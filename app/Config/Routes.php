@@ -44,9 +44,9 @@ $routes->match(['get', 'post'], 'profile', 'C_login::profile');
 // $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
 $routes->get('/dashboard', 'C_pencacah::index', ['filter' => 'auth']);
 $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filter' => 'user']);
-$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', ['filter' => 'user']);
-$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', ['filter' => 'user']);
-$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', ['filter' => 'user']);
+$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
+$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
+$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', );
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
