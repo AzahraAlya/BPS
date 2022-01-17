@@ -63,11 +63,11 @@ $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1', );
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
-$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai',  ['filter' => 'penilai']);
+$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', );
 
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
 $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
-$routes->post('/admin/manage/accounts/save', 'C_manage::save', ['filter' => 'admin']);
+$routes->post('/admin/manage/accounts/save', 'C_manage::save');
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

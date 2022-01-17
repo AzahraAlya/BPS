@@ -85,7 +85,7 @@ class C_login extends BaseController
 				session()->set('firstname', $this->request->getPost('firstname'));
 				$model->save($newData);
 				session()->setFlashdata('success', 'Data berhasil diubah');
-				return redirect()->to('/pencacah');
+				return redirect()->to('/dashboard');
 			}
 		}
 		$data['user'] = $model->where('id_user', session()->get('id_user'))->first();

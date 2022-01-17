@@ -60,7 +60,7 @@ class C_dashboard extends BaseController
 			'NOMOR_WA'=> $this->request->getVar('NOMOR_WA'),
 		]);
 
-		return redirect()->to(base_url('/pencacah'));
+		return redirect()->to(base_url('/dashboard'));
 	}
 
 

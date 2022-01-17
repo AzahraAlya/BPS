@@ -42,7 +42,7 @@ class C_Mitra extends BaseController
 		];
 		$M_pencacah = model("M_pencacah");
 		$M_pencacah->insert($data);
-		return redirect()->to(base_url('/pencacah'));
+		return redirect()->to(base_url('/dashboard'));
 	}
 
 	public function home(){
