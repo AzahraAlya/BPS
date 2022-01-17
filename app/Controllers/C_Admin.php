@@ -54,5 +54,9 @@ class C_Admin extends BaseController
 		$M_kegiatan = model("M_kegiatan");
 		$M_kegiatan->insert($data);
 		return redirect()->to(base_url('/admin/tambah-kegiatan'));
-}
+	}
+
+	public function manageaccount(){
+		return view('admin/manageaccount');
+	}
 }

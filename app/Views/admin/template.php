@@ -54,11 +54,15 @@
                         <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
                         <a class="collapse-item" href="/admin/tambah-kegiatan">Tambah Kegiatan</a>
                         <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
-                        <!-- <a class="collapse-item" href="/pengawas/tambah-kegiatan">Tambah Kegiatan</a> -->
-                        <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a> -->
+                       
                     </div>
                 </div>
+             
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/manage/account">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Manage Account</span></a>
             </li>
         <!-- Content Wrapper -->
     </ul>

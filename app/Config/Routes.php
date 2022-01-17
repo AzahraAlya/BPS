@@ -45,6 +45,8 @@ $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
 $routes->get('/pencacah', 'C_pencacah::index', ['filter' => 'auth']);
 $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1');
 $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1');
+$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
+$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
@@ -61,6 +63,10 @@ $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian');
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya');
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian');
+
+
+$routes->get('/manage/account', 'C_Admin::manageaccount');
+$routes->get('/manage/accounts/data', 'C_manage::index');
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

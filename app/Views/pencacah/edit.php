@@ -102,7 +102,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Tanggal Lahir</label>
-                            <input type="text" class="form-control"name="TANGGAL_LAHIR" value="<?= $pencacah['TANGGAL_LAHIR']; ?>" required>
+                            <input type="date" class="form-control"name="TANGGAL_LAHIR" value="<?= $pencacah['TANGGAL_LAHIR']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
