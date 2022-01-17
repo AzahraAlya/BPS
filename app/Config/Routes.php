@@ -59,7 +59,7 @@ $routes->get('/admin/tambah-mitra', 'C_Mitra::tambah', ['filter' => 'admin']);
 $routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
-$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1',  ['filter' => 'penilai']);
+$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1', );
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
