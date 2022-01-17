@@ -10,7 +10,7 @@ class TbKecamatan extends Migration
 	{
 		$this->forge->addField([
 			'kode_kcm' => [
-				'type' => 'INT',
+				'type' => 'VARCHAR',
 				'constraint' => 11,
 				'unsigned' => true,
 				'auto_increment' => true,

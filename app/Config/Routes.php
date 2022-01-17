@@ -41,32 +41,33 @@ $routes->match(['get', 'post'], 'profile', 'C_login::profile');
 // $routes->post('/editprofile', 'C_login::editprofile');
 
 
-$routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
-$routes->get('/pencacah', 'C_pencacah::index', ['filter' => 'auth']);
-$routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1');
-$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1');
-$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1');
-$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1');
+// $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
+$routes->get('/dashboard', 'C_pencacah::index', ['filter' => 'auth']);
+$routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filter' => 'user']);
+$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', ['filter' => 'user']);
+$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', ['filter' => 'user']);
+$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', ['filter' => 'user']);
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
 
 $routes->get('/admin/print', 'C_Admin::index', ['filter' => 'admin']);
-$routes->get('/admin/excel', 'C_Admin::excel');
-$routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan');
-$routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan');
-$routes->get('/admin/tambah-mitra', 'C_Mitra::tambah');
-$routes->post('/admin/store', 'C_Mitra::store');
+$routes->get('/admin/excel', 'C_Admin::excel', ['filter' => 'admin']);
+$routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan', ['filter' => 'admin']);
+$routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => 'admin']);
+$routes->get('/admin/tambah-mitra', 'C_Mitra::tambah', ['filter' => 'admin']);
+$routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
 
-$routes->get('/pengawas', 'C_Pengawas::pengawas');
-$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
-$routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian');
-$routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya');
-$routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian');
+$routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
+$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1',  ['filter' => 'penilai']);
+$routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
+$routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
+$routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
+$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai',  ['filter' => 'penilai']);
 
-
-$routes->get('/manage/account', 'C_Admin::manageaccount');
-$routes->get('/manage/accounts/data', 'C_manage::index');
+$routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
+$routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
+$routes->post('/admin/manage/accounts/save', 'C_manage::save', ['filter' => 'admin']);
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

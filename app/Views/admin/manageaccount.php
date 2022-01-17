@@ -1,4 +1,4 @@
-<?= $this->extend('pengawas/template'); ?>
+<?= $this->extend('admin/template'); ?>
 <?= $this->section('content'); ?>
 
 <!-- Content Wrapper -->
@@ -32,20 +32,23 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Username</th>
-                                    <th>Fullname</th>
+                                    <th>Firstname</th>
+                                    <th>Lastname</th>
                                     <th>Email</th>
-                                    <th>Action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php foreach ($admin as $i => $pc) : ?>
+                            <?php $id = 1;
+                                foreach ($admin as $a) : ?>
                                     <tr>
                                         <td><?= $id++; ?></td>
                                         <td><?= $a['username']; ?></td>
-                                        <td><?= $a['fullname']; ?></td>
+                                        <td><?= $a['firstname']; ?></td>
+                                        <td><?= $a['lastname']; ?></td>
                                         <td><?= $a['email']; ?></td>
+                                        
                                     </tr>
-                                <?php endforeach ?>
+                                <?php endforeach; ?>
                             </tbody>
                         </table>
                     </div>

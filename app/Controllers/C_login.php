@@ -35,7 +35,7 @@ class C_login extends BaseController
                     'logged_in'    => TRUE
                 ];
                 $session->set($ses_data);
-                return redirect()->to('/pencacah');
+                return redirect()->to('/dashboard');
             } else {
                 $session->setFlashdata('wrongPassword', 'wrongPassword');
                 return redirect()->to('/login');
