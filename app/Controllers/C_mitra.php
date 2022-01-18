@@ -94,10 +94,10 @@ class C_Mitra extends BaseController
 		return view('admin/data-lengkap',$data);
 	}
 
-	public function detailLengkap(){
+	public function detailLengkap($No_Urut){
 		$M_pencacah = model("M_pencacah");
 		$data = [
-			'pencacah' => $M_pencacah->findAll(),
+			'pencacah' => $M_pencacah->getPencacah($No_Urut),
 		];
 		return view('admin/detail-lengkap',$data);
 	}

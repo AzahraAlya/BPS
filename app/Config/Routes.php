@@ -55,9 +55,9 @@ $routes->get('/admin/print', 'C_Admin::index', ['filter' => 'admin']);
 $routes->get('/admin/excel', 'C_Admin::excel', ['filter' => 'admin']);
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::kegiatan', ['filter' => 'admin']);
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => 'admin']);
-$routes->get('/admin/tambah-mitra', 'C_Mitra::tambah', ['filter' => 'admin']);
-$routes->get('/admin/mitra-lengkap', 'C_Mitra::lengkap', ['filter' => 'admin']);
-$routes->get('/admin/data-detail/(:segment)', 'C_Mitra::detailLengkap', ['filter' => 'admin']);
+$routes->get('/admin/tambah-mitra', 'C_mitra::tambah', ['filter' => 'admin']);
+$routes->get('/admin/mitra-lengkap', 'C_mitra::lengkap', ['filter' => 'admin']);
+$routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1');
 $routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
