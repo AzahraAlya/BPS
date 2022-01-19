@@ -15,44 +15,39 @@
         <div class="container-fluid">
             <!-- /.content-header -->
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Daftar Pencacah</h1>
+                <h1 class="h3 mb-2 text-gray-800">Daftar Kegiatan</h1>
                 
                 <!-- <a href="/buku/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a> -->
                 <!-- DataTales Example -->
                 <div class="card mt-3">
                     <div class="card-header py-3">
                         <!-- <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6> -->
-                        <a href="/admin/tambah-mitra" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Pencacah</a>
+                        <a href="/admin/tambah-kegiatan" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Kegiatan</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No Urut</th>
-                                        <th scope="col">Kode Mitra</th>
-                                        <th scope="col">No Kecamatan</th>
-                                        <th scope="col">No Peserta</th>
-                                        <th scope="col">NIK</th>
-                                        <th scope="col">Nama</th>                                        
-                                        <th scope="col">Detail</th>                                    
+                                        <th scope="col">No</th>
+                                        <th scope="col">Nama Kegiatan</th>                                     
+                                        <th scope="col">Aksi</th>                                    
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($pencacah as $i => $pc) : ?>
+                                <?php foreach ($kegiatan as $i => $kg) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $pc['Kode_Mitra']; ?></td>
-                                            <td><?= $pc['noKecamatan']; ?></td>
-                                            <td><?= $pc['NOMOR_PESERTA']; ?></td>
-                                            <td><?= $pc['NIK']; ?></td>
-                                            <td><?= $pc['NAMA']; ?></td>
-                                            <td align="center">
-                                                <a href="/admin/data-detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i></a>
+                                            <td><?= $kg['nama_kegiatan']; ?></td>
+                                            <td>
+                                                <a href="/admin/edit/kegiatan/<?= $kg['id_kegiatan'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                                <form action="/admin/delete/kegiatan/<?= $kg['id_kegiatan']; ?>" method="post" class="d-inline">
+                                                    <input type="hidden" name = "_method" value = "DELETE" />
+                                                    <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>
-
                                 </tbody>
                             </table>
                         </div>

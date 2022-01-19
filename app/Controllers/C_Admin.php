@@ -35,7 +35,14 @@ class C_Admin extends BaseController
 		return view('admin/ad_tambahpencacah');
 	}
 
-
+	public function edit($id_kegiatan){
+		$M_kegiatan = model("M_kegiatan");
+		$data = [
+			'validation' => \Config\Services::validation(),
+			'kegiatan' => $M_kegiatan->getKegiatan($id_kegiatan),
+		];
+		return view('admin/edit_kegiatan', $data);
+	}
 
     public function excel(){
         $M_nilai = model("M_nilai");
@@ -48,6 +55,15 @@ class C_Admin extends BaseController
     }
 
 	public function kegiatan(){
+		$M_kegiatan = model("M_kegiatan");
+		$data = [
+			'kegiatan' => $M_kegiatan->findAll(),
+			// 'validation' => \Config\Services::validation(),
+		];
+		return view('admin/data_kegiatan', $data);
+	}
+
+	public function tambahkegiatan(){
 		return view('admin/tambah_kegiatan');
 	}
 

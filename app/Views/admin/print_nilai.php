@@ -55,13 +55,12 @@
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a>
                         <!-- <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a> -->
-                        <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a>
-                        <a class="collapse-item" href="/admin/tambah-kegiatan">Tambah Kegiatan</a>
+                        <!-- <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a> -->
+                        <a class="collapse-item" href="/admin/kegiatan">Data Kegiatan</a>
                         <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
                        
                     </div>
                 </div>
-             
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/manage/account">
