@@ -31,9 +31,7 @@ class C_Admin extends BaseController
 		return view('admin/ad_detailpencacah', $data);
 	}
 
-    public function tambah(){
-		return view('admin/ad_tambahpencacah');
-	}
+    
 
 	public function edit($id_kegiatan){
 		$M_kegiatan = model("M_kegiatan");
@@ -42,6 +40,23 @@ class C_Admin extends BaseController
 			'kegiatan' => $M_kegiatan->getKegiatan($id_kegiatan),
 		];
 		return view('admin/edit_kegiatan', $data);
+	}
+
+	public function update($id_kegiatan){
+
+		$M_kegiatan = model("M_kegiatan");
+		$M_kegiatan->save([
+			'id_kegiatan' => $id_kegiatan,
+			'nama_kegiatan'=>$this->request->getVar('nama_kegiatan'),
+		]);
+		return redirect()->to(base_url('/admin/kegiatan'));
+	}
+
+	public function delete($id_kegiatan)
+	{
+		$M_kegiatan = model("M_kegiatan");
+		$M_kegiatan->delete($id_kegiatan);
+		return redirect()->to(base_url('/admin/kegiatan'));
 	}
 
     public function excel(){

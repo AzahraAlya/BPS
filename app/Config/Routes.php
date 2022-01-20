@@ -57,6 +57,8 @@ $routes->get('/admin/kegiatan', 'C_Admin::kegiatan', ['filter' => 'admin']);
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::tambahkegiatan', ['filter' => 'admin']);
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => 'admin']);
 $routes->get('/admin/edit/kegiatan/(:segment)', 'C_Admin::edit/$1');
+$routes->post('/kegiatan/update/(:segment)', 'C_Admin::update/$1');
+$routes->delete('/admin/delete/kegiatan/(:any)', 'C_Admin::delete/$1');
 $routes->get('/admin/tambah-mitra', 'C_mitra::tambah', ['filter' => 'admin']);
 $routes->get('/admin/mitra-lengkap', 'C_mitra::lengkap', ['filter' => 'admin']);
 $routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1');

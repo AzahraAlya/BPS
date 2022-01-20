@@ -19,16 +19,26 @@
                 
                 <!-- <a href="/buku/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a> -->
                 <!-- DataTales Example -->
-                <form action="/kegiatan/update/<?= $kegiatan['id_kegiatan']; ?>" method="POST">  
-                        <div class="card-body">
-                            <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">ID Anggota</label>
-                                <input type="text" class="form-control" id= "nama_kegiatan" name = "nama_kegiatan" autofocus value="<?= $kegiatan['nama_kegiatan']; ?>" required>
-                            </div>
-                            
-                            <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i> Submit</button>
-                        </form>
+                <div class="container">
+                <div align="center">
+            <form action="/kegiatan/update/<?= $kegiatan['id_kegiatan']; ?>" method="POST">
+                <div class="card" style="width: 25rem;">
+                    <div class="card-header">
+                        <b>Edit Nama Kegiatan </b>
+                    </div>
+                    <div class="card-body">
+                        <div align="left">
+                            <a>Nama Kegiatan:</a>
+                        </div>
+                        <input type="text" class="form-control" id= "nama_kegiatan" name = "nama_kegiatan" autofocus value="<?= $kegiatan['nama_kegiatan']; ?>" required>
+                        <br>
+                        <button type="btn" class="btn btn-primary">
+                                <i class="fas fa-paper-plane"></i>Simpan</button>
+                    </div>
+                </div>
+            </form>
+                </div>
+                </div>
             </div>
             <!-- Content Row -->
             <div class="row">
