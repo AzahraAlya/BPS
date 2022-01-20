@@ -59,6 +59,7 @@ $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => '
 $routes->get('/admin/edit/kegiatan/(:segment)', 'C_Admin::edit/$1');
 $routes->post('/kegiatan/update/(:segment)', 'C_Admin::update/$1');
 $routes->delete('/admin/delete/kegiatan/(:any)', 'C_Admin::delete/$1');
+$routes->delete('/admin/data-hapus/(:any)', 'C_mitra::delete/$1');
 $routes->get('/admin/tambah-mitra', 'C_mitra::tambah', ['filter' => 'admin']);
 $routes->get('/admin/mitra-lengkap', 'C_mitra::lengkap', ['filter' => 'admin']);
 $routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1');
@@ -75,6 +76,8 @@ $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', );
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
 $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/save', 'C_manage::save');
+$routes->get('/manage/account/pencacah', 'C_Admin::manageaccountuser', ['filter' => 'admin']);
+$routes->delete('/admin/manage/accounts/delete/(:any)', 'C_manage::delete/$1');
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

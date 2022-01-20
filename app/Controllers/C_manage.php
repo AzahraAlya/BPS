@@ -47,4 +47,14 @@ class C_manage extends BaseController
         }
     }
 
+    public function delete($id_user)
+    {
+        // if (session()->get('role') == 1) {
+        //     $this->M_user->delete($id_user);
+        // }
+        $M_user = model("M_user");
+		$M_user->delete($id_user);
+        return redirect()->to('/manage/account/pencacah');
+    }
+
 }

@@ -36,6 +36,7 @@
                                         <th scope="col">NIK</th>
                                         <th scope="col">Nama</th>                                        
                                         <th scope="col">Detail</th>                                    
+                                        <th scope="col">Hapus</th>                                    
                                     </tr>
                                 </thead>
                                 <tbody>
@@ -49,6 +50,12 @@
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
                                                 <a href="/admin/data-detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
+                                            </td>
+                                            <td align="center">
+                                                <form action="/admin/data-hapus/<?= $pc['No_Urut']; ?>" method="post" class="d-inline">
+                                                    <input type="hidden" name = "_method" value = "DELETE" />
+                                                    <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
+                                                </form>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

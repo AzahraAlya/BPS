@@ -62,7 +62,12 @@
             <li class="nav-item">
                 <a class="nav-link" href="/manage/account">
                     <i class="fas fa-user-cog"></i>
-                    <span>Manage Account</span></a>
+                    <span>Manage Account Pengawas</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/manage/account/pencacah">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Manage Account Pencacah</span></a>
             </li>
         <!-- Content Wrapper -->
     </ul>

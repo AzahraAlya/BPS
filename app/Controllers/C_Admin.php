@@ -99,4 +99,13 @@ class C_Admin extends BaseController
 
 		return view('admin/manageaccount',$data);
 	}
+
+	public function manageaccountuser(){
+		helper(['form']);
+		$data = [
+            'admin' => $this->M_user->where('role', 1)->findAll(),
+        ];
+
+		return view('admin/manageaccountuser',$data);
+	}
 }

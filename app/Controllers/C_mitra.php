@@ -101,4 +101,11 @@ class C_Mitra extends BaseController
 		];
 		return view('admin/detail-lengkap',$data);
 	}
+
+	public function delete($No_Urut)
+	{
+		$M_pencacah = model("M_pencacah");
+		$M_pencacah->delete($No_Urut);
+		return redirect()->to(base_url('/admin/mitra-lengkap'));
+	}
 }
