@@ -23,18 +23,18 @@ class M_user extends Model
     protected $updatedField         = 'updated_at';
     protected $deletedField         = 'deleted_at';
 
-    protected $beforeInsert = ['beforeInsert'];
+    // protected $beforeInsert = ['beforeInsert'];
     protected $beforeUpdate = ['beforeUpdate'];
   
   
   
   
-    protected function beforeInsert(array $data){
-      $data = $this->passwordHash($data);
-      $data['data']['created_at'] = date('Y-m-d H:i:s');
+    // protected function beforeInsert(array $data){
+    //   $data = $this->passwordHash($data);
+    //   $data['data']['created_at'] = date('Y-m-d H:i:s');
   
-      return $data;
-    }
+    //   return $data;
+    // }
   
     protected function beforeUpdate(array $data){
       $data = $this->passwordHash($data);

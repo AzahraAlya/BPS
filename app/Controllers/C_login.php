@@ -21,7 +21,7 @@ class C_login extends BaseController
         $username = $this->request->getVar('username');
         $password = $this->request->getVar('password');
         $data = $model->where('username', $username)->first();
-        if ($data) {
+        if($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
