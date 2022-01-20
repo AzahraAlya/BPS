@@ -25,6 +25,7 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
+                        <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                         Form Detail Pencacah
                     </div>
                     <div class="card-body">

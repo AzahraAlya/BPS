@@ -40,10 +40,10 @@
                                             <th scope="row"><?= $i + 1;?></th>
                                             <td><?= $kg['nama_kegiatan']; ?></td>
                                             <td>
-                                                <a href="/admin/edit/kegiatan/<?= $kg['id_kegiatan'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i>Edit</a>
+                                                <a href="/admin/edit/kegiatan/<?= $kg['id_kegiatan'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i></a>
                                                 <form action="/admin/delete/kegiatan/<?= $kg['id_kegiatan']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
-                                                    <button type ="submit" class="btn btn-danger" onclick="return confirm('Apakah Anda yakin?');">Delete</button>
+                                                    <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>
                                             </td>
                                         </tr>

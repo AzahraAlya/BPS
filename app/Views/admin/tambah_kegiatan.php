@@ -24,8 +24,10 @@
                         </div>
                         <input type="text" class="form-control" id= "nama_kegiatan" name = "nama_kegiatan" required>
                         <br>
-                        <button type="btn" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i>Simpan</button>
+                        <button type="button" class="btn btn-primary btn-sm">
+                                Simpan</button>
+                        <a href = "/admin/kegiatan" class = "btn btn-sm btn-danger">Kembali</a>
+
                     </div>
                 </div>
             </form>

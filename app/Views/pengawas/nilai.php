@@ -271,8 +271,8 @@
                    $('input[name="que2"]').attr('disabled',this.value!="Aktif")
                    $('input[name="que3"]').attr('disabled',this.value!="Aktif")
                    $('input[name="que4"]').attr('disabled',this.value!="Aktif")
-                   $('input[name="que5"]').attr('disabled',this.value!="Aktif")
-                   $('input[name="que6"]').attr('disabled',this.value!="Aktif")
+                   $('input[name="que5[]"]').attr('disabled',this.value!="Aktif")
+                   $('input[name="que6[]"]').attr('disabled',this.value!="Aktif")
                    $('input[name="catatan"]').attr('disabled',this.value!="Aktif")
 
                });

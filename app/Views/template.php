@@ -37,6 +37,7 @@
 
             <!-- Main Content -->
             <div id="content">
+                <?= $this->include('navbar'); ?>
                 <?= $this->renderSection('content'); ?> 
             </div>
             <!-- End of Main Content -->

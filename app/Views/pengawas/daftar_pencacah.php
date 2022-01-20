@@ -48,7 +48,7 @@
                                             <td><?= $pc['NIK']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
-                                                <a href="/pencacah/detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i></a>
+                                                <a href="/pencacah/detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
                                             </td>
                                             <td><a href="/pengawas/nilai/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-success me-1"><i class="fas fa-calculator" class="d-inline"></i></a></td>
                                         </tr>

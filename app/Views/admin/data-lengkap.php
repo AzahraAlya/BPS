@@ -48,7 +48,7 @@
                                             <td><?= $pc['NIK']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
-                                                <a href="/admin/data-detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-edit"></i></a>
+                                                <a href="/admin/data-detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
                                             </td>
                                         </tr>
                                     <?php endforeach; ?>

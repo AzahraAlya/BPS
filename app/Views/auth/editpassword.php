@@ -75,7 +75,8 @@
                                 <!-- <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i> Daftar </button> -->
                                 <div class ='from-group'>
-                                    <input type="submit" name="update" value="update" class="btn btn-primary">
+                                    <input type="submit" name="update" value="update" class="btn btn-primary btn-sm">
+                                    <a href = "/dashboard" class = "btn btn-sm btn-danger">Kembali</a>
                                 </div>
                             </form>
                             <hr>
