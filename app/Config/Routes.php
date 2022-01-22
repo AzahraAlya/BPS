@@ -34,6 +34,7 @@ $routes->get('/guest', 'C_navigation::gHome');
 $routes->get('/login', 'C_login::index');
 $routes->get('/logout', 'C_login::logout');
 $routes->get('/register', 'C_register::index');
+$routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/saveRegister', 'C_register::save');
 $routes->post('/savelogin', 'C_login::auth');
 $routes->match(['get', 'post'], 'profile', 'C_login::profile');

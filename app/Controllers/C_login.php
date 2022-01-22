@@ -93,4 +93,38 @@ class C_login extends BaseController
         // dd($data);
 		echo view('auth/editpassword', $data);
     }
+
+    public function login_mitra(){
+
+        return view('auth/login_mitra');
+    }
+
+    public function mitra_auth(){
+        $session = session();
+        $M_pencacah = model("M_pencacah");
+
+        $username = $this->request->getVar('Kode_Mitra');
+        $password = $this->request->getVar('password');
+        $data = $M_pencacah->where('Kode_Mitra', $username)->first();
+        if($data) {
+            $pass = $data['password'];
+            $verify_pass = password_verify($password, $pass);
+            if ($verify_pass) {
+                $ses_data = [
+                    'No_Urut' => $data['No_Urut']
+                ];
+                $session->set($ses_data);
+                return view('pencacah/home',[
+                    'pencacah' => $M_pencacah->getUser($ses_data),
+                ]);
+            } else {
+                $session->setFlashdata('wrongPassword', 'wrongPassword');
+                return redirect()->to('/login_mitra');
+            }
+        } else {
+            $session->setFlashdata('usernameNotFound', 'usernameNotFound');
+            return redirect()->to('/login_mitra');
+        }
+    }
+    
 }

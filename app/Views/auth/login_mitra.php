@@ -45,16 +45,16 @@
                                 <div class="p-5">
                                     <div class="text-center mb-4">
                                         <h1 class="h4 text-gray-900">Badan Pusat Statistik</h1>
-                                        <span class="text-muted">Masuk Aplikasi</span>
+                                        <span class="text-muted">Login Mitra</span>
                                     </div>
                                     <?php if (session()->get('pesan')) : ?>
                                         <div class="alert alert-success" role="alert">
                                             <?= session()->get('pesan') ?>
                                         </div>
                                     <?php endif; ?>
-                                    <form class="user" action = "/c_login/auth" method="post">
+                                    <form class="user" action = "/c_login/mitra_auth" method="post">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="username">
+                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="Kode_Mitra">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
@@ -64,9 +64,7 @@
                                         </button>
                                     </form>
                                     <hr>
-                                    <div class="text-center">
-                                        <a class="small" href="/login_mitra">Login sebagai Mitra!</a>
-                                    </div>
+
                                 </div>
                             </div>
                         </div>
