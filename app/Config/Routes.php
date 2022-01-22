@@ -78,6 +78,8 @@ $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/save', 'C_manage::save');
 $routes->get('/manage/account/pencacah', 'C_Admin::manageaccountuser', ['filter' => 'admin']);
 $routes->delete('/admin/manage/accounts/delete/(:any)', 'C_manage::delete/$1');
+$routes->get('/admin/manage/accounts/edit/(:segment)', 'C_manage::editPassword/$1');
+$routes->post('/admin/manage/accounts/update/(:segment)', 'C_manage::updatePassword/$1');
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

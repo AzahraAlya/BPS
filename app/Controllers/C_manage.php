@@ -57,4 +57,22 @@ class C_manage extends BaseController
         return redirect()->to('/manage/account/pencacah');
     }
 
+    public function editPassword($No_Urut){
+
+        $M_pencacah = model("M_pencacah");
+		$data = [
+			'user' => $M_pencacah->getUser($No_Urut),
+		];
+        return view('admin/edit_password',$data);
+    }
+
+    public function updatePassword($No_Urut){
+        $M_pencacah = model("M_pencacah");
+        $M_pencacah->save([
+            'No_Urut' => $No_Urut,
+			'password'=>password_hash($this->request->getVar('password'),PASSWORD_DEFAULT),
+		]);
+		return redirect()->to(base_url('/manage/account/pencacah'));
+    }
+
 }

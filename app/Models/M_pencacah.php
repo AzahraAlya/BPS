@@ -9,10 +9,18 @@ class M_pencacah extends Model
 	
 	protected $table                = 'bps';
 	protected $primaryKey           = 'No_Urut';
-	protected $allowedFields        = ['Kode_Mitra','noKecamatan','NOMOR_PESERTA','NIK','NAMA','JENIS_KELAMIN', 'TEMPAT_LAHIR','TANGGAL_LAHIR','PENDIDIKAN','STATUS_PERKAWINAN','PEKERJAAN','PENGALAMAN_SURVEI_BPS','ALAMAT','DESA','KECAMATAN','KABUPATEN','NOMOR_HP','NOMOR_WA','KESAN_DAN_PESAN','PENAMPILAN','KOMUNIKASI','NILAI','KEPEMILIKAN_HP','SPESIFIKASI_ANDROID','OPERASI_GOOGLE_MAPS','GAMBAR','E','I','S','N','T','F','J','P','huruf1','huruf2','huruf3','huruf4','Rekomendasi_Hasil_MBTI','Psikolog_Prov','Evaluasi_KSK','HASIL_AKHIR','LULUS_PEMETAAN','Keterangan','NILAI_PENDALAMAN','NILAI_PENGAMATAN','JUMLAH_ERROR','PSIKOTES','Umur','Tanggal_Rekrutment'];
+	protected $allowedFields        = ['Kode_Mitra','password','noKecamatan','NOMOR_PESERTA','NIK','NAMA','JENIS_KELAMIN', 'TEMPAT_LAHIR','TANGGAL_LAHIR','PENDIDIKAN','STATUS_PERKAWINAN','PEKERJAAN','PENGALAMAN_SURVEI_BPS','ALAMAT','DESA','KECAMATAN','KABUPATEN','NOMOR_HP','NOMOR_WA','KESAN_DAN_PESAN','PENAMPILAN','KOMUNIKASI','NILAI','KEPEMILIKAN_HP','SPESIFIKASI_ANDROID','OPERASI_GOOGLE_MAPS','GAMBAR','E','I','S','N','T','F','J','P','huruf1','huruf2','huruf3','huruf4','Rekomendasi_Hasil_MBTI','Psikolog_Prov','Evaluasi_KSK','HASIL_AKHIR','LULUS_PEMETAAN','Keterangan','NILAI_PENDALAMAN','NILAI_PENGAMATAN','JUMLAH_ERROR','PSIKOTES','Umur','Tanggal_Rekrutment'];
 	protected $useTimestamps        = true;
 	
 	public function getPencacah($No_Urut=false){
+		if($No_Urut == false){
+			return $this->findAll();
+		}
+
+		return $this->where(['No_Urut'=> $No_Urut]) -> first();
+	}
+
+	public function getUser($No_Urut=false){
 		if($No_Urut == false){
 			return $this->findAll();
 		}

@@ -28,7 +28,6 @@ class M_user extends Model
   
   
   
-  
     // protected function beforeInsert(array $data){
     //   $data = $this->passwordHash($data);
     //   $data['data']['created_at'] = date('Y-m-d H:i:s');

@@ -102,8 +102,9 @@ class C_Admin extends BaseController
 
 	public function manageaccountuser(){
 		helper(['form']);
+		$M_pencacah = model("M_pencacah");
 		$data = [
-            'admin' => $this->M_user->where('role', 1)->findAll(),
+            'admin' => $M_pencacah->findAll(),
         ];
 
 		return view('admin/manageaccountuser',$data);

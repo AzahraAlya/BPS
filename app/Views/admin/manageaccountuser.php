@@ -32,9 +32,7 @@
                                 <tr>
                                     <th>No</th>
                                     <th>Username</th>
-                                    <th>Firstname</th>
-                                    <th>Lastname</th>
-                                    <th>Email</th>
+                                    <th>Password</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -43,15 +41,14 @@
                                 foreach ($admin as $a) : ?>
                                     <tr>
                                         <td><?= $id++; ?></td>
-                                        <td><?= $a['username']; ?></td>
-                                        <td><?= $a['firstname']; ?></td>
-                                        <td><?= $a['lastname']; ?></td>
-                                        <td><?= $a['email']; ?></td>
+                                        <td><?= $a['Kode_Mitra']; ?></td>
+                                        <td><?= $a['password']; ?></td>
                                         <td align="center">
-                                                <form action="/admin/manage/accounts/delete/<?= $a['id_user']; ?>" method="post" class="d-inline">
+                                                <form action="/admin/manage/accounts/delete/<?= $a['No_Urut']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>
+                                                <a href="/admin/manage/accounts/edit/<?= $a['No_Urut']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-calculator" class="d-inline"></i></a>
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>
