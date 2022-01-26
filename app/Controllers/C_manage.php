@@ -47,16 +47,7 @@ class C_manage extends BaseController
         }
     }
 
-    public function delete($id_user)
-    {
-        // if (session()->get('role') == 1) {
-        //     $this->M_user->delete($id_user);
-        // }
-        $M_user = model("M_user");
-		$M_user->delete($id_user);
-        return redirect()->to('/manage/account/pencacah');
-    }
-
+    //edit password pencacah oleh admin
     public function editPassword($No_Urut){
 
         $M_pencacah = model("M_pencacah");
@@ -66,6 +57,7 @@ class C_manage extends BaseController
         return view('admin/edit_password',$data);
     }
 
+    //simpan hasil edit password pencacah
     public function updatePassword($No_Urut){
         $M_pencacah = model("M_pencacah");
         $M_pencacah->save([
@@ -75,4 +67,38 @@ class C_manage extends BaseController
 		return redirect()->to(base_url('/manage/account/pencacah'));
     }
 
+    //delete akun pencacah
+    public function deletePencacah($No_Urut){
+            $M_pencacah = model("M_pencacah");
+            $M_pencacah->delete($No_Urut);
+            return redirect()->to('/manage/account/pencacah');
+        }   
+    
+    //edit password penilai oleh admin
+    public function editPasswordPenilai($id_user){
+
+        $M_user = model("M_user");
+		$data = [
+			'user' => $M_user->getPenilai($id_user),
+		];
+        return view('admin/editpw_penilai',$data);
+    }
+
+    //delete akun penilai
+    public function delete($id_user)
+    {
+          $M_user = model("M_user");
+          $M_user->delete($id_user);
+          return redirect()->to('/manage/account');
+    } 
+
+     //simpan hasil edit password penilai
+     public function updatePasswordPenilai($id_user){
+        $M_user = model("M_user");
+        $M_user->save([
+            'id_user' => $id_user,
+			'password'=>password_hash($this->request->getVar('password'),PASSWORD_DEFAULT),
+		]);
+		return redirect()->to(base_url('/manage/account'));
+    }
 }

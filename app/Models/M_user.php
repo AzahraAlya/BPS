@@ -48,6 +48,13 @@ class M_user extends Model
       return $data;
     }
   
+    public function getPenilai($id_user=false){
+      if($id_user == false){
+        return $this->findAll();
+      }
+  
+      return $this->where(['id_user'=> $id_user]) -> first();
+    }
     
 
 }
