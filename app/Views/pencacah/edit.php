@@ -9,17 +9,12 @@
     <div id="content">
 
         <!-- Topbar -->
-        <?= $this->include('navbar'); ?>
+        <?= $this->include('pencacah/navbar_pencacah'); ?>
         <!-- End of Topbar -->
 
         <!-- Begin Page Content -->
         <div class="container-fluid">
 
-            <!-- Page Heading -->
-            <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Detail Pencacah</h1>
-
-            </div>
             <!-- /.content-header -->
             <div class="container">
 
@@ -233,6 +228,14 @@
 </a>
 
 <!-- Logout Modal-->
-
+                    <script>
+                        <?php if (!empty(session()->getFlashdata('swal_icon'))){ ?>
+                            Swal.fire(
+                            'Berhasil',
+                            'Data berhasil diubah',
+                            'success'
+                            )
+                        <?php } ?>
+                    </script>
 
 <?= $this->endSection(); ?>

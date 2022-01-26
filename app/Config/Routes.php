@@ -35,7 +35,7 @@ $routes->get('/login', 'C_login::index');
 $routes->get('/logout', 'C_login::logout');
 $routes->get('/logout/pencacah', 'C_login::logoutpencacah');
 $routes->get('/register', 'C_register::index');
-$routes->post('/login/mitra', 'C_login::coba');
+$routes->post('/login/mitra', 'C_login::mitra_auth');
 $routes->get('/login/mitra', 'C_login::coba');
 $routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/saveRegister', 'C_register::save');

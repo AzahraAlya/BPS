@@ -136,9 +136,11 @@ class C_login extends BaseController
 
     public function coba(){
         $M_pencacah = model("M_pencacah");
-        return view('pencacah/home',[
-            'pencacah' => $M_pencacah->first(),
-        ]);
+
+        $data = [
+            'pencacah' => $M_pencacah->where('No_Urut', session()->get('No_Urut'))->first()
+        ];
+        return view('pencacah/edit',$data);
     }
     
 }
