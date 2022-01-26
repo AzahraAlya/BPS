@@ -40,10 +40,13 @@ https://templatemo.com/tm-538-digital-trend
 
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ml-auto">
-                    
                     <li class="nav-item">
-                        <a href="/login" class="nav-link contact">Login</a>
+                        <a href="/login_mitra" class="nav-link contact">Login Mitra</a>
                     </li>
+                    <li class="nav-item">
+                        <a href="/login" class="nav-link contact">Login Admin</a>
+                    </li>
+                   
                 </ul>
             </div>
         

@@ -52,7 +52,7 @@
                                             <?= session()->get('pesan') ?>
                                         </div>
                                     <?php endif; ?>
-                                    <form class="user" action = "/c_login/mitra_auth" method="post">
+                                    <form class="user" action = "/login/mitra" method="post">
                                         <div class="form-group">
                                             <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="Kode_Mitra">
                                         </div>

@@ -177,5 +177,20 @@
                         
                     </form>
                     </div>
+                    <script>
+                        <?php if (!empty(session()->getFlashdata('swal_icon'))){ ?>
+                              Swal.fire({
+                                icon:'<?= session()->getFlashdata('swal_icon')?>',
+                                title: '<?php echo session()->getFlashdata('swal_title') ?>',
+                                text :'<?php echo session()->getFlashdata('swal_text')?>',
+                              })
+                        <?php } ?>
+                    </script>
+
+
+
 
 <?= $this->endSection(); ?>
+
+ 
+  

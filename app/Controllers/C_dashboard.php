@@ -36,7 +36,7 @@ class C_dashboard extends BaseController
 
 	public function update($No_Urut)
 	{
-
+		helper(['swal_helper']);
 		$M_pencacah = model("M_pencacah");
 		$M_pencacah->save([
 			'No_Urut' => $No_Urut,
@@ -60,7 +60,8 @@ class C_dashboard extends BaseController
 			'NOMOR_WA'=> $this->request->getVar('NOMOR_WA'),
 		]);
 
-		return redirect()->to(base_url('/dashboard'));
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('login/mitra'));
 	}
 
 

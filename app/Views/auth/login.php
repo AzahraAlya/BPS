@@ -64,9 +64,9 @@
                                         </button>
                                     </form>
                                     <hr>
-                                    <div class="text-center">
+                                    <!-- <div class="text-center">
                                         <a class="small" href="/login_mitra">Login sebagai Mitra!</a>
-                                    </div>
+                                    </div> -->
                                 </div>
                             </div>
                         </div>

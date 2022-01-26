@@ -33,7 +33,10 @@ $routes->get('/', 'C_navigation::index', ['filter' => 'auth']);
 $routes->get('/guest', 'C_navigation::gHome');
 $routes->get('/login', 'C_login::index');
 $routes->get('/logout', 'C_login::logout');
+$routes->get('/logout/pencacah', 'C_login::logoutpencacah');
 $routes->get('/register', 'C_register::index');
+$routes->post('/login/mitra', 'C_login::coba');
+$routes->get('/login/mitra', 'C_login::coba');
 $routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/saveRegister', 'C_register::save');
 $routes->post('/savelogin', 'C_login::auth');
@@ -48,6 +51,7 @@ $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filt
 $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', );
+
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.

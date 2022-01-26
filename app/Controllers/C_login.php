@@ -53,6 +53,13 @@ class C_login extends BaseController
         return redirect()->to('/login');
     }
 
+    public function logoutpencacah()
+    {
+        $session = session();
+        $session->destroy();
+        return redirect()->to('/login_mitra');
+    }
+
     public function profile(){
         
 		helper(['form']);
@@ -125,6 +132,13 @@ class C_login extends BaseController
             $session->setFlashdata('usernameNotFound', 'usernameNotFound');
             return redirect()->to('/login_mitra');
         }
+    }
+
+    public function coba(){
+        $M_pencacah = model("M_pencacah");
+        return view('pencacah/home',[
+            'pencacah' => $M_pencacah->first(),
+        ]);
     }
     
 }
