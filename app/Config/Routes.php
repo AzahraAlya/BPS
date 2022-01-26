@@ -41,8 +41,7 @@ $routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/saveRegister', 'C_register::save');
 $routes->post('/savelogin', 'C_login::auth');
 $routes->match(['get', 'post'], 'profile', 'C_login::profile');
-// $routes->get('/profile', 'C_login::profile');
-// $routes->post('/editprofile', 'C_login::editprofile');
+$routes->match(['get', 'post'], 'setting', 'C_pencacah::profile');
 
 
 // $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);

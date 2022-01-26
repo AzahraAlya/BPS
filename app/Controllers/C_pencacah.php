@@ -71,4 +71,39 @@ class C_Pencacah extends BaseController{
 		];
 		return view('pengawas/pencacahdetail', $data);
 	}
+
+    public function profile(){
+        
+		helper(['form']);
+		//$model = new M_pencacah();
+        $model = model("M_pencacah");
+		if ($this->request->getMethod() == 'post') {
+			//let's do the validation here
+			$rules = [
+				
+			];
+
+			if ($this->request->getPost('password') != '') {
+				$rules['password'] = 'required|min_length[8]|max_length[255]';
+				$rules['password_confirm'] = 'matches[password]';
+			}
+
+			if (!$this->validate($rules)) {
+				$data['validation'] = $this->validator;
+			} else {
+				$newData = [
+					'No_Urut' => session()->get('No_Urut'),
+				];
+				if ($this->request->getPost('password') != '') {
+					$newData['password'] = $this->request->getPost('password');
+				}
+				//Edit sessions
+				$model->save($newData);
+				session()->setFlashdata('success', 'Data berhasil diubah');
+				return redirect()->to('/login/mitra');
+			}
+		}
+		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
+		echo view('pencacah/setting', $data);
+    }
 }
