@@ -67,8 +67,7 @@ class C_login extends BaseController
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
-				'firstname' => 'required|min_length[3]|max_length[20]',
-				'lastname' => 'required|min_length[3]|max_length[20]',
+				
 			];
 
 			if ($this->request->getPost('password') != '') {
@@ -81,15 +80,10 @@ class C_login extends BaseController
 			} else {
 				$newData = [
 					'id_user' => session()->get('id_user'),
-					'firstname' => $this->request->getPost('firstname'),
-					'lastname' => $this->request->getPost('lastname'),
-					'email' => $this->request->getPost('email'),
 				];
 				if ($this->request->getPost('password') != '') {
 					$newData['password'] = $this->request->getPost('password');
 				}
-				//Edit sessions
-				session()->set('firstname', $this->request->getPost('firstname'));
 				$model->save($newData);
 				session()->setFlashdata('success', 'Data berhasil diubah');
 				return redirect()->to('/dashboard');

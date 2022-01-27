@@ -42,19 +42,8 @@
                             <?php endif; ?>
 
                             <form class="user" action = "/profile" method="post">
-                                <div class="form-group row">
-                                    <div class="col-sm-6 mb-3 mb-sm-0">
-                                        <input type="text" class="form-control form-control-user"  name="firstname" id="firstname" value="<?= set_value('firstname', $user['firstname']) ?>">
-                                    </div>
-                                    <div class="col-sm-6">
-                                        <input type="text" class="form-control form-control-user" name="lastname" id="lastname" value="<?= set_value('lastname', $user['lastname']) ?>">
-                                    </div>
-                                </div>
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" readonly id="username" value="<?= $user['username'] ?>">
-                                </div>
-                                <div class="form-group">
-                                    <input type="email" class="form-control form-control-user" name="email" id="email" value="<?= set_value('email', $user['email']) ?>">
+                                    <input type="text" class="form-control form-control-user" readonly id="nik" value="<?= $user['nik'] ?>">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">
