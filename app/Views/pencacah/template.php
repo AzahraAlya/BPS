@@ -36,7 +36,7 @@
         <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
             <!-- Sidebar - Brand -->
-            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
@@ -52,6 +52,33 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pencacah</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/setting">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Edit Password</span></a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout/pencacah" data-toggle="modal" data-target="#logoutModal">
+                <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <span>Logout</span></a>
+            </li>
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Logout</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Yakin ingin keluar?</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
+                            <a class="btn btn-primary" href="/">Logout</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <!-- Divider -->
             <hr class="sidebar-divider">
