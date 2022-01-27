@@ -18,16 +18,16 @@ class C_login extends BaseController
     {
         $session = session();
         $model = new M_user();
-        $username = $this->request->getVar('username');
+        $username = $this->request->getVar('nik');
         $password = $this->request->getVar('password');
-        $data = $model->where('username', $username)->first();
+        $data = $model->where('nik', $username)->first();
         if($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
                     'id_user'      => $data['id_user'],
-                    'username'     => $data['username'],
+                    'nik'           => $data['nik'],
                     'firstname'     => $data['firstname'],
                     'lastname'     => $data['lastname'],
                     'email'        => $data['email'],

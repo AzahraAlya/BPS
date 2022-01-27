@@ -20,21 +20,15 @@
                     <h4 class="card-title">Pengelolaan Admin</h4>
                     <form class="forms-sample" action="/admin/manage/accounts/save" method="post">
                         <div class="form-group row">
-                            <label for="exampleInputUsername2" class="col-sm-2 col-form-label">Fisrtname</label>
+                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Nama Petugas</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control " name="firstname" placeholder="Firstname" required>
+                                <input type="text" minLength="4" class="form-control " name="nama_petugas" placeholder="Nama Petugas" required>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="exampleInputUsername2" class="col-sm-2 col-form-label">Lastname</label>
+                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">NIP</label>
                             <div class="col-sm-10">
-                                <input type="text" class="form-control " name="lastname" placeholder="Lastname" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Username</label>
-                            <div class="col-sm-10">
-                                <input type="text" minLength="4" class="form-control " name="username" placeholder="Username" required>
+                                <input type="text" minLength="4" class="form-control " name="nik" placeholder="NIP" required>
                             </div>
                         </div>
                         <div class="form-group row">
@@ -47,12 +41,6 @@
                             <label for="exampleInputPassword2" class="col-sm-2 col-form-label">Confirmation Password</label>
                             <div class="col-sm-10">
                                 <input type="password" minLength="4" class="form-control " name="confpassword" placeholder="Confirm Password" required>
-                            </div>
-                        </div>
-                        <div class="form-group row">
-                            <label for="exampleInputConfirmPassword2" class="col-sm-2 col-form-label">Email</label>
-                            <div class="col-sm-10">
-                                <input type="email" class="form-control " name="email" placeholder="Email" required>
                             </div>
                         </div>
                         <div class="form-group row">

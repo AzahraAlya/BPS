@@ -62,7 +62,7 @@ class C_manage extends BaseController
         $M_pencacah = model("M_pencacah");
         $M_pencacah->save([
             'No_Urut' => $No_Urut,
-			'password'=>password_hash($this->request->getVar('password'),PASSWORD_DEFAULT),
+			'password'=>$this->request->getPost('password')
 		]);
 		return redirect()->to(base_url('/manage/account/pencacah'));
     }
@@ -97,7 +97,7 @@ class C_manage extends BaseController
         $M_user = model("M_user");
         $M_user->save([
             'id_user' => $id_user,
-			'password'=>password_hash($this->request->getVar('password'),PASSWORD_DEFAULT),
+			'password'=>$this->request->getPost('password')
 		]);
 		return redirect()->to(base_url('/manage/account'));
     }

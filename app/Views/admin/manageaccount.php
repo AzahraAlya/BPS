@@ -31,6 +31,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama</th>
                                     <th>Username</th>
                                     <th>Password</th>
                                     <th>Aksi</th>
@@ -41,6 +42,7 @@
                                 foreach ($admin as $a) : ?>
                                     <tr>
                                         <td><?= $id++; ?></td>
+                                        <td><?= $a['nama_petugas']; ?></td>
                                         <td><?= $a['nik']; ?></td>
                                         <td><?= $a['password']; ?></td>
                                         <td align="center">
