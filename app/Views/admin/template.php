@@ -30,7 +30,7 @@
     <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
         
         <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="/dashboard">
+        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
             <div class="sidebar-brand-icon rotate-n-15">
                 <i class="fas fa-laugh-wink"></i>
             </div>
@@ -41,7 +41,30 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Sidebar -->
+        <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Penilai</span></a>
+        </li>
         <li class="nav-item">
+                <a class="nav-link" href="/admin/print">
+                    <i class="fas fa-file"></i>
+                    <span>Data Penilaian Mitra</span></a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="/admin/kegiatan">
+                    <i class="fas fa-archive"></i>
+                    <span>Data Kegiatan BPS</span></a>
+        </li>
+        <li class="nav-item">
+                <a class="nav-link" href="/admin/mitra-lengkap">
+                    <i class="fas fa-book"></i>
+                    <span>Data Mitra BPS</span></a>
+        </li>
+
+
+
+        <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adminUtilities" aria-expanded="true" aria-controls="adminUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Admin</span>
@@ -49,26 +72,27 @@
                 <div id="adminUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a>
+                        <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a> -->
                         <!-- <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a> -->
                         <!-- <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a> -->
-                        <a class="collapse-item" href="/admin/kegiatan">Data Kegiatan</a>
+                        <!-- <a class="collapse-item" href="/admin/kegiatan">Data Kegiatan</a>
                         <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
                        
                     </div>
                 </div>
              
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="/manage/account">
-                    <i class="fas fa-user-cog"></i>
+                    <i class="fas fa-cog"></i>
                     <span>Manage Account Pengawas</span></a>
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/manage/account/pencacah">
-                    <i class="fas fa-user-cog"></i>
+                    <i class="fas fa-cog"></i>
                     <span>Manage Account Pencacah</span></a>
             </li>
+            
         <!-- Content Wrapper -->
     </ul>
         <div id="content-wrapper" class="d-flex flex-column">
