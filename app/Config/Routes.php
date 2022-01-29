@@ -71,11 +71,14 @@ $routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
 
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
+$routes->get('/editprofile', 'C_Pengawas::editprofile');
 $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1', );
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', );
+$routes->post('/pengawas/saveprofile', 'C_Pengawas::saveprofile', );
+$routes->get('/simpanprofile', 'C_Pengawas::simpanprofile', );
 
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
 $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);

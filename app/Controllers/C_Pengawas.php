@@ -81,4 +81,27 @@ class C_Pengawas extends BaseController
 		return view('/pengawas/selanjutnya');
 	}
 
+	public function editprofile(){
+		return view('pengawas/editprofile');
+	}
+
+	public function saveprofile(){
+		$M_user = model("M_user");
+		$M_user->save([
+            'nama_petugas' => $this->request->getVar('nama_petugas'),
+            'nik' => $this->request->getVar('nik'),
+            'jk' => $this->request->getVar('jk'),
+            'tmp_lahir' => $this->request->getVar('tmp_lahir'),
+            'tgl_lahir' => $this->request->getVar('tgl_lahir'),
+            'pendidikan' => $this->request->getVar('pendidikan'),
+            'status_perkawinan' => $this->request->getVar('status_perkawinan'),
+            'pekerjaan' => $this->request->getVar('pekerjaan'),
+		]);
+		return redirect()->to(base_url('/simpanprofile'));
+	}
+
+	public function simpanprofile(){
+		return view('pengawas/simpanprofile');
+	}
+
 }

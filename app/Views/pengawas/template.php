@@ -57,7 +57,7 @@
                     <span>Ganti Password</span></a>
             </li>
         <li class="nav-item">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/editprofile">
                     <i class="fas fa-user-circle"></i>
                     <span>Profil</span></a>
         </li>
