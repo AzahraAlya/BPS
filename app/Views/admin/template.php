@@ -64,34 +64,51 @@
 
 
 
-        <!-- <li class="nav-item">
+        <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adminUtilities" aria-expanded="true" aria-controls="adminUtilities">
-                    <i class="fas fa-fw fa-wrench"></i>
-                    <span>Admin</span>
+                    <i class="fas fa-cog"></i>
+                    <span>Pengaturan Akun</span>
                 </a>
                 <div id="adminUtilities" class="collapse" aria-labelledby="headingUtilities" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
                         <h6 class="collapse-header"></h6>
-                        <a class="collapse-item" href="/admin/print">Data Penilaian Mitra</a> -->
-                        <!-- <a class="collapse-item" href="/admin/data-penilaian">Data Penilaian Mitra</a> -->
+                        <a class="collapse-item" href="/manage/account">Akun Pengawas</a>
+                        <a class="collapse-item" href="/manage/account/pencacah">Akun Mitra</a>
                         <!-- <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a> -->
                         <!-- <a class="collapse-item" href="/admin/kegiatan">Data Kegiatan</a>
-                        <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a>
+                        <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a> -->
                        
                     </div>
                 </div>
              
-            </li> -->
-            <li class="nav-item">
-                <a class="nav-link" href="/manage/account">
-                    <i class="fas fa-cog"></i>
-                    <span>Manage Account Pengawas</span></a>
             </li>
             <li class="nav-item">
-                <a class="nav-link" href="/manage/account/pencacah">
-                    <i class="fas fa-cog"></i>
-                    <span>Manage Account Pencacah</span></a>
+                <a class="nav-link" href="/profile">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Ganti Password</span></a>
             </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <span>Keluar</span></a>
+            </li>
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Keluar</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Yakin ingin keluar?</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                            <a class="btn btn-primary" href="/">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
             
         <!-- Content Wrapper -->
     </ul>

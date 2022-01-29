@@ -41,7 +41,49 @@
         <hr class="sidebar-divider my-0">
 
         <!-- Sidebar -->
+        <li class="nav-item active">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-fw fa-tachometer-alt"></i>
+                    <span>Pengawas</span></a>
+        </li>
         <li class="nav-item">
+                <a class="nav-link" href="/pengawas">
+                    <i class="fas fa-book"></i>
+                    <span>Daftar Pencacah</span></a>
+            </li>
+        <li class="nav-item">
+                <a class="nav-link" href="/profile">
+                    <i class="fas fa-user-cog"></i>
+                    <span>Ganti Password</span></a>
+            </li>
+        <li class="nav-item">
+                <a class="nav-link" href="#">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profil</span></a>
+        </li>
+            <li class="nav-item">
+                <a class="nav-link" href="/logout" data-toggle="modal" data-target="#logoutModal">
+                    <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
+                    <span>Keluar</span></a>
+            </li>
+            <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+                <div class="modal-dialog" role="document">
+                    <div class="modal-content">
+                        <div class="modal-header">
+                            <h5 class="modal-title" id="exampleModalLabel">Keluar</h5>
+                            <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                                <span aria-hidden="true">×</span>
+                            </button>
+                        </div>
+                        <div class="modal-body">Yakin ingin keluar?</div>
+                        <div class="modal-footer">
+                            <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
+                            <a class="btn btn-primary" href="/">Keluar</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        <!-- <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities" aria-expanded="true" aria-controls="collapseUtilities">
                     <i class="fas fa-fw fa-wrench"></i>
                     <span>Pengawas</span>
@@ -51,11 +93,9 @@
                         <h6 class="collapse-header"></h6>
                         <a class="collapse-item" href="/pengawas">List Pencacah</a>
                         <a class="collapse-item" href="/pengawas/penilaian">Penilaian</a>
-                        <!-- <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a> -->
                     </div>
                 </div>
-            </li>
+            </li> -->
         <!-- Content Wrapper -->
     </ul>
         <div id="content-wrapper" class="d-flex flex-column">
