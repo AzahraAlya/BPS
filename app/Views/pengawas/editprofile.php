@@ -24,18 +24,18 @@
                     </div>
                     <div class="card-body">
                    
-                    <form action="" method="POST">
+                    <form action="/pengawas/saveprofile/<?= $penilai['id_user']; ?>" method="POST">
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Nama</label>
-                            <input type="text" class="form-control" name="nama_petugas" value="" required>
+                            <input type="text" class="form-control" name="nama_petugas" value="<?= $penilai['nama_petugas']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">NIK</label>
-                            <input type="text" class="form-control" name="nik" value="" required>
+                            <input type="text" class="form-control" name="nik" value="<?= $penilai['nik']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -43,15 +43,23 @@
                         </div>
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
-                            <label for="validationCustom01">Jenis Kelamin</label>
-                            <input type="text" class="form-control" name="jk" value="" required>
-                            <div class="valid-feedback">
-                                Looks good!
+                                    <label for="validationCustom01">Jenis Kelamin</label>
+                                    <select name="jk" class="form-control" required>
+                                        <?php
+                                        if ($penilai['jk'] == "L") { ?>
+                                            <option value="L" selected>L</option>
+                                            <option value="P">P</option>
+                                        <?php } else { ?>
+                                            <option value="L">L</option>
+                                            <option value="P" selected>P</option>
+                                        <?php }
+                                        ?>
+                                    </select>
                             </div>
-                            </div>
+                          
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Tempat Lahir</label>
-                            <input type="text" class="form-control" name="tmp_lahir" value="" required>
+                            <input type="text" class="form-control" name="tmp_lahir" value="<?= $penilai['tmp_lahir']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -60,14 +68,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Tanggal Lahir</label>
-                            <input type="date" class="form-control" name="tgl_lahir" value="" required>
+                            <input type="date" class="form-control" name="tgl_lahir" value="<?= $penilai['tgl_lahir']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Pendidikan</label>
-                            <input type="text" class="form-control" name="pendidikan" value="" required>
+                            <input type="text" class="form-control" name="pendidikan" value="<?= $penilai['pendidikan']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -76,14 +84,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Status Perkawinan</label>
-                            <input type="text" class="form-control" name="status_perkawinan" value="" required>
+                            <input type="text" class="form-control" name="status_perkawinan" value="<?= $penilai['status_perkawinan']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Pekerjaan</label>
-                            <input type="text" class="form-control" name="pendidikan" value="" required>
+                            <input type="text" class="form-control" name="pekerjaan" value="<?= $penilai['pekerjaan']; ?>" required>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>

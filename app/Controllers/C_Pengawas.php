@@ -82,12 +82,15 @@ class C_Pengawas extends BaseController
 	}
 
 	public function editprofile(){
-		return view('pengawas/editprofile');
+		$model = model("M_user");
+		$data['penilai'] = $model->where('id_user', session()->get('id_user'))->first();
+		return view('pengawas/editprofile', $data);
 	}
 
-	public function saveprofile(){
+	public function saveprofile($id_user){
 		$M_user = model("M_user");
 		$M_user->save([
+			'id_user' => $id_user,
             'nama_petugas' => $this->request->getVar('nama_petugas'),
             'nik' => $this->request->getVar('nik'),
             'jk' => $this->request->getVar('jk'),
@@ -97,7 +100,8 @@ class C_Pengawas extends BaseController
             'status_perkawinan' => $this->request->getVar('status_perkawinan'),
             'pekerjaan' => $this->request->getVar('pekerjaan'),
 		]);
-		return redirect()->to(base_url('/simpanprofile'));
+		return redirect()->to(base_url('/editprofile'));
+
 	}
 
 	public function simpanprofile(){

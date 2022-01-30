@@ -77,7 +77,7 @@ $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'peni
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', );
-$routes->post('/pengawas/saveprofile', 'C_Pengawas::saveprofile', );
+$routes->post('/pengawas/saveprofile/(:segment)', 'C_Pengawas::saveprofile/$1', );
 $routes->get('/simpanprofile', 'C_Pengawas::simpanprofile', );
 
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);

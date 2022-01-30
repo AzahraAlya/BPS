@@ -14,7 +14,7 @@ class M_user extends Model
     protected $returnType           = 'array';
     protected $useSoftDeletes       = true;
     protected $protectFields        = true;
-    protected $allowedFields        = ['username', 'password', 'firstname','lastname', 'email', 'role', 'created_at', 'updated_at', 'deleted_at'];
+    protected $allowedFields        = ['username', 'password','nik','nama_petugas','jk','tmp_lahir','tgl_lahir','pendidikan','status_perkawinan','pekerjaan','firstname','lastname', 'email', 'role', 'created_at', 'updated_at', 'deleted_at'];
 
     // Dates
     protected $useTimestamps        = true;
