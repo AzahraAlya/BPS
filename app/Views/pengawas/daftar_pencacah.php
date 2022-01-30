@@ -34,6 +34,7 @@
                                         <th scope="col">No Peserta</th>
                                         <th scope="col">NIK</th>
                                         <th scope="col">Nama</th>                                        
+                                        <th scope="col">Kegiatan</th>                                        
                                         <th scope="col">Detail</th> 
                                         <th scope="col">Nilai</th>                                       
                                     </tr>
@@ -47,6 +48,9 @@
                                             <td><?= $pc['NOMOR_PESERTA']; ?></td>
                                             <td><?= $pc['NIK']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
+                                            <td align="center">
+                                                <a href="/pengawas/detail/<?= $pc['Kode_Mitra'];?>" class="btn btn-sm btn-info me-1"><i class="fas fa-eye"></i></a>
+                                            </td>
                                             <td align="center">
                                                 <a href="/pencacah/detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
                                             </td>

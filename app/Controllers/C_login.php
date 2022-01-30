@@ -27,7 +27,8 @@ class C_login extends BaseController
             if ($verify_pass) {
                 $ses_data = [
                     'id_user'      => $data['id_user'],
-                    'role'        => $data['role']
+                    'role'        => $data['role'],
+                    'logged_in' => TRUE
                 ];
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');

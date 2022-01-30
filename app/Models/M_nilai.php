@@ -26,6 +26,14 @@ class M_nilai extends Model
         return $query;
     }
 
+    public function getKegiatan($kode){
+		if($kode == false){
+			return $this->findAll();
+		}
+		return $this->where(['kode_mitra'=> $kode])->get()->getResultArray();
+    }
+	
+
 
 }
 

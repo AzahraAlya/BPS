@@ -45,13 +45,13 @@ class C_Pengawas extends BaseController
 			'que2'=> $this->request->getVar('que2'),
 			'que3'=> $this->request->getVar('que3'),
 			'que4'=> $this->request->getVar('que4'),
-			'que5' => implode(",",$this->request->getVar('que5')), 
+			'que5' => implode(",",$this->request->getVar('que5')),
 			'que6' => implode(",",$this->request->getVar('que6')),
 			'catatan' => $this->request->getVar('catatan'),
 		];
-		$M_nilai = model("M_nilai");
-		$M_nilai->insert($data);
-		// dd($data);
+		// $M_nilai = model("M_nilai");
+		// $M_nilai->insert($data);
+		dd($data);
 		return redirect()->to(base_url('/pengawas'));
 }
 
@@ -106,6 +106,21 @@ class C_Pengawas extends BaseController
 
 	public function simpanprofile(){
 		return view('pengawas/simpanprofile');
+	}
+
+	public function kegiatan(){
+		return view('pengawas/kegiatan');
+	}
+
+	public function detailkegiatan($kode)
+	{
+		$M_nilai = model("M_nilai");
+		// $kode = session()->get('Kode_Mitra');
+		$data = [
+			'validation' => \Config\Services::validation(),
+			'kegiatan' => $M_nilai->getKegiatan($kode),
+		];
+		return view('pengawas/kegiatan', $data);
 	}
 
 }
