@@ -51,6 +51,8 @@ $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', );
 $routes->get('pencacah/editprofile', 'C_pencacah::editprofile');
+$routes->get('/profilpegawai', 'C_pencacah::profilpegawai');
+$routes->post('/saveprofilepegawai/(:segment)', 'C_pencacah::saveprofilepegawai/$1', );
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.

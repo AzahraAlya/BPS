@@ -41,7 +41,7 @@ class C_Pencacah extends BaseController{
 
         
         } else {
-            return view('pencacah/home');
+            return view('pencacah/tmp');
                
                 // 'cart'=> $this->cartdb->where('user_id', session()->get('user_id'))->findAll(),
        
@@ -111,5 +111,29 @@ class C_Pencacah extends BaseController{
 		$model = model("M_pencacah");
 		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
 		return view('pencacah/editprofile', $data);
+	}
+
+
+	public function profilpegawai(){
+		$model = model("M_user");
+		$data['penilai'] = $model->where('id_user', session()->get('id_user'))->first();
+		return view('pencacah/profile_pegawai', $data);
+	}
+
+	public function saveprofilepegawai($id_user){
+		$M_user = model("M_user");
+		$M_user->save([
+			'id_user' => $id_user,
+            'nama_petugas' => $this->request->getVar('nama_petugas'),
+            'nik' => $this->request->getVar('nik'),
+            'jk' => $this->request->getVar('jk'),
+            'tmp_lahir' => $this->request->getVar('tmp_lahir'),
+            'tgl_lahir' => $this->request->getVar('tgl_lahir'),
+            'pendidikan' => $this->request->getVar('pendidikan'),
+            'status_perkawinan' => $this->request->getVar('status_perkawinan'),
+            'pekerjaan' => $this->request->getVar('pekerjaan'),
+		]);
+		return redirect()->to(base_url('/profilpegawai'));
+
 	}
 }
