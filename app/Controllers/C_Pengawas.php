@@ -121,5 +121,9 @@ class C_Pengawas extends BaseController
 		];
 		return view('pengawas/kegiatan', $data);
 	}
+	
+	public function pegawai(){
+		return view('pengawas/nonpegawai');
+	}
 
 }

@@ -1,4 +1,4 @@
-<?= $this->extend('pencacah/template'); ?>
+<?= $this->extend('pencacah/tmp'); ?>
 <?= $this->section('content'); ?>
 
 

@@ -16,7 +16,7 @@ class C_Pencacah extends BaseController{
     {
         $session = session();
 		$M_pencacah = model("M_pencacah");
-	
+		$M_user = model("M_user");
        
         $jumlahUser = $this->user->CountAllResults();
         if ($session->get('role') == 0) {
@@ -41,7 +41,10 @@ class C_Pencacah extends BaseController{
 
         
         } else {
-            return view('pencacah/tmp');
+            return view('pencacah/nonpegawai',[
+				'pegawai'=> $M_user->where('id_user', session()->get('id_user'))->first(),
+			]
+		);
                
                 // 'cart'=> $this->cartdb->where('user_id', session()->get('user_id'))->findAll(),
        
