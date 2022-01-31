@@ -49,9 +49,8 @@ class C_Pengawas extends BaseController
 			'que6' => implode(",",$this->request->getVar('que6')),
 			'catatan' => $this->request->getVar('catatan'),
 		];
-		// $M_nilai = model("M_nilai");
-		// $M_nilai->insert($data);
-		dd($data);
+		$M_nilai = model("M_nilai");
+		$M_nilai->insert($data);
 		return redirect()->to(base_url('/pengawas'));
 }
 
