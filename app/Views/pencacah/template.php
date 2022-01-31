@@ -53,6 +53,11 @@
                     <span>Pencacah</span></a>
             </li>
             <li class="nav-item">
+                <a class="nav-link" href="/pencacah/editprofile">
+                    <i class="fas fa-user-circle"></i>
+                    <span>Profil</span></a>
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/setting">
                     <i class="fas fa-user-cog"></i>
                     <span>Ganti Password</span></a>

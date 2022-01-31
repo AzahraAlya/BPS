@@ -61,7 +61,7 @@ class C_dashboard extends BaseController
 		]);
 
 		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
-		return redirect()->to(base_url('login/mitra'));
+		return redirect()->to(base_url('/pencacah/editprofile'));
 	}
 
 

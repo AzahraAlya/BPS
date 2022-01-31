@@ -50,7 +50,7 @@ $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filt
 $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
 $routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', );
-
+$routes->get('pencacah/editprofile', 'C_pencacah::editprofile');
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.

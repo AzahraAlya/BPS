@@ -23,6 +23,7 @@
                     </div>
                     <div class="card-body">
                 <form action="/pencacah/update/<?= $pencacah['No_Urut']; ?>" method="POST">
+
                                 <div class="form-row">
                                     <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Kode Mitra</label>
@@ -179,7 +180,7 @@
                                 <button type="submit" class="btn btn-primary">
                                         <i class="fas fa-paper-plane"></i> Simpan</button>
                                 
-                    </form>
+                </form>
                     </div>
                     </div>
                     <script>

@@ -106,4 +106,10 @@ class C_Pencacah extends BaseController{
 		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
 		echo view('pencacah/setting', $data);
     }
+
+	public function editprofile(){
+		$model = model("M_pencacah");
+		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
+		return view('pencacah/editprofile', $data);
+	}
 }
