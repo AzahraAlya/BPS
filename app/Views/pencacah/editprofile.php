@@ -20,7 +20,7 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                        Edit Profil 
+                    <p class="h5 text-center font-weight-bold">Edit Profil</p>
                     </div>
                     <div class="card-body">
                    
@@ -179,8 +179,9 @@
                             </div>
                         </div>
 
-                        <button type="submit" class="btn btn-primary">
-                                <i class="fas fa-paper-plane"></i> Simpan</button>
+                        <button type="submit" class="btn btn-primary btn-sm">
+                                 Simpan</button>
+                                <a href="/pencacah" class="btn btn-sm btn-danger">Kembali</a>
 
                     </form>
 

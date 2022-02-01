@@ -19,7 +19,7 @@
 
             <div class="card mt-3">
                 <div class="card-header">
-                    Data Pencacah
+                <p class="h4 text-center font-weight-bold">Data Mitra</p>
                 </div>
                 <div class="card-body">
                     <form action="" method="POST">
@@ -78,7 +78,7 @@
                                         <i class="fas fa-paper-plane"></i> Simpan</button> -->
 
                     </form>
-                    <a href="/pencacah/editprofile" class="btn btn-sm btn-danger">Profile</a>
+                    <a href="/pencacah/editprofile" class="btn btn-sm btn-info">Profile</a>
                 </div>
             </div>
             <script>
