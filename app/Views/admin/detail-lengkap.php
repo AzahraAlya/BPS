@@ -17,7 +17,7 @@
 
             <!-- Page Heading -->
             <div class="d-sm-flex align-items-center justify-content-between mb-4">
-                <h1 class="h3 mb-0 text-gray-800">Detail Pencacah</h1>
+                <!-- <h1 class="h3 mb-0 text-gray-800">Detail Pencacah</h1> -->
 
             </div>
             <!-- /.content-header -->
@@ -25,7 +25,8 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                        Form Detail Pencacah
+                    <p class="h5 text-center font-weight-bold">Detail Data Lengkap Mitra</p>
+                    <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
                    

@@ -17,7 +17,7 @@
         <div class="col-md-12 grid-margin stretch-card">
             <div class="card">
                 <div class="card-body">
-                    <h4 class="card-title">Pengelolaan Admin</h4>
+                    <h4 class="card-title">Pengelolaan Pengawas</h4>
                     <form class="forms-sample" action="/admin/manage/accounts/save" method="post">
                         <div class="form-group row">
                             <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Nama Petugas</label>
@@ -50,7 +50,8 @@
                             </div>
                         </div>
                         
-                        <button type="submit" class="btn btn-primary mr-2">Submit</button>
+                        <button type="submit" class="btn btn-sm btn-primary mr-2">Submit</button>
+                        <a href = "/manage/account" class="btn btn-sm btn-danger">Kembali</a>
                     </form>
                 </div>
             </div>

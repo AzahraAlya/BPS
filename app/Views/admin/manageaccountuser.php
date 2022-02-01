@@ -14,16 +14,17 @@
         <!-- Begin Page Content -->
         <div class="content-wrapper">
         <div class="container">
-        <a href="/manage/accounts/data">
+        <!-- <a href="/manage/accounts/data">
             <button type="button" class="btn btn-primary">
                 <i class="mdi mdi-account-plus"></i>
                 Add admin
             </button>
-        </a>
+        </a> -->
         <br> <br>
         <div class="card mt-3">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Pengelolaan Akun Pencacah</h6>
+                    <p class="h5 text-center font-weight-bold">Kelola Akun Mitra</p>
+                    <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -44,11 +45,12 @@
                                         <td><?= $a['Kode_Mitra']; ?></td>
                                         <td><?= $a['password']; ?></td>
                                         <td align="center">
+                                        <a href="/admin/manage/accounts/edit/<?= $a['No_Urut']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
                                                 <form action="/admin/manage/accounts/delete/<?= $a['No_Urut']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>
-                                                <a href="/admin/manage/accounts/edit/<?= $a['No_Urut']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-calculator" class="d-inline"></i></a>
+                                                
                                         </td>
                                     </tr>
                                 <?php endforeach; ?>

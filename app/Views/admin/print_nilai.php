@@ -1,5 +1,9 @@
 <?= $this->extend('admin/template'); ?>
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/searchBuilder.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.css">
 <?= $this->section('content'); ?>
+   
 <div id="content-wrapper" class="d-flex flex-column">
 
     <!-- Main Content -->
@@ -13,13 +17,13 @@
         <div class="container-fluid">
             <!-- /.content-header -->
                 <!-- Page Heading -->
-                <h1 class="h3 mb-2 text-gray-800">Daftar Pencacah</h1>
+                <!-- <h1 class="h3 mb-2 text-gray-800">Daftar Pencacah</h1> -->
                 
                 <!-- <a href="/buku/tambah" class="btn btn-primary"><i class="fas fa-plus"></i> Tambah Data</a> -->
                 <!-- DataTales Example -->
                 <div class="card mt-3">
                     <div class="card-header py-3">
-                        <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6>
+                    <p class="h5 text-center font-weight-bold">Data Penilaian Mitra</p>
                         <a href="/admin/excel" class="btn btn-outline-danger shadow float-right">Excel<i class="fa fa-file-excel"></i></a>
                     </div>
                     <div class="card-body">
@@ -74,6 +78,10 @@
                 </div>
             </div>
 
+            <script src="/assets/startbootstrap/vendor/datatables/jquery-3.5.1.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/dataTables.searchBuilder.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.js"></script>
            <script>
                $(document).ready(function() {
                     $('#example').DataTable( {

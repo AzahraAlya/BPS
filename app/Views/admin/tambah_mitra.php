@@ -14,7 +14,8 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                        Tambah Data Mitra Baru
+                    <p class="h5 text-center font-weight-bold">Form Tambah Mitra Baru</p>
+                    <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
                     <form action="/admin/store" method="POST">  
