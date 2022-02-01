@@ -52,11 +52,11 @@
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pegawai</span></a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="/profilpegawai">
                     <i class="fas fa-user-circle"></i>
                     <span>Profil</span></a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="/profile">
                     <i class="fas fa-user-cog"></i>

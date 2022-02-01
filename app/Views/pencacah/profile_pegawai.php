@@ -20,7 +20,7 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                        Form Edit Pencacah
+                    <p class="h5 text-center font-weight-bold">Ubah Profil</p>
                     </div>
                     <div class="card-body">
                    
@@ -32,8 +32,8 @@
                             
                             </div>
                             <div class="col-md-6 mb-3">
-                            <label for="validationCustom02">NIK</label>
-                            <input type="text" class="form-control" name="nik" value="<?= $penilai['nik']; ?>" required>
+                            <label for="validationCustom02">Kode Pegawai</label>
+                            <input type="text" class="form-control" name="nik" value="<?= $penilai['nik']; ?>" readonly>
                             
                             </div>
                         </div>

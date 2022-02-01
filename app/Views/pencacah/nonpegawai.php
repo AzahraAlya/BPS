@@ -14,7 +14,7 @@
         <div class="container">
             <div class="card mt-3">
                 <div class="card-header">
-                    Data Karyawan
+                <p class="h4 text-center font-weight-bold">Data Karyawan</p>
                 </div>
                 <div class="card-body">
 
@@ -40,7 +40,7 @@
                             </div>
                         </div>
                     </form>
-                    <a href="/profilpegawai" class = "btn btn-sm btn-danger">Profile</a>
+                    <a href="/profilpegawai" class = "btn btn-sm btn-info">Profile</a>
                 </div>
             </div>
         </div>
