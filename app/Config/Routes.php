@@ -46,6 +46,7 @@ $routes->match(['get', 'post'], 'setting', 'C_pencacah::profile');
 
 // $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
 $routes->get('/dashboard', 'C_pencacah::index', ['filter' => 'auth']);
+$routes->get('/pencacah', 'C_pencacah::pencacah');
 $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filter' => 'user']);
 $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
