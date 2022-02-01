@@ -49,7 +49,7 @@
         <li class="nav-item">
                 <a class="nav-link" href="/pengawas">
                     <i class="fas fa-book"></i>
-                    <span>Daftar Pencacah</span></a>
+                    <span>Daftar Mitra</span></a>
             </li>
         <li class="nav-item">
                 <a class="nav-link" href="/profile">

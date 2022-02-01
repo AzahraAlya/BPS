@@ -20,7 +20,7 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                        Form Edit Pencacah
+                    <p class="h5 text-center font-weight-bold">Ubah Profil</p>
                     </div>
                     <div class="card-body">
                    
@@ -97,8 +97,9 @@
                             </div>
                             </div>
                         </div>
-                        <button type="submit" class="btn btn-primary">
+                        <button type="submit" class="btn btn-sm btn-primary">
                                 <i class="fas fa-paper-plane"></i> Simpan</button>
+                                <a href="/dashboard" class="btn btn-sm btn-danger">Kembali</a>
                         
                     </form>
 

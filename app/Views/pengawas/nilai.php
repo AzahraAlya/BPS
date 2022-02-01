@@ -12,7 +12,7 @@
         <div class="container">
                 <div class="card mt-3">
                         <div class="card-header">
-                            Form Edit Data Anggota
+                        <p class="h6 text-center font-weight-bold">Form Penilaian Mitra</p>
                         </div>
                     <div class="card-body">
                     <form action="/pengawas/store-nilai" method="POST">  
@@ -168,12 +168,14 @@
                                 <label for="formGroupExampleInput2" class="form-label">Catatan</label>
                                 <input type="text" class="form-control col-md-6 mb-3"  name = "catatan">
                             </div>
-                        </div>    
+                           
            
-                            <button type="btn" class="btn btn-primary" name="btn-simpan">
+                            <button type="submit" class="btn btn-sm btn-primary" name="btn-simpan">
                                 <i class="fas fa-paper-plane"></i>Simpan</button>
+                                <a href="/dashboard" class="btn btn-sm btn-danger">Kembali</a>
                             
                         </form>
+                        </div> 
                     </div>
                 </div>
         </div>
