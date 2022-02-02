@@ -1,7 +1,5 @@
 <?= $this->extend('admin/template'); ?>
-    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.css">
-    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/searchBuilder.dataTables.min.css">
-    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.css">
+    
 <?= $this->section('content'); ?>
    
 <div id="content-wrapper" class="d-flex flex-column">
@@ -78,18 +76,4 @@
                 </div>
             </div>
 
-            <script src="/assets/startbootstrap/vendor/datatables/jquery-3.5.1.js"></script>
-            <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
-            <script src="/assets/startbootstrap/vendor/datatables/dataTables.searchBuilder.min.js"></script>
-            <script src="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.js"></script>
-           <script>
-               $(document).ready(function() {
-                    $('#example').DataTable( {
-                        dom: 'Qlfrtip',
-                        searchBuilder: {
-                            columns: [9,10,11,12]
-                        }
-                    });
-                });
-           </script>
         <?= $this->endSection(); ?>

@@ -21,6 +21,10 @@
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/searchBuilder.dataTables.min.css">
+    <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.css">
 </head>
 
 <body id="page-top">
@@ -142,6 +146,22 @@
 
             <!-- Page level custom scripts -->
            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+           <script src="/assets/startbootstrap/vendor/datatables/jquery-3.5.1.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/dataTables.searchBuilder.min.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.js"></script>
+            
+
+           <script>
+               $(document).ready(function() {
+                    $('#example').DataTable( {
+                        dom: 'Qlfrtip',
+                        searchBuilder: {
+                            columns: [9,10,11,12]
+                        }
+                    });
+                });
+           </script>
         </div>
     </div>
 
