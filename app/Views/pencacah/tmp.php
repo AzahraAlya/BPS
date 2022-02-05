@@ -79,7 +79,7 @@
                         <div class="modal-body">Yakin ingin keluar?</div>
                         <div class="modal-footer">
                             <button class="btn btn-secondary" type="button" data-dismiss="modal">Batal</button>
-                            <a class="btn btn-primary" href="/">Keluar</a>
+                            <a class="btn btn-primary" href="/logout">Keluar</a>
                         </div>
                     </div>
                 </div>

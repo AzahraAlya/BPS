@@ -25,10 +25,10 @@ class Penilai implements FilterInterface
      */
     public function before(RequestInterface $request, $arguments = null)
     {
-        if(! session()->get('logged_in')){
+        if(! session()->get('login')){
             return redirect()->to('/login');
         }
-        if(!(session()->get('role') == 0)){
+        if(!(session()->get('role') == 2)){
             return redirect()->to('/dashboard');
         }
     }

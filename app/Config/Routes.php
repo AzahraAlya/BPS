@@ -18,7 +18,7 @@ if (file_exists(SYSTEMPATH . 'Config/Routes.php'))
  * --------------------------------------------------------------------
  */
 $routes->setDefaultNamespace('App\Controllers');
-$routes->setDefaultController('Home');
+$routes->setDefaultController('C_pencacah');
 $routes->setDefaultMethod('index');
 $routes->setTranslateURIDashes(false);
 $routes->set404Override();
@@ -36,24 +36,24 @@ $routes->get('/logout', 'C_login::logout');
 $routes->get('/logout/pencacah', 'C_login::logoutpencacah');
 $routes->get('/register', 'C_register::index');
 $routes->post('/login/mitra', 'C_login::mitra_auth');
-$routes->get('/login/mitra', 'C_login::coba');
+$routes->get('/login/mitra', 'C_login::coba', ['filter' => 'mitra']);
 $routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/saveRegister', 'C_register::save');
 $routes->post('/savelogin', 'C_login::auth');
-$routes->match(['get', 'post'], 'profile', 'C_login::profile');
-$routes->match(['get', 'post'], 'setting', 'C_pencacah::profile');
+$routes->match(['get', 'post'], 'profile', 'C_login::profile', ['filter' => 'auth']);
+$routes->match(['get', 'post'], 'setting', 'C_pencacah::profile', ['filter' => 'mitra'] );
 
 
 // $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
 $routes->get('/dashboard', 'C_pencacah::index', ['filter' => 'auth']);
-$routes->get('/pencacah', 'C_pencacah::pencacah');
+$routes->get('/pencacah', 'C_pencacah::pencacah', ['filter' => 'mitra']);
 $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filter' => 'user']);
-$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1', );
-$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1', );
-$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1', );
-$routes->get('pencacah/editprofile', 'C_pencacah::editprofile');
-$routes->get('/profilpegawai', 'C_pencacah::profilpegawai');
-$routes->post('/saveprofilepegawai/(:segment)', 'C_pencacah::saveprofilepegawai/$1', );
+$routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1',['filter' => 'penilai'] );
+$routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1' );
+$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1' );
+$routes->get('/pencacah/editprofile', 'C_pencacah::editprofile',['filter' => 'mitra']);
+$routes->get('/profilpegawai', 'C_pencacah::profilpegawai', ['filter' => 'user']);
+$routes->post('/saveprofilepegawai/(:segment)', 'C_pencacah::saveprofilepegawai/$1' );
 
 // We get a performance increase by specifying the default
 // route since we don't have to scan directories.
@@ -63,27 +63,27 @@ $routes->get('/admin/excel', 'C_Admin::excel', ['filter' => 'admin']);
 $routes->get('/admin/kegiatan', 'C_Admin::kegiatan', ['filter' => 'admin']);
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::tambahkegiatan', ['filter' => 'admin']);
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => 'admin']);
-$routes->get('/admin/edit/kegiatan/(:segment)', 'C_Admin::edit/$1');
+$routes->get('/admin/edit/kegiatan/(:segment)', 'C_Admin::edit/$1', ['filter' => 'admin']);
 $routes->post('/kegiatan/update/(:segment)', 'C_Admin::update/$1');
 $routes->delete('/admin/delete/kegiatan/(:any)', 'C_Admin::delete/$1');
 $routes->delete('/admin/data-hapus/(:any)', 'C_mitra::delete/$1');
 $routes->get('/admin/tambah-mitra', 'C_mitra::tambah', ['filter' => 'admin']);
 $routes->get('/admin/mitra-lengkap', 'C_mitra::lengkap', ['filter' => 'admin']);
-$routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1');
+$routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1', ['filter' => 'admin']);
 $routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
 
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
-$routes->get('/editprofile', 'C_Pengawas::editprofile');
-$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1');
+$routes->get('/editprofile', 'C_Pengawas::editprofile', ['filter' => 'penilai']);
+$routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1',['filter' => 'penilai']);
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
-$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
+$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', ['filter' => 'penilai'] );
 $routes->post('/pengawas/saveprofile/(:segment)', 'C_Pengawas::saveprofile/$1', );
-$routes->get('/simpanprofile', 'C_Pengawas::simpanprofile', );
-$routes->get('/pengawas/kegiatan', 'C_Pengawas::kegiatan', );
-$routes->get('/pengawas/detail/(:segment)', 'C_pengawas::detailkegiatan/$1', );
+// $routes->get('/simpanprofile', 'C_Pengawas::simpanprofile', );
+// $routes->get('/pengawas/kegiatan', 'C_Pengawas::kegiatan', );
+$routes->get('/pengawas/detail/(:segment)', 'C_pengawas::detailkegiatan/$1',['filter' => 'penilai'] );
 
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
 $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
@@ -91,8 +91,8 @@ $routes->post('/admin/manage/accounts/save', 'C_manage::save');
 $routes->get('/manage/account/pencacah', 'C_Admin::manageaccountuser', ['filter' => 'admin']);
 $routes->delete('/admin/manage/accounts/delete/(:any)', 'C_manage::deletePencacah/$1');
 $routes->delete('/admin/manage/delete/(:any)', 'C_manage::delete/$1');
-$routes->get('/admin/manage/accounts/edit/(:segment)', 'C_manage::editPassword/$1');
-$routes->get('/admin/manage/edit/(:segment)', 'C_manage::editPasswordPenilai/$1');
+$routes->get('/admin/manage/accounts/edit/(:segment)', 'C_manage::editPassword/$1', ['filter' => 'admin']);
+$routes->get('/admin/manage/edit/(:segment)', 'C_manage::editPasswordPenilai/$1', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/update/(:segment)', 'C_manage::updatePassword/$1');
 $routes->post('/admin/manage/update/(:segment)', 'C_manage::updatePasswordPenilai/$1');
 

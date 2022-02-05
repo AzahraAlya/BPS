@@ -48,7 +48,7 @@
                                         <span class="text-muted">Masuk Aplikasi</span>
                                     </div>
                                     <?php if (session()->get('pesan')) : ?>
-                                        <div class="alert alert-success" role="alert">
+                                        <div class="alert alert-danger" role="alert">
                                             <?= session()->get('pesan') ?>
                                         </div>
                                     <?php endif; ?>

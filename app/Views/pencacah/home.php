@@ -10,11 +10,12 @@
         <?= $this->include('pencacah/navbar_pencacah'); ?>
         <!-- End of Topbar -->
 
-        <?php if (session()->get('success')) : ?>
+        <?php if (session()->get('pesan')) : ?>
             <div class="alert alert-success" role="alert">
-                <?= session()->get('success') ?>
+                <?= session()->get('pesan') ?>
             </div>
         <?php endif; ?>
+        
         <div class="container">
 
             <div class="card mt-3">

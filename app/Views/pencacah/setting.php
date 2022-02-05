@@ -37,9 +37,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Ubah Password</h1>
                             </div>
-                            <?php if(isset($validation)):?>
-                                <div class ='alert alert-danger'><?= $validation->listErrors();?></div>
-                            <?php endif; ?>
+                           
 
                             <form class="user" action = "/setting" method="post">
                                 <div class="form-group">
@@ -54,13 +52,7 @@
                                         <input type="password" class="form-control form-control-user" placeholder="Confirm Password" name="password_confirm" id="password_confirm" value="" >
                                     </div>
                                 </div>
-                                <?php if (isset($validation)) : ?>
-                                <div class="col-12">
-                                    <div class="alert alert-danger" role="alert">
-                                    <?= $validation->listErrors() ?>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
+                                
                          
                                 <!-- <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i> Daftar </button> -->

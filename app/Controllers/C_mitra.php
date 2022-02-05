@@ -77,14 +77,6 @@ class C_Mitra extends BaseController
 		return redirect()->to(base_url('/dashboard'));
 	}
 
-	// public function home(){
-
-	// 	return view('pencacah/home');
-	// }
-
-	// public function homeData(){
-	// 	return view('pencacah/data');
-	// }
 
 	public function lengkap(){
 		$M_pencacah = model("M_pencacah");

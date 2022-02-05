@@ -23,6 +23,7 @@ class Filters extends BaseConfig
         'admin'     => \App\Filters\Admin::class,
         'user'     => \App\Filters\User::class,
         'penilai'     => \App\Filters\Penilai::class,
+        'mitra'     => \App\Filters\Mitra::class,
 	];
 
 	/**
@@ -33,13 +34,16 @@ class Filters extends BaseConfig
 	 */
 	public $globals = [
 		'before' => [
+			// 'mitra' =>['except' => ['/','/register', '/saveLogin', 'saveRegister']],
 			// 'honeypot',
 			// 'csrf',
 		],
 		'after'  => [
-			'toolbar',
-			// 'honeypot',
-		],
+			// 'mitra' =>['except' => ['/pencacah*'],
+		// 	'toolbar',
+		// 	// 'honeypot',
+		// ]
+		]
 	];
 
 	/**

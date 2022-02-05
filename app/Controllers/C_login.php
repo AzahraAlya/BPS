@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\M_pencacah;
 use App\Models\M_user;
 
 class C_login extends BaseController
@@ -21,6 +22,7 @@ class C_login extends BaseController
         $username = $this->request->getVar('nik');
         $password = $this->request->getVar('password');
         $data = $model->where('nik', $username)->first();
+
         if($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
@@ -28,16 +30,16 @@ class C_login extends BaseController
                 $ses_data = [
                     'id_user'      => $data['id_user'],
                     'role'        => $data['role'],
-                    'logged_in' => TRUE
+                    'login' => TRUE
                 ];
                 $session->set($ses_data);
                 return redirect()->to('/dashboard');
             } else {
-                $session->setFlashdata('wrongPassword', 'wrongPassword');
+                $session->setFlashdata('pesan', 'password anda salah');
                 return redirect()->to('/login');
             }
         } else {
-            $session->setFlashdata('usernameNotFound', 'usernameNotFound');
+            $session->setFlashdata('pesan', 'username tidak ditemukan');
             return redirect()->to('/login');
         }
     }
@@ -53,7 +55,7 @@ class C_login extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login_mitra');
+        return redirect()->to('/');
     }
 
     public function profile(){
@@ -97,31 +99,34 @@ class C_login extends BaseController
     }
 
     public function mitra_auth(){
-        $session = session();
-        $M_pencacah = model("M_pencacah");
 
+        $session = session();
+        $model = new M_pencacah();
         $username = $this->request->getVar('Kode_Mitra');
         $password = $this->request->getVar('password');
-        $data = $M_pencacah->where('Kode_Mitra', $username)->first();
+        $data = $model->where('Kode_Mitra', $username)->first();
+
         if($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
-                    'No_Urut' => $data['No_Urut']
+                    'No_Urut'      => $data['No_Urut'],
+                    'login' => TRUE
                 ];
                 $session->set($ses_data);
-                return view('pencacah/home',[
-                    'pencacah' => $M_pencacah->getUser($ses_data),
-                ]);
+                session()->setFlashdata('pesan', 'berhasil login');
+                return redirect()->to('/pencacah');
+			    
             } else {
-                $session->setFlashdata('wrongPassword', 'wrongPassword');
+                $session->setFlashdata('pesan', 'password anda salah');
                 return redirect()->to('/login_mitra');
             }
         } else {
-            $session->setFlashdata('usernameNotFound', 'usernameNotFound');
+            $session->setFlashdata('pesan', 'username tidak ditemukan');
             return redirect()->to('/login_mitra');
         }
+        
     }
 
     public function coba(){

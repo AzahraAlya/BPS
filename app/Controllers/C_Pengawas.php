@@ -107,9 +107,9 @@ class C_Pengawas extends BaseController
 		return view('pengawas/simpanprofile');
 	}
 
-	public function kegiatan(){
-		return view('pengawas/kegiatan');
-	}
+	// public function kegiatan(){
+	// 	return view('pengawas/kegiatan');
+	// }
 
 	public function detailkegiatan($kode)
 	{
