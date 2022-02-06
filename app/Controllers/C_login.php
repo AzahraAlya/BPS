@@ -11,8 +11,8 @@ class C_login extends BaseController
 	public function index()
 	{
         helper(['form']);
-        echo view('auth/login');
-		// return view('auth/login');
+        // echo view('auth/login');
+		return view('auth/login');
 	}
 
     public function auth()
@@ -23,6 +23,10 @@ class C_login extends BaseController
         $password = $this->request->getVar('password');
         $data = $model->where('nik', $username)->first();
 
+        if($username==NULL){
+            $session->setFlashdata('pesan', 'username anda salah');
+            return redirect()->to('/login');
+        }
         if($data) {
             $pass = $data['password'];
             $verify_pass = password_verify($password, $pass);
@@ -30,15 +34,17 @@ class C_login extends BaseController
                 $ses_data = [
                     'id_user'      => $data['id_user'],
                     'role'        => $data['role'],
-                    'login' => TRUE
+                    'login'         => TRUE
                 ];
                 $session->set($ses_data);
+                session()->setFlashdata('pesan', 'berhasil login');
                 return redirect()->to('/dashboard');
             } else {
                 $session->setFlashdata('pesan', 'password anda salah');
                 return redirect()->to('/login');
             }
-        } else {
+        } 
+        else {
             $session->setFlashdata('pesan', 'username tidak ditemukan');
             return redirect()->to('/login');
         }

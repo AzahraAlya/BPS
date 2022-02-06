@@ -32,6 +32,7 @@ $routes->setAutoRoute(true);
 $routes->get('/', 'C_navigation::index', ['filter' => 'auth']);
 $routes->get('/guest', 'C_navigation::gHome');
 $routes->get('/login', 'C_login::index');
+$routes->post('/login', 'C_login::auth');
 $routes->get('/logout', 'C_login::logout');
 $routes->get('/logout/pencacah', 'C_login::logoutpencacah');
 $routes->get('/register', 'C_register::index');
