@@ -45,8 +45,8 @@ class C_Pengawas extends BaseController
 			'que2'=> $this->request->getVar('que2'),
 			'que3'=> $this->request->getVar('que3'),
 			'que4'=> $this->request->getVar('que4'),
-			'que5' => implode(",",$this->request->getVar('que5')),
-			'que6' => implode(",",$this->request->getVar('que6')),
+			'que5' => implode(",",(array)$this->request->getVar('que5')),
+			'que6' => implode(",",(array)$this->request->getVar('que6')),
 			'catatan' => $this->request->getVar('catatan'),
 		];
 		$M_nilai = model("M_nilai");
