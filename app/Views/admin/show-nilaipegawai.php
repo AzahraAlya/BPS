@@ -22,6 +22,7 @@
                 <div class="card mt-3">
                     <div class="card-header py-3">
                     <p class="h5 text-center font-weight-bold">Data Penilaian Pegawai</p>
+                    <a href = "/admin/pegawai" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                         <!-- <a href="#" class="btn btn-outline-danger shadow float-right">Excel<i class="fa fa-file-excel"></i></a> -->
                     </div>
                     <div class="card-body">

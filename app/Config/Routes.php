@@ -76,9 +76,10 @@ $routes->delete('/admin/hapuspegawai/(:any)', 'C_Admin::deletePegawai/$1',['filt
 $routes->get('/admin/nilaipegawai/(:segment)', 'C_Admin::nilaipegawai/$1',['filter' => 'admin']);
 $routes->post('/admin/store-nilaipegawai', 'C_Admin::storeNilaiPegawai',['filter' => 'admin']);
 $routes->get('/admin/penilaianpegawai', 'C_Admin::penilaianPegawai',['filter' => 'admin']);
+$routes->get('/admin/pegawai', 'C_Admin::dataPegawai',['filter' => 'admin']);
+$routes->get('/admin/detailpegawai/(:segment)', 'C_Admin::detailpegawai/$1',['filter' => 'admin']);
 //
-$routes->get('/admin/pegawai', 'C_Admin::dataPegawai');
-$routes->get('/admin/detailpegawai/(:segment)', 'C_Admin::detailpegawai/$1');
+
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
 $routes->get('/editprofile', 'C_Pengawas::editprofile', ['filter' => 'penilai']);

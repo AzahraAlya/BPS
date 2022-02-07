@@ -17,11 +17,16 @@ class C_Pencacah extends BaseController{
         $session = session();
 		$M_pencacah = model("M_pencacah");
 		$M_user = model("M_user");
+		$M_nilai = model("M_nilai");
+		$M_pegawai = model("M_pegawai");
        
         $jumlahUser = $this->user->CountAllResults();
         if ($session->get('role') == 0) {
-            return view('admin/template',[
+            return view('admin/dashboard',[
 				'pencacah' => $M_pencacah->findAll(),
+				'nilai' => $M_nilai->findAll(),
+				'pegawai' => $M_user->findAll(),
+				'nilaipgw' => $M_pegawai->findAll(),
 				'validation' => \Config\Services::validation(),
                 'jumlahUser'=> $jumlahUser,
                 'jumlahAdmin' => $this->user->like('role','0')->countAllResults(),

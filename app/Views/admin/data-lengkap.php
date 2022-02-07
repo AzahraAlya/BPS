@@ -24,7 +24,8 @@
                         <!-- <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6> -->
                         <p class="h5 text-center font-weight-bold">Data Lengkap Mitra</p>
                         <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
-                        <a href="/admin/tambah-mitra" class="btn btn-sm btn-info"><i class="fas fa-plus"></i> Tambah Mitra Baru</a>
+                        <a href="/admin/tambah-mitra" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Tambah Mitra Baru</a>
+                        <a href="/admin/print" class="btn btn-sm btn-primary float-right">Lihat Penilaian</a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

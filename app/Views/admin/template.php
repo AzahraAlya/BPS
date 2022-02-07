@@ -35,8 +35,8 @@
         
         <!-- Sidebar - Brand -->
         <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-            <div class="sidebar-brand-icon rotate-n-15">
-                <i class="fas fa-laugh-wink"></i>
+            <div class="sidebar-brand-icon">
+                <i class="fas fa-award"></i>
             </div>
             <div class="sidebar-brand-text mx-3">Evaluasi Kinerja<sup>bps</sup></div>
         </a>
@@ -46,14 +46,19 @@
 
         <!-- Sidebar -->
         <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Penilai</span></a>
+                    <span>Admin</span></a>
         </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
                 <a class="nav-link" href="/admin/print">
                     <i class="fas fa-file"></i>
                     <span>Data Penilaian Mitra</span></a>
+        </li> -->
+        <li class="nav-item">
+                <a class="nav-link" href="/admin/mitra-lengkap">
+                    <i class="fas fa-book"></i>
+                    <span>Data Mitra</span></a>
         </li>
         <li class="nav-item">
                 <a class="nav-link" href="/admin/pegawai">
@@ -65,11 +70,7 @@
                     <i class="fas fa-archive"></i>
                     <span>Data Kegiatan BPS</span></a>
         </li>
-        <li class="nav-item">
-                <a class="nav-link" href="/admin/mitra-lengkap">
-                    <i class="fas fa-book"></i>
-                    <span>Data Mitra BPS</span></a>
-        </li>
+        
 
 
 
