@@ -72,7 +72,13 @@ $routes->get('/admin/tambah-mitra', 'C_mitra::tambah', ['filter' => 'admin']);
 $routes->get('/admin/mitra-lengkap', 'C_mitra::lengkap', ['filter' => 'admin']);
 $routes->get('/admin/data-detail/(:segment)', 'C_mitra::detailLengkap/$1', ['filter' => 'admin']);
 $routes->post('/admin/store', 'C_Mitra::store',['filter' => 'admin']);
-
+$routes->delete('/admin/hapuspegawai/(:any)', 'C_Admin::deletePegawai/$1',['filter' => 'admin']);
+$routes->get('/admin/nilaipegawai/(:segment)', 'C_Admin::nilaipegawai/$1',['filter' => 'admin']);
+$routes->post('/admin/store-nilaipegawai', 'C_Admin::storeNilaiPegawai',['filter' => 'admin']);
+$routes->get('/admin/penilaianpegawai', 'C_Admin::penilaianPegawai',['filter' => 'admin']);
+//
+$routes->get('/admin/pegawai', 'C_Admin::dataPegawai');
+$routes->get('/admin/detailpegawai/(:segment)', 'C_Admin::detailpegawai/$1');
 
 $routes->get('/pengawas', 'C_Pengawas::pengawas', ['filter' => 'penilai']);
 $routes->get('/editprofile', 'C_Pengawas::editprofile', ['filter' => 'penilai']);

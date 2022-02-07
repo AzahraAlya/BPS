@@ -56,6 +56,11 @@
                     <span>Data Penilaian Mitra</span></a>
         </li>
         <li class="nav-item">
+                <a class="nav-link" href="/admin/pegawai">
+                    <i class="fas fa-file"></i>
+                    <span>Data Pegawai</span></a>
+        </li>
+        <li class="nav-item">
                 <a class="nav-link" href="/admin/kegiatan">
                     <i class="fas fa-archive"></i>
                     <span>Data Kegiatan BPS</span></a>

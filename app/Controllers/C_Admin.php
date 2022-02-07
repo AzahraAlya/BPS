@@ -109,4 +109,75 @@ class C_Admin extends BaseController
 
 		return view('admin/manageaccountuser',$data);
 	}
+
+	//tampilan data pegawai
+	public function dataPegawai(){
+		$M_user = model("M_user");
+		$data = [
+			'pegawai' => $M_user->where('role !=', 0)->findAll(), 
+		];
+		return view('admin/data-pegawai',$data);
+	}
+
+	//detail data pegawai
+	public function detailpegawai($id_user){
+		$M_user = model("M_user");
+		$data = [
+			'pegawai' => $M_user->getPenilai($id_user), 
+		];
+		return view('admin/detail-pegawai',$data);
+	}
+
+	//hapus data pegawai
+	public function deletePegawai($id_user)
+	{
+		$M_user = model("M_user");
+		$M_user->delete($id_user);
+		return redirect()->to(base_url('/admin/pegawai'));
+	}
+
+	//tampilan pertanyaan penilaian pegawai
+	public function nilaipegawai($id_user){
+		$M_user = model("M_user");
+		$M_kegiatan = model("M_kegiatan");
+		$data = [
+			'pegawai' => $M_user->getPenilai($id_user), 
+			'kegiatan' => $M_kegiatan->findAll(),
+			
+		];
+		return view('admin/nilaipegawai',$data);
+	}
+
+	//simpan hasil penilaian
+	public function storeNilaiPegawai(){
+		$data = [
+			'nip' => $this->request->getVar('nip'),
+			'nama_pegawai' => $this->request->getVar('nama_pegawai'),
+			'nama_penilai' => $this->request->getVar('nama_penilai'),
+			'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
+			'beban' => $this->request->getVar('beban'),
+			'status' => $this->request->getVar('status'),
+			'que1' => $this->request->getVar('que1'),
+			'que2'=> $this->request->getVar('que2'),
+			'que3'=> $this->request->getVar('que3'),
+			'que4'=> $this->request->getVar('que4'),
+			'que5' => implode(",",(array)$this->request->getVar('que5')),
+			'que6' => implode(",",(array)$this->request->getVar('que6')),
+			'catatan' => $this->request->getVar('catatan'),
+		];
+		$M_pegawai = model("M_pegawai");
+		$M_pegawai->insert($data);
+		return redirect()->to(base_url('/admin/pegawai'));
+	}
+
+	//tampilan daftar pegawai yang sudah dinilai
+	public function penilaianPegawai(){
+		$M_pegawai = model("M_pegawai");
+        
+        $data = [
+            'pegawai' => $M_pegawai->findAll(),
+
+		];
+		return view('admin/show-nilaipegawai',$data);
+	}
 }
