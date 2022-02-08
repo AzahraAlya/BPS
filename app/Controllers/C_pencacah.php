@@ -59,7 +59,7 @@ class C_Pencacah extends BaseController{
 	public function pencacah(){
 		$model = model("M_pencacah");
 		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
-		return view('pencacah/home', $data);
+		return view('pencacah/editprofile', $data);
 	}
 
     public function homeData($kode)

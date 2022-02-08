@@ -33,10 +33,9 @@
                                         <th scope="col">No Urut</th>
                                         <th scope="col">Kode Mitra</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">NIK</th>
-                                        <th scope="col">No HP</th>                                        
-                                        <th scope="col">Alamat</th> 
                                         <th scope="col">Nama Penilai</th>
+                                        <th scope="col">Nama Kegiatan</th>                                        
+                                        <th scope="col">Bulan Kegiatan</th> 
                                         <th scope="col">Volume Beban Kerja</th>
                                         <th scope="col">Status Partisipasi Mitra</th>
                                         <th scope="col">Penguasaan Konsep</th>
@@ -54,10 +53,9 @@
                                             <th scope="row"><?= $i + 1;?></th>
                                             <td><?= $adm->kode_mitra; ?></td>
                                             <td><?= $adm->nama; ?></td>
-                                            <td><?= $adm->nik; ?></td>
-                                            <td><?= $adm->no_hp; ?></td>
-                                            <td><?= $adm->alamat; ?></td>
                                             <td><?= $adm->nama_penilai; ?></td>
+                                            <td><?= $adm->nama_kegiatan; ?></td>
+                                            <td><?= $adm->bulan_kegiatan; ?></td>
                                             <td><?= $adm->beban_kerja; ?></td>
                                             <td><?= $adm->status; ?></td>
                                             <td><?= $adm->que1; ?></td>

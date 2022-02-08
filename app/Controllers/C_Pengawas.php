@@ -40,6 +40,7 @@ class C_Pengawas extends BaseController
 			'alamat' => $this->request->getVar('alamat'),
 			'nama_penilai' => $this->request->getVar('nama_penilai'),
 			'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
+			'bulan_kegiatan' => $this->request->getVar('bulan_kegiatan'),
 			'beban_kerja' => $this->request->getVar('beban_kerja'),
 			'status' => $this->request->getVar('status'),
 			'que1' => $this->request->getVar('que1'),
@@ -84,7 +85,7 @@ class C_Pengawas extends BaseController
 
 	public function editprofile(){
 		$model = model("M_user");
-		$data['penilai'] = $model->where('id_user', session()->get('id_user'))->first();
+		$data['pencacah'] = $model->where('id_user', session()->get('id_user'))->first();
 		return view('pengawas/editprofile', $data);
 	}
 
