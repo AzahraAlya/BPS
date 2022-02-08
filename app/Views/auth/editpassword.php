@@ -17,6 +17,7 @@
 
     <!-- Custom styles for this template-->
     <link href="assets/startbootstrap/css/sb-admin-2.min.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
 
 </head>
@@ -37,9 +38,7 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Ubah Password</h1>
                             </div>
-                            <?php if(isset($validation)):?>
-                                <div class ='alert alert-danger'><?= $validation->listErrors();?></div>
-                            <?php endif; ?>
+                            
 
                             <form class="user" action = "/profile" method="post">
                                 <div class="form-group">
@@ -53,13 +52,7 @@
                                         <input type="password" class="form-control form-control-user" placeholder="Confirm Password" name="password_confirm" id="password_confirm" value="" >
                                     </div>
                                 </div>
-                                <?php if (isset($validation)) : ?>
-                                <div class="col-12">
-                                    <div class="alert alert-danger" role="alert">
-                                    <?= $validation->listErrors() ?>
-                                    </div>
-                                </div>
-                                <?php endif; ?>
+                                
                          
                                 <!-- <button type="submit" class="btn btn-primary">
                                 <i class="fas fa-paper-plane"></i> Daftar </button> -->
@@ -85,6 +78,17 @@
 
     <!-- Custom scripts for all pages-->
     <script src="assets/startboostrap/js/sb-admin-2.min.js"></script>
+    <script src="/assets/js/sweetalert2.min.js"></script>
+
+    <script>
+                        <?php if (!empty(session()->getFlashdata('swal_icon'))){ ?>
+                            Swal.fire(
+                            'Berhasil',
+                            'Password Berhasil Diubah',
+                            'success'
+                            )
+                        <?php } ?>
+                    </script>
 
 </body>
 

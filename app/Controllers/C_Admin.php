@@ -43,12 +43,14 @@ class C_Admin extends BaseController
 	}
 
 	public function update($id_kegiatan){
-
+		helper(['swal_helper']);
+		
 		$M_kegiatan = model("M_kegiatan");
 		$M_kegiatan->save([
 			'id_kegiatan' => $id_kegiatan,
 			'nama_kegiatan'=>$this->request->getVar('nama_kegiatan'),
 		]);
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		return redirect()->to(base_url('/admin/kegiatan'));
 	}
 

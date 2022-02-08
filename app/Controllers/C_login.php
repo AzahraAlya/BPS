@@ -54,7 +54,7 @@ class C_login extends BaseController
     {
         $session = session();
         $session->destroy();
-        return redirect()->to('/login');
+        return redirect()->to('/');
     }
 
     public function logoutpencacah()
@@ -65,7 +65,7 @@ class C_login extends BaseController
     }
 
     public function profile(){
-        
+        helper(['swal_helper']);
 		helper(['form']);
 		$model = new M_user();
 		if ($this->request->getMethod() == 'post') {
@@ -89,7 +89,7 @@ class C_login extends BaseController
 					$newData['password'] = $this->request->getPost('password');
 				}
 				$model->save($newData);
-				session()->setFlashdata('success', 'Data berhasil diubah');
+				set_notifikasi_swal('success', 'Berhasil','Password Berhasil Diubah');
 				return redirect()->to('/dashboard');
 			}
 		}

@@ -35,7 +35,7 @@ class C_Pencacah extends BaseController{
             ]);
             
         }else if($session->get('role') == 2){
-            return view('pengawas/daftar_pencacah',[
+            return view('pengawas/dashboard',[
                 'pencacah' => $M_pencacah->findAll(),
 				'validation' => \Config\Services::validation(),
                 'jumlahUser'=> $jumlahUser,

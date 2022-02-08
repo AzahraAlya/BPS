@@ -26,7 +26,7 @@
                 <div class="card mt-3">
                     <div class="card-header">
                         <p class="h5 text-center font-weight-bold">Detail Data Mitra</p>
-                        <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
+                        <a href = "/pengawas" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
                    

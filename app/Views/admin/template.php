@@ -21,6 +21,7 @@
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    
 
     <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/searchBuilder.dataTables.min.css">
@@ -156,6 +157,8 @@
             <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.searchBuilder.min.js"></script>
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.js"></script>
+            <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+            <script src="/assets/js/sweetalert2.min.js"></script>
             
 
            <script>

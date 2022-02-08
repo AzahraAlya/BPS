@@ -31,6 +31,7 @@ class C_Pengawas extends BaseController
 	}
 
 	public function store_nilai(){
+		helper(['swal_helper']);
 		$data = [
 			'kode_mitra' => $this->request->getVar('kode_mitra'),
 			'nama' => $this->request->getVar('nama'),
@@ -51,6 +52,7 @@ class C_Pengawas extends BaseController
 		];
 		$M_nilai = model("M_nilai");
 		$M_nilai->insert($data);
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		return redirect()->to(base_url('/pengawas'));
 }
 
@@ -87,6 +89,8 @@ class C_Pengawas extends BaseController
 	}
 
 	public function saveprofile($id_user){
+		helper(['swal_helper']);
+		
 		$M_user = model("M_user");
 		$M_user->save([
 			'id_user' => $id_user,
@@ -99,6 +103,8 @@ class C_Pengawas extends BaseController
             'status_perkawinan' => $this->request->getVar('status_perkawinan'),
             'pekerjaan' => $this->request->getVar('pekerjaan'),
 		]);
+
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		return redirect()->to(base_url('/editprofile'));
 
 	}
@@ -106,10 +112,6 @@ class C_Pengawas extends BaseController
 	public function simpanprofile(){
 		return view('pengawas/simpanprofile');
 	}
-
-	// public function kegiatan(){
-	// 	return view('pengawas/kegiatan');
-	// }
 
 	public function detailkegiatan($kode)
 	{

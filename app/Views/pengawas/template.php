@@ -21,6 +21,7 @@
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 </head>
 
 <body id="page-top">
@@ -42,7 +43,7 @@
 
         <!-- Sidebar -->
         <li class="nav-item active">
-                <a class="nav-link" href="#">
+                <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pengawas</span></a>
         </li>
@@ -128,6 +129,18 @@
 
             <!-- Page level custom scripts -->
            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+
+           <script src="/assets/js/sweetalert2.min.js"></script>
+
+                    <script>
+                        <?php if (!empty(session()->getFlashdata('swal_icon'))){ ?>
+                            Swal.fire(
+                            'Berhasil',
+                            'Berhasil Disimpan',
+                            'success'
+                            )
+                        <?php } ?>
+                    </script>
         </div>
     </div>
 

@@ -13,6 +13,7 @@
                 <div class="card mt-3">
                         <div class="card-header">
                         <p class="h6 text-center font-weight-bold">Form Penilaian Mitra</p>
+                        <a href = "/pengawas" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                         </div>
                     <div class="card-body">
                     <form action="/pengawas/store-nilai" method="POST">  
@@ -171,14 +172,15 @@
                            
            
                             <button type="submit" class="btn btn-sm btn-primary" name="btn-simpan">
-                                <i class="fas fa-paper-plane"></i>Simpan</button>
-                                <a href="/dashboard" class="btn btn-sm btn-danger">Kembali</a>
+                                Simpan</button>
+                                <a href="/pengawas" class="btn btn-sm btn-danger">Batal</a>
                             
                         </form>
                         </div> 
                     </div>
                 </div>
         </div>
+        
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script>
                $('input[name="status"]').on('change',function()
@@ -193,4 +195,14 @@
 
                });
            </script>
+
+                    <script>
+                        <?php if (!empty(session()->getFlashdata('swal_icon'))){ ?>
+                            Swal.fire(
+                            'Berhasil',
+                            'Data berhasil diubah',
+                            'success'
+                            )
+                        <?php } ?>
+                    </script>
         <?= $this->endSection(); ?>
