@@ -23,7 +23,7 @@
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Mitra</label>
-                                    <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                                    <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
                                     <div class="invalid-feedback">
                                         Please provide a valid city.
                                     </div>
@@ -40,7 +40,7 @@
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom05">NIK</label>
-                                    <input type="text" class="form-control" name="nik" autofocus value="<?= $pencacah['NIK']; ?>" readonly>
+                                    <input type="text" class="form-control" name="nik" autofocus value="<?= $pencacah['NIK_NIP']; ?>" readonly>
                                     <div class="invalid-feedback">
                                         Please provide a valid zip.
                                     </div>

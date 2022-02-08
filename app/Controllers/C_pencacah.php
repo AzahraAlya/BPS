@@ -36,8 +36,8 @@ class C_Pencacah extends BaseController{
             ]);
             
         }else if($session->get('role') == 2){
-            return view('pengawas/dashboard',[ // role 2 = pengawas
-                'pencacah' => $M_pencacah->findAll(),
+            return view('pengawas/editprofile',[ // role 2 = pengawas
+                'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
 				'validation' => \Config\Services::validation(),
                 'jumlahUser'=> $jumlahUser,
                 'jumlahAdmin' => $this->user->like('role','0')->countAllResults(),
@@ -113,12 +113,12 @@ class C_Pencacah extends BaseController{
 	}
 
 
-    public function detail($No_Urut)
+    public function detail($NO_URUT)
 	{
-		$M_pencacah = model("M_pencacah");
+		$M_petugas = model("M_petugas");
 		$data = [
 			'validation' => \Config\Services::validation(),
-			'pencacah' => $M_pencacah->getPencacah($No_Urut),
+			'pencacah' => $M_petugas->getPencacah($NO_URUT),
 		];
 		return view('pengawas/pencacahdetail', $data);
 	}

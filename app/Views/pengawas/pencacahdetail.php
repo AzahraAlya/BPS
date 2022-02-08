@@ -34,14 +34,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom01">Kode Mitra</label>
-                            <input type="text" class="form-control" name="Kode_Mitra" value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                            <input type="text" class="form-control" name="KODE_PETUGAS" value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">No Kecamatan</label>
-                            <input type="text" class="form-control" name="noKecamatan" value="<?= $pencacah['noKecamatan']; ?>" readonly>
+                            <input type="text" class="form-control" name="noKECAMATAN" value="<?= $pencacah['noKECAMATAN']; ?>" readonly>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -57,7 +57,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom02">NIK</label>
-                            <input type="text" class="form-control" name="NIK" value="<?= $pencacah['NIK']; ?>" readonly>
+                            <input type="text" class="form-control" name="NIK_NIP" value="<?= $pencacah['NIK_NIP']; ?>" readonly>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>

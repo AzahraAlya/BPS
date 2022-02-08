@@ -57,11 +57,11 @@
                     <i class="fas fa-user-cog"></i>
                     <span>Ganti Password</span></a>
             </li>
-        <li class="nav-item">
+        <!-- <li class="nav-item">
                 <a class="nav-link" href="/editprofile">
                     <i class="fas fa-user-circle"></i>
                     <span>Profil</span></a>
-        </li>
+        </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="/logout" data-toggle="modal" data-target="#logoutModal">
                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>

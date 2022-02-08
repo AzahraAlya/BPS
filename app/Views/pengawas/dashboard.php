@@ -3,9 +3,9 @@
 
 <?php
 
-use App\Models\M_user;
-use App\Models\UserModel;
-$this->user = new M_user();
+use App\Models\M_petugas;
+
+$this->user = new M_petugas();
 $session = session();
 ?>  
 
@@ -22,7 +22,7 @@ $session = session();
         <!-- Begin Page Content -->
         <div class="col-12 col-xl-8 mb-4 mb-xl-0">
             <div class="container">
-            <h3 class="font-weight-bold">Selamat Datang, <?= $this->user->find($session->get('id_user'))['nama_petugas'] ?></h3>
+            <h3 class="font-weight-bold">Selamat Datang, <?= $this->user->find($session->get('NO_URUT'))['NAMA'] ?></h3>
             <!-- <h6 class="font-weight-normal mb-0">All systems are running smoothly! You have <span class="text-primary">3 unread alerts!</span></h6> -->
             </div>
         </div>

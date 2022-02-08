@@ -44,18 +44,18 @@
                                     <?php foreach ($pencacah as $i => $pc) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $pc['Kode_Mitra']; ?></td>
-                                            <td><?= $pc['noKecamatan']; ?></td>
+                                            <td><?= $pc['KODE_PETUGAS']; ?></td>
+                                            <td><?= $pc['noKECAMATAN']; ?></td>
                                             <td><?= $pc['NOMOR_PESERTA']; ?></td>
-                                            <td><?= $pc['NIK']; ?></td>
+                                            <td><?= $pc['NIK_NIP']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
-                                                <a href="/pengawas/detail/<?= $pc['Kode_Mitra'];?>" class="btn btn-sm btn-info me-1"><i class="fas fa-eye"></i></a>
+                                                <a href="/pengawas/detail/<?= $pc['KODE_PETUGAS'];?>" class="btn btn-sm btn-info me-1"><i class="fas fa-eye"></i></a>
                                             </td>
                                             <td align="center">
-                                                <a href="/pencacah/detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
+                                                <a href="/pencacah/detail/<?= $pc['NO_URUT'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
                                             </td>
-                                            <td><a href="/pengawas/nilai/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-success me-1"><i class="fas fa-calculator" class="d-inline"></i></a></td>
+                                            <td><a href="/pengawas/nilai/<?= $pc['NO_URUT'];?>" class="btn btn-sm btn-success me-1"><i class="fas fa-calculator" class="d-inline"></i></a></td>
                                         </tr>
                                     <?php endforeach; ?>
 

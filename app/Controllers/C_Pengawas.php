@@ -9,22 +9,23 @@ class C_Pengawas extends BaseController
 {
 	public function pengawas()
 	{
-		$M_pencacah = model("M_pencacah");
+		$M_petugas = model("M_petugas");
 		$data = [
-			'pencacah' => $M_pencacah->findAll(),
+			//'pencacah' => $M_petugas->findAll(),
+			'pencacah' => $M_petugas->where('role = 0')->findAll(),
 			'validation' => \Config\Services::validation(),
 
 		];
 		return view('pengawas/daftar_pencacah',$data);
 	}
 
-	public function nilai($No_Urut){
+	public function nilai($NO_URUT){
 
-		$M_pencacah = model("M_pencacah");
+		$M_petugas = model("M_petugas");
 		$M_kegiatan = model("M_kegiatan");
 		$data = [
 			'validation' => \Config\Services::validation(),
-			'pencacah' => $M_pencacah->getPencacahan($No_Urut),
+			'pencacah' => $M_petugas->getPencacah($NO_URUT),
 			'kegiatan' => $M_kegiatan->findAll(),
 		];
 		return view('pengawas/nilai',$data);
@@ -71,20 +72,30 @@ class C_Pengawas extends BaseController
 		return view('pengawas/editprofile', $data);
 	}
 
-	public function saveprofile($id_user){
+	public function saveprofile($NO_URUT){
 		helper(['swal_helper']);
 		
-		$M_user = model("M_user");
-		$M_user->save([
-			'id_user' => $id_user,
-            'nama_petugas' => $this->request->getVar('nama_petugas'),
-            'nik' => $this->request->getVar('nik'),
-            'jk' => $this->request->getVar('jk'),
-            'tmp_lahir' => $this->request->getVar('tmp_lahir'),
-            'tgl_lahir' => $this->request->getVar('tgl_lahir'),
-            'pendidikan' => $this->request->getVar('pendidikan'),
-            'status_perkawinan' => $this->request->getVar('status_perkawinan'),
-            'pekerjaan' => $this->request->getVar('pekerjaan'),
+		$M_petugas = model("M_petugas");
+		$M_petugas->save([
+			'NO_URUT' => $NO_URUT,
+            'KODE_PETUGAS' => $this->request->getVar('KODE_PETUGAS'),
+            'noKECAMATAN' => $this->request->getVar('noKECAMATAN'),
+            'NOMOR_PESERTA' => $this->request->getVar('NOMOR_PESERTA'),
+            'NIK_NIP' => $this->request->getVar('NIK_NIP'),
+            'NAMA' => $this->request->getVar('NAMA'),
+            'JENIS_KELAMIN' => $this->request->getVar('JENIS_KELAMIN'),
+            'PENDIDIKAN' => $this->request->getVar('PENDIDIKAN'),
+            'TEMPAT_LAHIR' => $this->request->getVar('TEMPAT_LAHIR'),
+            'TANGGAL_LAHIR' => $this->request->getVar('TANGGAL_LAHIR'),
+            'STATUS_PERKAWINAN' => $this->request->getVar('STATUS_PERKAWINAN'),
+            'PEKERJAAN' => $this->request->getVar('PEKERJAAN'),
+            'PENGALAMAN_SURVEI_BPS' => $this->request->getVar('PENGALAMAN_SURVEI_BPS'),
+            'ALAMAT' => $this->request->getVar('ALAMAT'),
+            'DESA' => $this->request->getVar('DESA'),
+            'KECAMATAN' => $this->request->getVar('KECAMATAN'),
+            'KABUPATEN' => $this->request->getVar('KABUPATEN'),
+            'NOMOR_HP' => $this->request->getVar('NOMOR_HP'),
+            'NOMOR_WA' => $this->request->getVar('NOMOR_WA'),
 		]);
 
 		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
