@@ -20,6 +20,7 @@ class C_Mitra extends BaseController
 	}
 
 	public function store(){
+		helper(['swal_helper']);
 		$data = [
 			'Kode_Mitra' => $this->request->getVar('Kode_Mitra'),
 			'noKecamatan'=> $this->request->getVar('noKecamatan'),
@@ -74,7 +75,8 @@ class C_Mitra extends BaseController
 		];
 		$M_pencacah = model("M_pencacah");
 		$M_pencacah->insert($data);
-		return redirect()->to(base_url('/dashboard'));
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('/admin/mitra-lengkap'));
 	}
 
 

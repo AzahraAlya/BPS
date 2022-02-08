@@ -77,6 +77,7 @@ $routes->get('/admin/nilaipegawai/(:segment)', 'C_Admin::nilaipegawai/$1',['filt
 $routes->post('/admin/store-nilaipegawai', 'C_Admin::storeNilaiPegawai',['filter' => 'admin']);
 $routes->get('/admin/penilaianpegawai', 'C_Admin::penilaianPegawai',['filter' => 'admin']);
 $routes->get('/admin/pegawai', 'C_Admin::dataPegawai',['filter' => 'admin']);
+$routes->get('/admin/list/penilaian/(:segment)', 'C_Admin::listNilaiPegawai/$1',['filter' => 'admin']);
 $routes->get('/admin/detailpegawai/(:segment)', 'C_Admin::detailpegawai/$1',['filter' => 'admin']);
 //
 

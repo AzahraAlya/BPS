@@ -21,7 +21,7 @@
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
-    
+
 
     <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.css">
     <link rel="stylesheet" href="/assets/startbootstrap/vendor/datatables/searchBuilder.dataTables.min.css">
@@ -32,50 +32,50 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-    <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
-        
-        <!-- Sidebar - Brand -->
-        <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
-            <div class="sidebar-brand-icon">
-                <i class="fas fa-award"></i>
-            </div>
-            <div class="sidebar-brand-text mx-3">Evaluasi Kinerja<sup>bps</sup></div>
-        </a>
+        <ul class="navbar-nav bg-gradient-primary sidebar sidebar-dark accordion" id="accordionSidebar">
 
-        <!-- Divider -->
-        <hr class="sidebar-divider my-0">
+            <!-- Sidebar - Brand -->
+            <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
+                <div class="sidebar-brand-icon">
+                    <i class="fas fa-award"></i>
+                </div>
+                <div class="sidebar-brand-text mx-3">Evaluasi Kinerja<sup>bps</sup></div>
+            </a>
 
-        <!-- Sidebar -->
-        <li class="nav-item active">
+            <!-- Divider -->
+            <hr class="sidebar-divider my-0">
+
+            <!-- Sidebar -->
+            <li class="nav-item active">
                 <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Admin</span></a>
-        </li>
-        <!-- <li class="nav-item">
+            </li>
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="/admin/print">
                     <i class="fas fa-file"></i>
                     <span>Data Penilaian Mitra</span></a>
         </li> -->
-        <li class="nav-item">
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/mitra-lengkap">
                     <i class="fas fa-book"></i>
                     <span>Data Mitra</span></a>
-        </li>
-        <li class="nav-item">
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/pegawai">
                     <i class="fas fa-file"></i>
                     <span>Data Pegawai</span></a>
-        </li>
-        <li class="nav-item">
+            </li>
+            <li class="nav-item">
                 <a class="nav-link" href="/admin/kegiatan">
                     <i class="fas fa-archive"></i>
                     <span>Data Kegiatan BPS</span></a>
-        </li>
-        
+            </li>
 
 
 
-        <li class="nav-item">
+
+            <li class="nav-item">
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#adminUtilities" aria-expanded="true" aria-controls="adminUtilities">
                     <i class="fas fa-cog"></i>
                     <span>Pengaturan Akun</span>
@@ -88,10 +88,10 @@
                         <!-- <a class="collapse-item" href="/admin/tambah-mitra">Tambah Data Mitra Baru</a> -->
                         <!-- <a class="collapse-item" href="/admin/kegiatan">Data Kegiatan</a>
                         <a class="collapse-item" href="/admin/mitra-lengkap">Data Mitra Lengkap</a> -->
-                       
+
                     </div>
                 </div>
-             
+
             </li>
             <li class="nav-item">
                 <a class="nav-link" href="/profile">
@@ -120,14 +120,14 @@
                     </div>
                 </div>
             </div>
-            
-        <!-- Content Wrapper -->
-    </ul>
+
+            <!-- Content Wrapper -->
+        </ul>
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
-                <?= $this->renderSection('content'); ?> 
+                <?= $this->renderSection('content'); ?>
             </div>
             <!-- End of Main Content -->
 
@@ -152,25 +152,35 @@
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
             <!-- Page level custom scripts -->
-           <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
-           <script src="/assets/startbootstrap/vendor/datatables/jquery-3.5.1.js"></script>
+            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+            <script src="/assets/startbootstrap/vendor/datatables/jquery-3.5.1.js"></script>
             <script src="/assets/startbootstrap/vendor/datatables/jquery.dataTables.min.js"></script>
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.searchBuilder.min.js"></script>
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.dateTime.min.js"></script>
             <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
             <script src="/assets/js/sweetalert2.min.js"></script>
-            
 
-           <script>
-               $(document).ready(function() {
-                    $('#example').DataTable( {
+
+            <script>
+                $(document).ready(function() {
+                    $('#example').DataTable({
                         dom: 'Qlfrtip',
                         searchBuilder: {
-                            columns: [9,10,11,12]
+                            columns: [9, 10, 11, 12]
                         }
                     });
                 });
-           </script>
+            </script>
+
+            <script>
+                <?php if (!empty(session()->getFlashdata('swal_icon'))) { ?>
+                    Swal.fire(
+                        'Berhasil',
+                        'Berhasil Disimpan',
+                        'success'
+                    )
+                <?php } ?>
+            </script>
         </div>
     </div>
 

@@ -150,8 +150,19 @@ class C_Admin extends BaseController
 		return view('admin/nilaipegawai',$data);
 	}
 
+	public function listNilaiPegawai($kode){
+		$M_pegawai = model("M_pegawai");
+		// $kode = session()->get('Kode_Mitra');
+		$data = [
+			'validation' => \Config\Services::validation(),
+			'kegiatan' => $M_pegawai->getKegiatan($kode),
+		];
+		return view('admin/list-kegiatan', $data);
+	}
+
 	//simpan hasil penilaian
 	public function storeNilaiPegawai(){
+		helper(['swal_helper']);
 		$data = [
 			'nip' => $this->request->getVar('nip'),
 			'nama_pegawai' => $this->request->getVar('nama_pegawai'),
@@ -169,6 +180,7 @@ class C_Admin extends BaseController
 		];
 		$M_pegawai = model("M_pegawai");
 		$M_pegawai->insert($data);
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		return redirect()->to(base_url('/admin/pegawai'));
 	}
 

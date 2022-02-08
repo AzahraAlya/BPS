@@ -12,7 +12,12 @@ class M_pegawai extends Model
 	protected $allowedFields        = ['nama_pegawai','nip','nama_penilai','nama_kegiatan','beban','status','que1','que2','que3','que4','que5','que6','catatan','created_at', 'updated_at'];
 	protected $useTimestamps        = true;
 
-	
+	public function getKegiatan($kode){
+		if($kode == false){
+		  return $this->findAll();
+		}
+		return $this->where(['nip'=> $kode])->get()->getResultArray();
+	}
 }
 
 
