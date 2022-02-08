@@ -43,12 +43,12 @@
                                 foreach ($admin as $a) : ?>
                                     <tr>
                                         <td><?= $id++; ?></td>
-                                        <td><?= $a['nama_petugas']; ?></td>
-                                        <td><?= $a['nik']; ?></td>
+                                        <td><?= $a['NAMA']; ?></td>
+                                        <td><?= $a['KODE_PETUGAS']; ?></td>
                                         <td><?= $a['password']; ?></td>
                                         <td align="center">
-                                        <a href="/admin/manage/edit/<?= $a['id_user']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
-                                                <form action="/admin/manage/delete/<?= $a['id_user']; ?>" method="post" class="d-inline">
+                                        <a href="/admin/manage/edit/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
+                                                <form action="/admin/manage/delete/<?= $a['NO_URUT']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>

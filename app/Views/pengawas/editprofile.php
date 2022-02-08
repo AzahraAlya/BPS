@@ -24,12 +24,12 @@
                     </div>
                     <div class="card-body">
 
-                        <form action="pengawas/saveprofile/<?= $pencacah['No_Urut']; ?>" method="POST">
+                        <form action="pengawas/saveprofile/<?= $pencacah['NO_URUT']; ?>" method="POST">
 
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Kode Mitra</label>
-                                    <input type="text" class="form-control" name="Kode_Mitra" value="<?= $pencacah['Kode_Mitra']; ?>" required>
+                                    <input type="text" class="form-control" name="KODE_PETUGAS" value="<?= $pencacah['KODE_PETUGAS']; ?>" required>
                                     <div class="valid-feedback">
                                         Looks good!
                                     </div>

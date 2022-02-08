@@ -14,6 +14,9 @@ class Mitra implements FilterInterface
         if(!session('login')){
             return redirect()->to('/guest');
         }
+        if(!(session()->get('role') == 0)){
+            return redirect()->to('/dashboard');
+        }
     }
 
     public function after(RequestInterface $request, ResponseInterface $response, $arguments = null)

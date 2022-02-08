@@ -21,7 +21,7 @@ class C_Pencacah extends BaseController{
 		$M_pegawai = model("M_pegawai");
        
         $jumlahUser = $this->user->CountAllResults();
-        if ($session->get('role') == 0) {
+        if ($session->get('role') == 3) { //role 3 = admin
             return view('admin/dashboard',[
 				'pencacah' => $M_pencacah->findAll(),
 				'nilai' => $M_nilai->findAll(),
@@ -35,7 +35,7 @@ class C_Pencacah extends BaseController{
             ]);
             
         }else if($session->get('role') == 2){
-            return view('pengawas/dashboard',[
+            return view('pengawas/dashboard',[ // role 2 = pengawas
                 'pencacah' => $M_pencacah->findAll(),
 				'validation' => \Config\Services::validation(),
                 'jumlahUser'=> $jumlahUser,
@@ -45,8 +45,10 @@ class C_Pencacah extends BaseController{
             ]);
 
         
-        } else {
-            return view('pencacah/nonpegawai',[
+        }else if ($session->get('role') == 0) {
+			return view('pencacah/dashboard'); // role 0 = mitra
+		} else {
+            return view('pencacah/nonpegawai',[ //role 1 = non pns
 				'pegawai'=> $M_user->where('id_user', session()->get('id_user'))->first(),
 			]
 		);

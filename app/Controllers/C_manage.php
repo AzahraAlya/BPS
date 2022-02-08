@@ -75,28 +75,28 @@ class C_manage extends BaseController
         }   
     
     //edit password penilai oleh admin
-    public function editPasswordPenilai($id_user){
+    public function editPasswordPenilai($NO_URUT){
 
-        $M_user = model("M_user");
+        $M_petugas = model("M_petugas");
 		$data = [
-			'user' => $M_user->getPenilai($id_user),
+			'user' => $M_petugas->getPetugas($NO_URUT),
 		];
         return view('admin/editpw_penilai',$data);
     }
 
     //delete akun penilai
-    public function delete($id_user)
+    public function delete($NO_URUT)
     {
-          $M_user = model("M_user");
-          $M_user->delete($id_user);
+          $M_petugas = model("M_petugas");
+          $M_petugas->delete($NO_URUT);
           return redirect()->to('/manage/account');
     } 
 
      //simpan hasil edit password penilai
-     public function updatePasswordPenilai($id_user){
-        $M_user = model("M_user");
-        $M_user->save([
-            'id_user' => $id_user,
+     public function updatePasswordPenilai($NO_URUT){
+        $M_petugas = model("M_petugas");
+        $M_petugas->save([
+            'NO_URUT' => $NO_URUT,
 			'password'=>$this->request->getPost('password')
 		]);
 		return redirect()->to(base_url('/manage/account'));

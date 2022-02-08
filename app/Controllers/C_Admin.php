@@ -2,12 +2,14 @@
 
 namespace App\Controllers;
 use App\Models\M_user;
+use App\Models\M_petugas;
 class C_Admin extends BaseController
 {
 	protected $M_user;
     public function __construct()
     {
         $this->M_user = new M_user();
+        $this->M_petugas = new M_petugas();
     }
 	public function index()
 	{
@@ -96,7 +98,7 @@ class C_Admin extends BaseController
 	public function manageaccount(){
 		helper(['form']);
 		$data = [
-            'admin' => $this->M_user->where('role', 2)->findAll(),
+            'admin' => $this->M_petugas->where('role !=', 0)->findAll(),
         ];
 
 		return view('admin/manageaccount',$data);

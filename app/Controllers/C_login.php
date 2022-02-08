@@ -4,6 +4,7 @@ namespace App\Controllers;
 
 use App\Models\M_pencacah;
 use App\Models\M_user;
+use App\Models\M_petugas;
 
 class C_login extends BaseController
 {
@@ -18,10 +19,10 @@ class C_login extends BaseController
     public function auth()
     {
         $session = session();
-        $model = new M_user();
-        $username = $this->request->getVar('nik');
+        $model = new M_petugas();
+        $username = $this->request->getVar('KODE_PETUGAS');
         $password = $this->request->getVar('password');
-        $data = $model->where('nik', $username)->first();
+        $data = $model->where('KODE_PETUGAS', $username)->first();
 
         if($username==NULL){
             $session->setFlashdata('pesan', 'username anda salah');
@@ -32,7 +33,7 @@ class C_login extends BaseController
             $verify_pass = password_verify($password, $pass);
             if ($verify_pass) {
                 $ses_data = [
-                    'id_user'      => $data['id_user'],
+                    'NO_URUT'      => $data['NO_URUT'],
                     'role'        => $data['role'],
                     'login'         => TRUE
                 ];

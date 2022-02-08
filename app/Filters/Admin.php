@@ -28,7 +28,7 @@ class Admin implements FilterInterface
         if(! session()->get('login')){
             return redirect()->to('/login');
         }
-        if(!(session()->get('role') == 0)){
+        if(!(session()->get('role') == 3)){
             return redirect()->to('/dashboard');
         }
     }
