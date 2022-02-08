@@ -65,18 +65,21 @@ class C_login extends BaseController
     }
 
     public function profile(){
+        $session = session();
         helper(['swal_helper']);
 		helper(['form']);
 		$model = new M_user();
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
-				
+				'password' => 'required|min_length[3]|max_length[20]',
+				'password_confirm' => 'required|min_length[3]|max_length[20]',
 			];
 
 			if ($this->request->getPost('password') != '') {
 				$rules['password'] = 'required|min_length[8]|max_length[255]';
 				$rules['password_confirm'] = 'matches[password]';
+
 			}
 
 			if (!$this->validate($rules)) {

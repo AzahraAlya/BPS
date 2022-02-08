@@ -38,7 +38,9 @@
                             <div class="text-center">
                                 <h1 class="h4 text-gray-900 mb-4">Ubah Password</h1>
                             </div>
-                            
+                            <?php if(isset($validation)):?>
+                                <div class ='alert alert-danger'><?= $validation->listErrors();?></div>
+                            <?php endif; ?>
 
                             <form class="user" action = "/profile" method="post">
                                 <div class="form-group">
