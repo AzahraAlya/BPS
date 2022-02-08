@@ -69,7 +69,7 @@ class C_login extends BaseController
         $session = session();
         helper(['swal_helper']);
 		helper(['form']);
-		$model = new M_user();
+		$model = new M_petugas();
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
@@ -87,7 +87,7 @@ class C_login extends BaseController
 				$data['validation'] = $this->validator;
 			} else {
 				$newData = [
-					'id_user' => session()->get('id_user'),
+					'NO_URUT' => session()->get('NO_URUT'),
 				];
 				if ($this->request->getPost('password') != '') {
 					$newData['password'] = $this->request->getPost('password');
@@ -97,7 +97,7 @@ class C_login extends BaseController
 				return redirect()->to('/dashboard');
 			}
 		}
-		$data['user'] = $model->where('id_user', session()->get('id_user'))->first();
+		$data['user'] = $model->where('NO_URUT', session()->get('NO_URUT'))->first();
         // $data['user'] = $this->$model->find(session()->get('id_user'));
         // dd($data);
 		echo view('auth/editpassword', $data);

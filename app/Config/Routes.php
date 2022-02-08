@@ -51,7 +51,7 @@ $routes->get('/pencacah', 'C_pencacah::pencacah', ['filter' => 'mitra']);
 $routes->post('/pencacah/homeData/(:segment)', 'C_pencacah::homeData/$1', ['filter' => 'user']);
 $routes->get('/pencacah/detail/(:segment)', 'C_pencacah::detail/$1',['filter' => 'penilai'] );
 $routes->get('/pencacah/edit/(:segment)', 'C_dashboard::edit/$1' );
-$routes->post('/pencacah/update/(:segment)', 'C_dashboard::update/$1' );
+$routes->post('/pencacah/update/(:segment)', 'C_pencacah::update/$1' );
 $routes->get('/pencacah/editprofile', 'C_pencacah::editprofile',['filter' => 'mitra']);
 $routes->get('/profilpegawai', 'C_pencacah::profilpegawai', ['filter' => 'user']);
 $routes->post('/saveprofilepegawai/(:segment)', 'C_pencacah::saveprofilepegawai/$1' );

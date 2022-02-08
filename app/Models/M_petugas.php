@@ -26,6 +26,13 @@ class M_petugas extends Model
 
 	protected $beforeUpdate = ['beforeUpdate'];
   
+  public function getUser($NO_URUT=false){
+		if($NO_URUT == false){
+			return $this->findAll();
+		}
+
+		return $this->where(['NO_URUT'=> $NO_URUT]) -> first();
+	}
   
     protected function beforeUpdate(array $data){
       $data = $this->passwordHash($data);

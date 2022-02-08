@@ -41,7 +41,7 @@
 
                             <form class="user" action = "/setting" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" readonly id="Kode_Mitra" value="<?= $pencacah['Kode_Mitra'] ?>">
+                                    <input type="text" class="form-control form-control-user" readonly id="KODE_PETUGAS" value="<?= $pencacah['KODE_PETUGAS'] ?>">
                                 </div>
                              
                                 <div class="form-group row">

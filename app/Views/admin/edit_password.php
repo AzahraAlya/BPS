@@ -13,7 +13,7 @@
                 <div class="container">
                 <div align="center">
 
-            <form action="/admin/manage/accounts/update/<?= $user['No_Urut']; ?>" method="post">
+            <form action="/admin/manage/accounts/update/<?= $user['NO_URUT']; ?>" method="post">
                 <div class="card" style="width: 25rem;">
                     <div class="card-header">
                         <b>Ganti Password</b>

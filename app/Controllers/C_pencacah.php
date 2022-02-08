@@ -16,6 +16,7 @@ class C_Pencacah extends BaseController{
     {
         $session = session();
 		$M_pencacah = model("M_pencacah");
+		$M_petugas = model("M_petugas");
 		$M_user = model("M_user");
 		$M_nilai = model("M_nilai");
 		$M_pegawai = model("M_pegawai");
@@ -46,10 +47,13 @@ class C_Pencacah extends BaseController{
 
         
         }else if ($session->get('role') == 0) {
-			return view('pencacah/dashboard'); // role 0 = mitra
+			return view('pencacah/editprofile',[
+				'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
+			]
+		); // role 0 = mitra
 		} else {
             return view('pencacah/nonpegawai',[ //role 1 = non pns
-				'pegawai'=> $M_user->where('id_user', session()->get('id_user'))->first(),
+				'pegawai'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
 			]
 		);
                
@@ -77,6 +81,37 @@ class C_Pencacah extends BaseController{
 
 		// 	// return view('pencacah/data');
 	}
+
+	public function update($NO_URUT)
+	{
+		helper(['swal_helper']);
+		$M_pencacah = model("M_petugas");
+		$M_pencacah->save([
+			'NO_URUT' => $NO_URUT,
+			'KODE_MITRA' => $this->request->getVar('Kode_Mitra'),
+			'noKECAMATAN'=> $this->request->getVar('noKECAMATAN'),
+			'NOMOR_PESERTA' => $this->request->getVar('NOMOR_PESERTA'),
+			'NIK_NIP'=> $this->request->getVar('NIK_NIP'),
+			'NAMA'=> $this->request->getVar('NAMA'),
+			'JENIS_KELAMIN'=> $this->request->getVar('JENIS_KELAMIN'),
+			'TEMPAT_LAHIR'=> $this->request->getVar('TEMPAT_LAHIR'),
+			'TANGGAL_LAHIR'=> $this->request->getVar('TANGGAL_LAHIR'),
+			'PENDIDIKAN'=> $this->request->getVar('PENDIDIKAN'),
+			'STATUS_PERKAWINAN'=> $this->request->getVar('STATUS_PERKAWINAN'),
+			'PEKERJAAN'=> $this->request->getVar('PEKERJAAN'),
+			'PENGALAMAN_SURVEI_BPS'=> $this->request->getVar('PENGALAMAN_SURVEI_BPS'),
+			'ALAMAT'=> $this->request->getVar('ALAMAT'),
+			'DESA'=> $this->request->getVar('DESA'),
+			'KECAMATAN'=> $this->request->getVar('KECAMATAN'),
+			'KABUPATEN'=> $this->request->getVar('KABUPATEN'),
+			'NOMOR_HP'=> $this->request->getVar('NOMOR_HP'),
+			'NOMOR_WA'=> $this->request->getVar('NOMOR_WA'),
+		]);
+
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('/dashboard'));
+	}
+
 
     public function detail($No_Urut)
 	{
@@ -108,15 +143,15 @@ class C_Pencacah extends BaseController{
 				$data['validation'] = $this->validator;
 			} else {
 				$newData = [
-					'No_Urut' => session()->get('No_Urut'),
+					'NO_URUT' => session()->get('NO_URUT'),
 				];
 				if ($this->request->getPost('password') != '') {
 					$newData['password'] = $this->request->getPost('password');
 				}
 				//Edit sessions
 				$model->save($newData);
-				session()->setFlashdata('success', 'Data berhasil diubah');
-				return redirect()->to('/login/mitra');
+				session()->setFlashdata('success', 'Password berhasil diubah');
+				return redirect()->to('/pencacah/editprofile');
 			}
 		}
 		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
@@ -124,8 +159,8 @@ class C_Pencacah extends BaseController{
     }
 
 	public function editprofile(){
-		$model = model("M_pencacah");
-		$data['pencacah'] = $model->where('No_Urut', session()->get('No_Urut'))->first();
+		$model = model("M_petugas");
+		$data['pencacah'] = $model->where('NO_URUT', session()->get('NO_URUT'))->first();
 		return view('pencacah/editprofile', $data);
 	}
 

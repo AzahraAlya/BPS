@@ -14,16 +14,16 @@
         <!-- Begin Page Content -->
         <div class="content-wrapper">
         <div class="container">
-        <!-- <a href="/manage/accounts/data">
+        <a href="/manage/accounts/data">
             <button type="button" class="btn btn-primary">
                 <i class="mdi mdi-account-plus"></i>
-                Add admin
+                Tambah Akun Pengawas
             </button>
-        </a> -->
+        </a>
         <br> <br>
         <div class="card mt-3">
                     <div class="card-header py-3">
-                    <p class="h5 text-center font-weight-bold">Kelola Akun Mitra</p>
+                    <p class="h5 text-center font-weight-bold">Kelola Akun Pengawas</p>
                     <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
@@ -32,6 +32,7 @@
                             <thead>
                                 <tr>
                                     <th>No</th>
+                                    <th>Nama</th>
                                     <th>Username</th>
                                     <th>Password</th>
                                     <th>Aksi</th>
@@ -42,16 +43,18 @@
                                 foreach ($admin as $a) : ?>
                                     <tr>
                                         <td><?= $id++; ?></td>
-                                        <td><?= $a['Kode_Mitra']; ?></td>
+                                        <td><?= $a['NAMA']; ?></td>
+                                        <td><?= $a['KODE_PETUGAS']; ?></td>
                                         <td><?= $a['password']; ?></td>
                                         <td align="center">
-                                        <a href="/admin/manage/accounts/edit/<?= $a['No_Urut']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
-                                                <form action="/admin/manage/accounts/delete/<?= $a['No_Urut']; ?>" method="post" class="d-inline">
+                                        <a href="/admin/manage/accounts/edit/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
+                                                <form action="/admin/manage/delete/<?= $a['NO_URUT']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>
                                                 
                                         </td>
+                                        
                                     </tr>
                                 <?php endforeach; ?>
                             </tbody>

@@ -44,7 +44,7 @@
 
                             <form class="user" action = "/profile" method="post">
                                 <div class="form-group">
-                                    <input type="text" class="form-control form-control-user" readonly id="nik" value="<?= $user['nik'] ?>">
+                                    <input type="text" class="form-control form-control-user" readonly id="KODE_PETUGAS" value="<?= $user['KODE_PETUGAS'] ?>">
                                 </div>
                                 <div class="form-group row">
                                     <div class="col-sm-6 mb-3 mb-sm-0">

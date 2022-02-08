@@ -48,20 +48,28 @@ class C_manage extends BaseController
     }
 
     //edit password pencacah oleh admin
-    public function editPassword($No_Urut){
-
-        $M_pencacah = model("M_pencacah");
+    public function editPassword($NO_URUT){
+        
+        $M_petugas = model("M_petugas");
 		$data = [
-			'user' => $M_pencacah->getUser($No_Urut),
+			'user' => $M_petugas->getUser($NO_URUT),
 		];
         return view('admin/edit_password',$data);
     }
+    public function manageaccount(){
+		
+		$data = [
+            'admin' => $this->M_petugas->where('role !=', 0)->findAll(),
+        ];
+
+		return view('admin/manageaccount',$data);
+	}
 
     //simpan hasil edit password pencacah
-    public function updatePassword($No_Urut){
-        $M_pencacah = model("M_pencacah");
-        $M_pencacah->save([
-            'No_Urut' => $No_Urut,
+    public function updatePassword($NO_URUT){
+        $M_petugas = model("M_petugas");
+        $M_petugas->save([
+            'NO_URUT' => $NO_URUT,
 			'password'=>$this->request->getPost('password')
 		]);
 		return redirect()->to(base_url('/manage/account/pencacah'));
