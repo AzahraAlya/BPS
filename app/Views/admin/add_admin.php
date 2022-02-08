@@ -44,11 +44,21 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label for="exampleInputConfirmPassword2" class="col-sm-2 col-form-label">Role</label>
+                            <div class="col-sm-10">
+                                <select name="role" class="form-control" required>
+                                    <option value="2">Pengawas/Pegawai</option>
+                                    <option value="1">Non PNS</option>
+                                </select>
+                            </div>
+                        </div>
+                        <!-- <div class="form-group row">
+                            
                            
                             <div class="col-sm-9">
                             <input type="hidden" class="form-control form-control-lg" name="role" placeholder="Email" value = 2>
                             </div>
-                        </div>
+                        </div> -->
                         
                         <button type="submit" class="btn btn-sm btn-primary mr-2">Submit</button>
                         <a href = "/manage/account" class="btn btn-sm btn-danger">Kembali</a>
