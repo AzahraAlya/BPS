@@ -109,7 +109,7 @@ $routes->delete('/admin/manage/delete/(:any)', 'C_manage::delete/$1');
 $routes->get('/admin/manage/accounts/edit/(:segment)', 'C_manage::editPassword/$1', ['filter' => 'admin']);
 $routes->get('/admin/manage/edit/(:segment)', 'C_manage::editPasswordPenilai/$1', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/update/(:segment)', 'C_manage::updatePassword/$1');
-$routes->post('/admin/manage/update/(:segment)', 'C_manage::updatePasswordPenilai/$1');
+$routes->post('/admin/manage/update/(:segment)', 'C_manage::updatePasswordPenilai/$1', ['filter' => 'admin']);
 
 // $routes->get('/dashboard', 'C_dashboard::index');
 

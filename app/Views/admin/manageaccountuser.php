@@ -34,6 +34,7 @@
                                     <th>Nama</th>
                                     <th>Username</th>
                                     <th>Password</th>
+                                    <th>Konfirmasi Password</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
@@ -45,6 +46,7 @@
                                         <td><?= $a['NAMA']; ?></td>
                                         <td><?= $a['KODE_PETUGAS']; ?></td>
                                         <td><?= $a['password']; ?></td>
+                                        <td><?= $a['password_confirm']; ?></td>
                                         <td align="center">
                                         <a href="/admin/manage/accounts/edit/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
                                                 <form action="/admin/manage/delete/<?= $a['NO_URUT']; ?>" method="post" class="d-inline">

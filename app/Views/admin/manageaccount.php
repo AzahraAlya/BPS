@@ -31,21 +31,21 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                             <thead>
                                 <tr>
-                                    <th>No</th>
                                     <th>Nama</th>
                                     <th>Username</th>
                                     <th>Password</th>
+                                    <th>Konfirmasi Password</th>
                                     <th>Aksi</th>
                                 </tr>
                             </thead>
                             <tbody>
-                            <?php $id = 1;
+                            <?php
                                 foreach ($admin as $a) : ?>
                                     <tr>
-                                        <td><?= $id++; ?></td>
                                         <td><?= $a['NAMA']; ?></td>
                                         <td><?= $a['KODE_PETUGAS']; ?></td>
                                         <td><?= $a['password']; ?></td>
+                                        <td><?= $a['password_confirm']; ?></td>
                                         <td align="center">
                                         <a href="/admin/manage/edit/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
                                                 <form action="/admin/manage/delete/<?= $a['NO_URUT']; ?>" method="post" class="d-inline">

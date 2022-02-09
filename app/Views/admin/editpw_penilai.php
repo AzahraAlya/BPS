@@ -24,6 +24,11 @@
                         </div>
                         <input type="text" class="form-control" id= "password" name = "password" autofocus value="<?= $user['password']; ?>">
                         <br>
+                        <div align="left">
+                            <a>Konfirmasi Password</a>
+                        </div>
+                        <input type="text" class="form-control" id= "password_confirm" name = "password_confirm" autofocus value="<?= $user['password_confirm']; ?>">
+                        <br>
                         <button type="submit" class="btn btn-primary btn-sm">
                                 Simpan</button>
                         <a href = "/manage/account" class = "btn btn-sm btn-danger">Kembali</a>

@@ -73,11 +73,22 @@ class C_manage extends BaseController
     //simpan hasil edit password pencacah
     public function updatePassword($NO_URUT){
         $M_petugas = model("M_petugas");
-        $M_petugas->save([
-            'NO_URUT' => $NO_URUT,
-			'password'=>$this->request->getPost('password')
-		]);
-		return redirect()->to(base_url('/manage/account/pencacah'));
+        $rules = [
+            'password'      => 'required|min_length[3]|max_length[200]',
+            'password_confirm'  => 'matches[password]',
+        ];
+        if ($this->validate($rules)) {
+            $data = [
+                'NO_URUT' => $NO_URUT,
+                'password'=>$this->request->getPost('password'),
+                'password_confirm'      => $this->request->getVar('password_confirm'),
+            ];
+            $this->M_petugas->save($data);
+		    return redirect()->to(base_url('/manage/account/pencacah'));
+        } else {
+            return view('admin/errorpage');
+        }
+		
     }
 
     //delete akun pencacah
@@ -107,11 +118,22 @@ class C_manage extends BaseController
 
      //simpan hasil edit password penilai
      public function updatePasswordPenilai($NO_URUT){
-        $M_petugas = model("M_petugas");
-        $M_petugas->save([
-            'NO_URUT' => $NO_URUT,
-			'password'=>$this->request->getPost('password')
-		]);
-		return redirect()->to(base_url('/manage/account'));
+      
+        $rules = [
+            'password'      => 'required|min_length[3]|max_length[200]',
+            'password_confirm'  => 'matches[password]',
+        ];
+        if ($this->validate($rules)) {
+            $data = [
+                'NO_URUT' => $NO_URUT,
+                'password'=>$this->request->getPost('password'),
+                'password_confirm'      => $this->request->getVar('password_confirm'),
+            ];
+            $this->M_petugas->save($data);
+		    return redirect()->to(base_url('/manage/account'));
+        } else {
+            return view('admin/errorpage');
+        }
+        
     }
 }
