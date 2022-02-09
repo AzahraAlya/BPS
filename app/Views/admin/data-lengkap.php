@@ -22,7 +22,7 @@
                 <div class="card mt-3">
                     <div class="card-header py-3">
                         <!-- <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6> -->
-                        <p class="h5 text-center font-weight-bold">Data Lengkap Mitra</p>
+                        <p class="h5 text-center font-weight-bold">Data Lengkap Petugas</p>
                         <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                         <a href="/admin/tambah-mitra" class="btn btn-sm btn-primary"><i class="fas fa-plus"></i> Tambah Mitra Baru</a>
                         <a href="/admin/print" class="btn btn-sm btn-primary float-right">Lihat Penilaian</a>
@@ -32,30 +32,32 @@
                             <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
                                 <thead>
                                     <tr>
-                                        <th scope="col">No Urut</th>
-                                        <th scope="col">Kode Mitra</th>
-                                        <th scope="col">No Kecamatan</th>
-                                        <th scope="col">No Peserta</th>
-                                        <th scope="col">NIK</th>
+                                        <th scope="col">No</th>
+                                        <th scope="col">Kode Petugas</th>
                                         <th scope="col">Nama</th>                                        
-                                        <th scope="col">Detail</th>                                    
+                                        <th scope="col">Detail</th>
+                                        <th scope="col">Nilai</th>
+                                        <th scope="col">Riwayat Kegiatan</th>                                     
                                         <th scope="col">Hapus</th>                                    
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <?php foreach ($pencacah as $i => $pc) : ?>
+                                    <?php foreach ($petugas as $i => $pc) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $pc['Kode_Mitra']; ?></td>
-                                            <td><?= $pc['noKecamatan']; ?></td>
-                                            <td><?= $pc['NOMOR_PESERTA']; ?></td>
-                                            <td><?= $pc['NIK']; ?></td>
+                                            <td><?= $pc['KODE_PETUGAS']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
-                                                <a href="/admin/data-detail/<?= $pc['No_Urut'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
+                                                <a href="/admin/data-detail/<?= $pc['NO_URUT'];?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-eye"></i></a>
                                             </td>
                                             <td align="center">
-                                                <form action="/admin/data-hapus/<?= $pc['No_Urut']; ?>" method="post" class="d-inline">
+                                                <a href="/admin/nilaipegawai/<?= $pc['NO_URUT']; ?>" class="btn btn-sm btn-success"><i class="fas fa-calculator"></i></a>
+                                            </td>
+                                            <td align="center">
+                                                <a href="/admin/list/penilaian/<?= $pc['NIK_NIP']; ?>" class="btn btn-sm btn-info"><i class="fas fa-check-circle"></i></a>
+                                            </td>
+                                            <td align="center">
+                                                <form action="/admin/data-hapus/<?= $pc['NO_URUT']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>
                                                 </form>

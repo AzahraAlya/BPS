@@ -13,7 +13,7 @@
                 <div class="card mt-3">
                         <div class="card-header">
                         <p class="h5 text-center font-weight-bold">Form Penilaian Pegawai</p>
-                        <a href = "/admin/pegawai" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
+                        <a href = "/admin/mitra-lengkap" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                             
                         </div>
                     <div class="card-body">
@@ -24,17 +24,36 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom03">Kode Pegawai</label>
-                            <input type="text" class="form-control" name="nip" autofocus value="<?= $pegawai['nik']; ?>" readonly>
+                            <input type="text" class="form-control" name="kode_petugas" autofocus value="<?= $petugas['KODE_PETUGAS']; ?>" readonly>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Nama</label>
-                            <input type="text" class="form-control"name="nama_pegawai" autofocus value="<?= $pegawai['nama_petugas']; ?>" readonly>
+                            <input type="text" class="form-control" name="nama" autofocus value="<?= $petugas['NAMA']; ?>" readonly>
                             </div>
                         </div>
+                        <div class="form-row">
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom05">NIK</label>
+                                    <input type="text" class="form-control" name="nik_nip" autofocus value="<?= $petugas['NIK_NIP']; ?>" readonly>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom01">Nomor HP</label>
+                                    <input type="text" class="form-control" name="no_hp" autofocus value="<?= $petugas['NOMOR_HP']; ?>" readonly>
+                                </div>
+                            </div>
+
+                            <div class="form-row">
+                                <div class="col">
+                                    <label for="validationCustom02">Alamat</label>
+                                    <input type="text" class="form-control" name="alamat" autofocus value="<?= $petugas['ALAMAT']; ?>" readonly>
+                                </div>
+                            </div>
+
+                            <br />
                         <!-- tampilan -->
                         <br/><div class="form-row">
                             <div class="col-md-6 mb-3">    
-                            <label for="validationCustom03">Nama Penilai</label>
+                            <label for="validationCustom03">Kode Penilai</label>
                             <input type="text" class="form-control" id= "nama_penilai" name = "nama_penilai">
                             
                             </div>
@@ -54,10 +73,30 @@
                         </div>
 
                         <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                            <label for="validationCustom05">Volume Beban Kerja</label>
-                            <input type="text" class="form-control" id= "beban" name = "beban">
-                            </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom04">Bulan Kegiatan</label>
+                                    <select name="bulan_kegiatan" class="form-control" required>
+                                        <option value="">-Pilih Bulan Kegiatan-</option>
+                                        <option value="Januari">Januari</option>
+                                        <option value="Februari">Februari</option>
+                                        <option value="Maret">Maret</option>
+                                        <option value="April">April</option>
+                                        <option value="Mei">Mei</option>
+                                        <option value="Juni">Juni</option>
+                                        <option value="Juli">Juli</option>
+                                        <option value="Agustus">Agustus</option>
+                                        <option value="September">September</option>
+                                        <option value="Oktober">Oktober</option>
+                                        <option value="November">November</option>
+                                        <option value="Desember">Desember</option>
+                                    </select>
+                                </div>
+                                <div class="col-md-6 mb-3">
+                                    <label for="validationCustom05">Volume Beban Kerja</label>
+                                    <input type="text" class="form-control" id= "beban_kerja" name = "beban_kerja">
+                                </div>
+                        </div>
+                        <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Mitra</label><br/>
                                 <input type="radio" name="status" id="options" value="Aktif">Aktif<br/>

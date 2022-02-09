@@ -18,22 +18,22 @@
                     <a href = "/admin/mitra-lengkap" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
-                    <form action="/admin/store" method="POST">  
+                    <form action="/admin/store-mitra" method="POST">  
                         <div class="card-body">
 
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom03">Kode Mitra</label>
-                            <input type="text" class="form-control" id= "Kode_Mitra" name = "Kode_Mitra"  value="<?php echo $id_mitra?>" readonly>
+                            <input type="text" class="form-control" id= "KODE_PETUGAS" name = "KODE_PETUGAS"  value="<?php echo $id_petugas?>" readonly>
                             
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Nomor Kecamatan</label>
-                            <select name="noKecamatan" class="form-control" required>
+                            <select name="noKECAMATAN" class="form-control" required>
                                     <option value="">-Pilih Kecamatan-</option>
                                     <?php
                                         foreach($kecamatan as $data){?>
-                                            <option value="<?= $data['kode_kcm'];?>"><?= $data['nama_kcm'];?></option>   
+                                            <option value="<?= $data['kode_kcm'];?>"><?= $data['kode_kcm'];?>-<?=$data['nama_kcm']?></option>   
                                         <?php }?>
                                 </select>
                             
@@ -47,7 +47,7 @@
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom03">NIK</label>
-                                <input type="text" class="form-control" id= "NIK" name = "NIK" required>    
+                                <input type="text" class="form-control" id= "NIK_NIP" name = "NIK_NIP" required>    
                             </div>
                         </div>
 

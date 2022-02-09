@@ -59,7 +59,7 @@ class C_manage extends BaseController
     public function manageaccount(){
 		
 		$data = [
-            'admin' => $this->M_petugas->where('role !=', 0)->findAll(),
+            'admin' => $this->M_petugas->where('role !=', 3)->findAll(),
         ];
 
 		return view('admin/manageaccount',$data);

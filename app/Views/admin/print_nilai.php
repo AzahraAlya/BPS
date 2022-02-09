@@ -31,9 +31,9 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">No Urut</th>
-                                        <th scope="col">Kode Mitra</th>
+                                        <th scope="col">Kode Petugas</th>
                                         <th scope="col">Nama</th>
-                                        <th scope="col">Nama Penilai</th>
+                                        <th scope="col">Kode Penilai</th>
                                         <th scope="col">Nama Kegiatan</th>                                        
                                         <th scope="col">Bulan Kegiatan</th> 
                                         <th scope="col">Volume Beban Kerja</th>
@@ -51,7 +51,7 @@
                                 <?php foreach ($admin as $i => $adm) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $adm->kode_mitra; ?></td>
+                                            <td><?= $adm->kode_petugas; ?></td>
                                             <td><?= $adm->nama; ?></td>
                                             <td><?= $adm->nama_penilai; ?></td>
                                             <td><?= $adm->nama_kegiatan; ?></td>

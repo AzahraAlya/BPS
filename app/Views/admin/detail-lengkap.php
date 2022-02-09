@@ -25,7 +25,7 @@
 
                 <div class="card mt-3">
                     <div class="card-header">
-                    <p class="h5 text-center font-weight-bold">Detail Data Lengkap Mitra</p>
+                    <p class="h5 text-center font-weight-bold">Detail Data Lengkap Petugas</p>
                     <a href = "/admin/mitra-lengkap" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
@@ -34,14 +34,14 @@
                         
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
-                                <label for="validationCustom01">Kode Mitra</label>
-                                <input type="text" class="form-control" name="Kode_Mitra" value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                                <label for="validationCustom01">Kode Petugas</label>
+                                <input type="text" class="form-control" name="Kode_Mitra" value="<?= $petugas['KODE_PETUGAS']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good! </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">No Kecamatan</label>
-                                <input type="text" class="form-control" name="noKecamatan" value="<?= $pencacah['noKecamatan']; ?>" readonly>
+                                <input type="text" class="form-control" name="noKECAMATAN" value="<?= $petugas['noKECAMATAN']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -50,14 +50,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">No Peserta</label>
-                                <input type="text" class="form-control" name="NOMOR_PESERTA" value="<?= $pencacah['NOMOR_PESERTA']; ?>" readonly>
+                                <input type="text" class="form-control" name="NOMOR_PESERTA" value="<?= $petugas['NOMOR_PESERTA']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">NIK</label>
-                                <input type="text" class="form-control" name="NIK" value="<?= $pencacah['NIK']; ?>" readonly>
+                                <input type="text" class="form-control" name="NIK" value="<?= $petugas['NIK_NIP']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -66,21 +66,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Nama</label>
-                                <input type="text" class="form-control" name="NAMA" value="<?= $pencacah['NAMA']; ?>" readonly>
+                                <input type="text" class="form-control" name="NAMA" value="<?= $petugas['NAMA']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Jenis Kelamin</label>
-                                <input type="text" class="form-control"name="JENIS_KELAMIN" value="<?= $pencacah['JENIS_KELAMIN']; ?>" readonly>
+                                <input type="text" class="form-control"name="JENIS_KELAMIN" value="<?= $petugas['JENIS_KELAMIN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Pendidikan</label>
-                                <input type="text" class="form-control" name="PENDIDIKAN" value="<?= $pencacah['PENDIDIKAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="PENDIDIKAN" value="<?= $petugas['PENDIDIKAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -89,14 +89,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Tempat Lahir</label>
-                                <input type="text" class="form-control" name="TEMPAT_LAHIR" value="<?= $pencacah['TEMPAT_LAHIR']; ?>" readonly>
+                                <input type="text" class="form-control" name="TEMPAT_LAHIR" value="<?= $petugas['TEMPAT_LAHIR']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Tanggal Lahir</label>
-                            <input type="text" class="form-control"name="TANGGAL_LAHIR" value="<?= $pencacah['TANGGAL_LAHIR']; ?>" readonly>
+                            <input type="text" class="form-control"name="TANGGAL_LAHIR" value="<?= $petugas['TANGGAL_LAHIR']; ?>" readonly>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -105,14 +105,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Status Perkawinan</label>
-                                <input type="text" class="form-control" name="STATUS_PERKAWINAN" value="<?= $pencacah['STATUS_PERKAWINAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="STATUS_PERKAWINAN" value="<?= $petugas['STATUS_PERKAWINAN']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                         <div class="col-md-6 mb-3">
                             <label for="validationCustom02">Pekerjaan</label>
-                            <input type="text" class="form-control" name="PEKERJAAN" value="<?= $pencacah['PEKERJAAN']; ?>" readonly>
+                            <input type="text" class="form-control" name="PEKERJAAN" value="<?= $petugas['PEKERJAAN']; ?>" readonly>
                             <div class="valid-feedback">
                                 Looks good!
                             </div>
@@ -121,12 +121,12 @@
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Pengalaman Survei BPS</label>
-                            <input type="text" class="form-control" name="PENGALAMAN_SURVEI_BPS" value="<?= $pencacah['PENGALAMAN_SURVEI_BPS']; ?>" readonly>
+                            <input type="text" class="form-control" name="PENGALAMAN_SURVEI_BPS" value="<?= $petugas['PENGALAMAN_SURVEI_BPS']; ?>" readonly>
                         </div>
 
                         <div class="form-group">
                             <label for="exampleInputPassword1">Alamat</label>
-                            <input type="text" class="form-control" name="ALAMAT" value="<?= $pencacah['ALAMAT']; ?>" readonly>
+                            <input type="text" class="form-control" name="ALAMAT" value="<?= $petugas['ALAMAT']; ?>" readonly>
                         </div>
 
                        
@@ -134,21 +134,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Desa</label>
-                                <input type="text" class="form-control" name="DESA" value="<?= $pencacah['DESA']; ?>" readonly>
+                                <input type="text" class="form-control" name="DESA" value="<?= $petugas['DESA']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                         <div class="col-md-3 mb-3">
                             <label for="validationCustom04">Kecamatan</label>
-                            <input type="text" class="form-control" name="KECAMATAN" value="<?= $pencacah['KECAMATAN']; ?>" readonly>
+                            <input type="text" class="form-control" name="KECAMATAN" value="<?= $petugas['KECAMATAN']; ?>" readonly>
                             <div class="invalid-feedback">
                                 Please select a valid state.
                             </div>
                         </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Kabupaten</label>
-                                <input type="text" class="form-control" name="KABUPATEN" value="<?= $pencacah['KABUPATEN']; ?>" readonly>
+                                <input type="text" class="form-control" name="KABUPATEN" value="<?= $petugas['KABUPATEN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -157,14 +157,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">No Hp</label>
-                                <input type="text" class="form-control" name="NOMOR_HP" value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
+                                <input type="text" class="form-control" name="NOMOR_HP" value="<?= $petugas['NOMOR_HP']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">No WA</label>
-                                <input type="text" class="form-control" name="NOMOR_WA" value="<?= $pencacah['NOMOR_WA']; ?>" readonly>
+                                <input type="text" class="form-control" name="NOMOR_WA" value="<?= $petugas['NOMOR_WA']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -172,27 +172,27 @@
                         </div>
                         <div class="form-group">
                             <label for="exampleInputPassword1">Kesan dan Pesan</label>
-                            <input type="text" class="form-control" name="KESAN_DAN_PESAN" value="<?= $pencacah['KESAN_DAN_PESAN']; ?>" readonly>
+                            <input type="text" class="form-control" name="KESAN_DAN_PESAN" value="<?= $petugas['KESAN_DAN_PESAN']; ?>" readonly>
                         </div>
                        
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Penampilan</label>
-                                <input type="text" class="form-control" name="PENAMPILAN" value="<?= $pencacah['PENAMPILAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="PENAMPILAN" value="<?= $petugas['PENAMPILAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Komunikasi</label>
-                                <input type="text" class="form-control" name="KOMUNIKASI" value="<?= $pencacah['KOMUNIKASI']; ?>" readonly>
+                                <input type="text" class="form-control" name="KOMUNIKASI" value="<?= $petugas['KOMUNIKASI']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Nilai</label>
-                                <input type="text" class="form-control" name="NILAI" value="<?= $pencacah['NILAI']; ?>" readonly>
+                                <input type="text" class="form-control" name="NILAI" value="<?= $petugas['NILAI']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -202,14 +202,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Kepemilikan HP</label>
-                                <input type="text" class="form-control" name="KEPEMILIKAN_HP" value="<?= $pencacah['KEPEMILIKAN_HP']; ?>" readonly>
+                                <input type="text" class="form-control" name="KEPEMILIKAN_HP" value="<?= $petugas['KEPEMILIKAN_HP']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">Spesifikasi Android</label>
-                                <input type="text" class="form-control" name="SPESIFIKASI_ANDROID" value="<?= $pencacah['SPESIFIKASI_ANDROID']; ?>" readonly>
+                                <input type="text" class="form-control" name="SPESIFIKASI_ANDROID" value="<?= $petugas['SPESIFIKASI_ANDROID']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -219,14 +219,14 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom01">Operasi Google Maps</label>
-                                <input type="text" class="form-control" name="OPERASI_GOOGLE_MAPS" value="<?= $pencacah['OPERASI_GOOGLE_MAPS']; ?>" readonly>
+                                <input type="text" class="form-control" name="OPERASI_GOOGLE_MAPS" value="<?= $petugas['OPERASI_GOOGLE_MAPS']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
                             </div>
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom02">Gambar</label>
-                                <input type="text" class="form-control" name="GAMBAR" value="<?= $pencacah['GAMBAR']; ?>" readonly>
+                                <input type="text" class="form-control" name="GAMBAR" value="<?= $petugas['GAMBAR']; ?>" readonly>
                                 <div class="valid-feedback">
                                     Looks good!
                                 </div>
@@ -236,28 +236,28 @@
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom03">E</label>
-                                <input type="text" class="form-control" name="E" value="<?= $pencacah['E']; ?>" readonly>
+                                <input type="text" class="form-control" name="E" value="<?= $petugas['E']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">I</label>
-                                <input type="text" class="form-control" name="I" value="<?= $pencacah['I']; ?>" readonly>
+                                <input type="text" class="form-control" name="I" value="<?= $petugas['I']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">S</label>
-                                <input type="text" class="form-control" name="S" value="<?= $pencacah['S']; ?>" readonly>
+                                <input type="text" class="form-control" name="S" value="<?= $petugas['S']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">N</label>
-                                <input type="text" class="form-control" name="N" value="<?= $pencacah['N']; ?>" readonly>
+                                <input type="text" class="form-control" name="N" value="<?= $petugas['N']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -268,28 +268,28 @@
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom03">T</label>
-                                <input type="text" class="form-control" name="T" value="<?= $pencacah['T']; ?>" readonly>
+                                <input type="text" class="form-control" name="T" value="<?= $petugas['T']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">F</label>
-                                <input type="text" class="form-control" name="F" value="<?= $pencacah['F']; ?>" readonly>
+                                <input type="text" class="form-control" name="F" value="<?= $petugas['F']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">J</label>
-                                <input type="text" class="form-control" name="J" value="<?= $pencacah['J']; ?>" readonly>
+                                <input type="text" class="form-control" name="J" value="<?= $petugas['J']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">P</label>
-                                <input type="text" class="form-control" name="P" value="<?= $pencacah['P']; ?>" readonly>
+                                <input type="text" class="form-control" name="P" value="<?= $petugas['P']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -299,28 +299,28 @@
                         <div class="form-row">
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom03">Huruf 1</label>
-                                <input type="text" class="form-control" name="huruf1" value="<?= $pencacah['huruf1']; ?>" readonly>
+                                <input type="text" class="form-control" name="huruf1" value="<?= $petugas['huruf1']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Huruf 2</label>
-                                <input type="text" class="form-control" name="huruf2" value="<?= $pencacah['huruf2']; ?>" readonly>
+                                <input type="text" class="form-control" name="huruf2" value="<?= $petugas['huruf2']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Huruf 3</label>
-                                <input type="text" class="form-control" name="huruf3" value="<?= $pencacah['huruf3']; ?>" readonly>
+                                <input type="text" class="form-control" name="huruf3" value="<?= $petugas['huruf3']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Huruf 4</label>
-                                <input type="text" class="form-control" name="huruf4" value="<?= $pencacah['huruf4']; ?>" readonly>
+                                <input type="text" class="form-control" name="huruf4" value="<?= $petugas['huruf4']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -330,21 +330,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Rekomendasi Hasil MBTI</label>
-                                <input type="text" class="form-control" name="Rekomendasi_Hasil_MBTI" value="<?= $pencacah['Rekomendasi_Hasil_MBTI']; ?>" readonly>
+                                <input type="text" class="form-control" name="Rekomendasi_Hasil_MBTI" value="<?= $petugas['REKOMENDASI_HASIL_MBTI']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Psikolog Prov</label>
-                                <input type="text" class="form-control" name="Psikolog_Prov" value="<?= $pencacah['Psikolog_Prov']; ?>" readonly>
+                                <input type="text" class="form-control" name="Psikolog_Prov" value="<?= $petugas['PSIKOLOG_PROV']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Evaluasi KSK</label>
-                                <input type="text" class="form-control" name="Evaluasi_KSK" value="<?= $pencacah['Evaluasi_KSK']; ?>" readonly>
+                                <input type="text" class="form-control" name="Evaluasi_KSK" value="<?= $petugas['EVALUASI_KSK']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -354,21 +354,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Hasil Akhir</label>
-                                <input type="text" class="form-control" name="HASIL_AKHIR" value="<?= $pencacah['HASIL_AKHIR']; ?>" readonly>
+                                <input type="text" class="form-control" name="HASIL_AKHIR" value="<?= $petugas['HASIL_AKHIR']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Lulus Pemetaan</label>
-                                <input type="text" class="form-control" name="LULUS_PEMETAAN" value="<?= $pencacah['LULUS_PEMETAAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="LULUS_PEMETAAN" value="<?= $petugas['LULUS_PEMETAAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Keterangan</label>
-                                <input type="text" class="form-control" name="Keterangan" value="<?= $pencacah['Keterangan']; ?>" readonly>
+                                <input type="text" class="form-control" name="Keterangan" value="<?= $petugas['KETERANGAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -378,21 +378,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Nilai Pendalaman</label>
-                                <input type="text" class="form-control" name="NILAI_PENDALAMAN" value="<?= $pencacah['NILAI_PENDALAMAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="NILAI_PENDALAMAN" value="<?= $petugas['NILAI_PENDALAMAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Nilai Pengamatan</label>
-                                <input type="text" class="form-control" name="NILAI_PENGAMATAN" value="<?= $pencacah['NILAI_PENGAMATAN']; ?>" readonly>
+                                <input type="text" class="form-control" name="NILAI_PENGAMATAN" value="<?= $petugas['NILAI_PENGAMATAN']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Jumlah Error</label>
-                                <input type="text" class="form-control" name="JUMLAH_ERROR" value="<?= $pencacah['JUMLAH_ERROR']; ?>" readonly>
+                                <input type="text" class="form-control" name="JUMLAH_ERROR" value="<?= $petugas['JUMLAH_ERROR']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>
@@ -402,21 +402,21 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                                 <label for="validationCustom03">Psikotes</label>
-                                <input type="text" class="form-control" name="PSIKOTES" value="<?= $pencacah['PSIKOTES']; ?>" readonly>
+                                <input type="text" class="form-control" name="PSIKOTES" value="<?= $petugas['PSIKOTES']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid city.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom04">Umur</label>
-                                <input type="text" class="form-control" name="Umur" value="<?= $pencacah['Umur']; ?>" readonly>
+                                <input type="text" class="form-control" name="Umur" value="<?= $petugas['UMUR']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please select a valid state.
                                 </div>
                             </div>
                             <div class="col-md-3 mb-3">
                                 <label for="validationCustom05">Tanggal Rekrutmen Ujian MBTI</label>
-                                <input type="text" class="form-control" name="Tanggal_rekrutmen_Ujian_MBTI" value="<?= $pencacah['Tanggal_rekrutmen_Ujian_MBTI']; ?>" readonly>
+                                <input type="text" class="form-control" name="Tanggal_rekrutmen_Ujian_MBTI" value="<?= $petugas['TANGGAL_REKRUTMEN_UJIAN_MBTI']; ?>" readonly>
                                 <div class="invalid-feedback">
                                     Please provide a valid zip.
                                 </div>

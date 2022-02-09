@@ -59,13 +59,13 @@
             <li class="nav-item">
                 <a class="nav-link" href="/admin/mitra-lengkap">
                     <i class="fas fa-book"></i>
-                    <span>Data Mitra</span></a>
+                    <span>Data Petugas</span></a>
             </li>
-            <li class="nav-item">
+            <!-- <li class="nav-item">
                 <a class="nav-link" href="/admin/pegawai">
                     <i class="fas fa-file"></i>
                     <span>Data Pegawai</span></a>
-            </li>
+            </li> -->
             <li class="nav-item">
                 <a class="nav-link" href="/admin/kegiatan">
                     <i class="fas fa-archive"></i>

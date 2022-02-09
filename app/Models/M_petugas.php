@@ -61,4 +61,22 @@ class M_petugas extends Model
   
       return $this->where(['NO_URUT'=> $NO_URUT]) -> first();
     }
+
+    public function id_KodePetugas(){
+      $kode = $this->db->table('tb_petugas')
+      ->select('RIGHT(KODE_PETUGAS,3) as KODE_PETUGAS', false)
+      ->orderBy('KODE_PETUGAS', 'DESC')
+      ->limit(1)->get()->getRowArray();
+        $kode_mitra = isset($kode['KODE_PETUGAS']) ? $kode['KODE_PETUGAS'] : '';
+      if($kode_mitra ==null){
+        $no = 1;
+      }else{
+        $no = intval($kode_mitra) + 1;
+      }
+  
+      $tgl = 1810;
+      $batas = str_pad($no, 3, STR_PAD_LEFT);
+      $id_petugas = $tgl.$batas;
+      return $id_petugas;
+    }
 }
