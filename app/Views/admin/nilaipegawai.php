@@ -24,7 +24,7 @@
                         <div class="form-row">
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom03">Kode Pegawai</label>
-                            <input type="text" class="form-control" name="kode_petugas" autofocus value="<?= $petugas['KODE_PETUGAS']; ?>" readonly>
+                            <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $petugas['KODE_PETUGAS']; ?>" readonly>
                             </div>
                             <div class="col-md-6 mb-3">
                             <label for="validationCustom04">Nama</label>
@@ -34,7 +34,7 @@
                         <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom05">NIK</label>
-                                    <input type="text" class="form-control" name="nik_nip" autofocus value="<?= $petugas['NIK_NIP']; ?>" readonly>
+                                    <input type="text" class="form-control" name="nik" autofocus value="<?= $petugas['NIK_NIP']; ?>" readonly>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Nomor HP</label>

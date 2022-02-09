@@ -22,7 +22,7 @@
                 <div class="card mt-3">
                     <div class="card-header py-3">
                     <p class="h5 text-center font-weight-bold">Riwayat Penilaian Mitra</p>
-                    <a href = "/admin/pegawai" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
+                    <a href = "/admin/mitra-lengkap" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">
@@ -41,7 +41,7 @@
                                 foreach ($kegiatan as $i => $pc) : ?>
                                         <tr>
                                             
-                                            <td><?= $pc['nama_pegawai']; ?></td>
+                                            <td><?= $pc['nama']; ?></td>
                                             <td><?= $pc['nama_kegiatan']; ?></td>
                                             <td><?= date("l, d F Y",strtotime($pc['created_at'])); ?></td>
                                         </tr>

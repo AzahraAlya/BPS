@@ -63,9 +63,11 @@ class C_Admin extends BaseController
 		}
 	
 		//simpan petugas baru
-		public function storeMitra(){
+		public function storeMitra($NO_URUT){
 			helper(['swal_helper']);
-			$data = [
+			$M_petugas = model("M_petugas");
+			$M_petugas->save([
+				'NO_URUT' => $NO_URUT,
 				'KODE_PETUGAS' => $this->request->getVar('KODE_PETUGAS'),
 				'noKECAMATAN'=> $this->request->getVar('noKECAMATAN'),
 				'NOMOR_PESERTA' => $this->request->getVar('NOMOR_PESERTA'),
@@ -109,16 +111,15 @@ class C_Admin extends BaseController
 				'EVALUASI_KSK' => $this->request->getVar('EVALUASI_KSK'),
 				'HASIL_AKHIR' => $this->request->getVar('HASIL_AKHIR'),
 				'LULUS_PEMETAAN' => $this->request->getVar('LULUS_PEMETAAN'),
-				'Keterangan' => $this->request->getVar('KETERANGAN'),
+				'KETERANGAN' => $this->request->getVar('KETERANGAN'),
 				'NILAI_PENDALAMAN' => $this->request->getVar('NILAI_PENDALAMAN'),
 				'NILAI_PENGAMATAN' => $this->request->getVar('NILAI_PENGAMATAN'),
 				'JUMLAH_ERROR' => $this->request->getVar('JUMLAH_ERROR'),
 				'PSIKOTES' => $this->request->getVar('PSIKOTES'),
 				'UMUR' => $this->request->getVar('UMUR'),
 				'TANGGAL_REKRUTMEN_UJIAN_MBTI' => $this->request->getVar('TANGGAL_REKRUTMEN_UJIAN_MBTI'),
-			];
-			$model = model("M_petugas");
-			$model->insert($data);
+			]);
+			
 			set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 			return redirect()->to(base_url('/admin/mitra-lengkap'));
 		}
@@ -254,11 +255,11 @@ class C_Admin extends BaseController
 	}
 
 	public function listNilaiPegawai($kode){
-		$M_pegawai = model("M_pegawai");
+		$M_nilai = model("M_nilai");
 		// $kode = session()->get('Kode_Mitra');
 		$data = [
 			'validation' => \Config\Services::validation(),
-			'kegiatan' => $M_pegawai->getKegiatan($kode),
+			'kegiatan' => $M_nilai->getKegiatan($kode),
 		];
 		return view('admin/list-kegiatan', $data);
 	}
@@ -267,9 +268,9 @@ class C_Admin extends BaseController
 	public function storeNilaiPegawai(){
 		helper(['swal_helper']);
 		$data = [
-			'kode_petugas' => $this->request->getVar('kode_petugas'),
+			'kode_mitra' => $this->request->getVar('kode_mitra'),
 			'nama' => $this->request->getVar('nama'),
-			'nik_nip' => $this->request->getVar('nik_nip'),
+			'nik' => $this->request->getVar('nik'),
 			'no_hp' => $this->request->getVar('no_hp'),
 			'alamat' => $this->request->getVar('alamat'),
 			'nama_penilai' => $this->request->getVar('nama_penilai'),

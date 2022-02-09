@@ -54,7 +54,7 @@
                                                 <a href="/admin/nilaipegawai/<?= $pc['NO_URUT']; ?>" class="btn btn-sm btn-success"><i class="fas fa-calculator"></i></a>
                                             </td>
                                             <td align="center">
-                                                <a href="/admin/list/penilaian/<?= $pc['NIK_NIP']; ?>" class="btn btn-sm btn-info"><i class="fas fa-check-circle"></i></a>
+                                                <a href="/admin/list/penilaian/<?= $pc['KODE_PETUGAS']; ?>" class="btn btn-sm btn-info"><i class="fas fa-check-circle"></i></a>
                                             </td>
                                             <td align="center">
                                                 <form action="/admin/data-hapus/<?= $pc['NO_URUT']; ?>" method="post" class="d-inline">

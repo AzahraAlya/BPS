@@ -2,6 +2,7 @@
 
 namespace App\Controllers;
 
+use App\Models\M_petugas;
 use App\Models\M_user;
 
 class C_manage extends BaseController
@@ -10,11 +11,18 @@ class C_manage extends BaseController
     public function __construct()
     {
         $this->M_user = new M_user();
+        $this->M_petugas = new M_petugas();
     }
 
 	public function index()
 	{
-        return view('admin/add_admin');
+        $model = model("M_petugas");
+		$id_petugas = $model->id_KodePetugas();
+	
+		$data = [
+			'id_petugas' => $id_petugas,
+		];
+        return view('admin/add_admin', $data);
 	}
 
     public function save()
@@ -22,8 +30,8 @@ class C_manage extends BaseController
         $session = session();
         helper(['form']);
         $rules = [
-            'nama_petugas'      => 'required|min_length[3]|max_length[64]',
-            'nik'      => 'required|min_length[3]|max_length[64]',
+            'NAMA'      => 'required|min_length[3]|max_length[64]',
+            'KODE_PETUGAS'      => 'required|min_length[3]|max_length[64]',
             'password'      => 'required|min_length[3]|max_length[200]',
             'confpassword'  => 'matches[password]',
             'role'      => 'required|min_length[1]|max_length[2]',
@@ -31,15 +39,12 @@ class C_manage extends BaseController
 
         if ($this->validate($rules)) {
             $data = [
-                'nama_petugas'  => $this->request->getVar('nama_petugas'),
-                'nik'  => $this->request->getVar('nik'),
+                'NAMA'  => $this->request->getVar('NAMA'),
+                'KODE_PETUGAS'  => $this->request->getVar('KODE_PETUGAS'),
                 'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
-                // 'firstname'  => $this->request->getVar('firstname'),
-                // 'lastname'  => $this->request->getVar('lastname'),
-                // 'email'     => $this->request->getVar('email'),
                 'role'      => $this->request->getVar('role'),
             ];
-            $this->M_user->save($data);
+            $this->M_petugas->insert($data);
             return redirect()->to('/manage/account');
         } else {
             $validation = $this->validator;

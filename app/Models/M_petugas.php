@@ -79,4 +79,6 @@ class M_petugas extends Model
       $id_petugas = $tgl.$batas;
       return $id_petugas;
     }
+
+   
 }

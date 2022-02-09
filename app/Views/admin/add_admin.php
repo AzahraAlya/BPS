@@ -20,17 +20,18 @@
                     <h4 class="card-title">Pengelolaan Pengawas</h4>
                     <form class="forms-sample" action="/admin/manage/accounts/save" method="post">
                         <div class="form-group row">
-                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Nama Petugas</label>
+                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Kode Petugas</label>
                             <div class="col-sm-10">
-                                <input type="text" minLength="4" class="form-control " name="nama_petugas" placeholder="Nama Petugas" required>
+                                <input type="text" minLength="4" class="form-control " name="KODE_PETUGAS" placeholder="Kode Petugas" value="<?php echo $id_petugas?>" readonly>
                             </div>
                         </div>
                         <div class="form-group row">
-                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">NIP</label>
+                            <label for="exampleInputEmail2" class="col-sm-2 col-form-label">Nama Petugas</label>
                             <div class="col-sm-10">
-                                <input type="text" minLength="4" class="form-control " name="nik" placeholder="NIP" required>
+                                <input type="text" minLength="4" class="form-control " name="NAMA" placeholder="Nama Petugas" required>
                             </div>
                         </div>
+                        
                         <div class="form-group row">
                             <label for="exampleInputMobile" class="col-sm-2 col-form-label">Password</label>
                             <div class="col-sm-10">

@@ -51,7 +51,7 @@
                                 <?php foreach ($admin as $i => $adm) : ?>
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
-                                            <td><?= $adm->kode_petugas; ?></td>
+                                            <td><?= $adm->kode_mitra; ?></td>
                                             <td><?= $adm->nama; ?></td>
                                             <td><?= $adm->nama_penilai; ?></td>
                                             <td><?= $adm->nama_kegiatan; ?></td>
