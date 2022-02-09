@@ -102,7 +102,9 @@ $routes->get('/pengawas/detail/(:segment)', 'C_pengawas::detailkegiatan/$1',['fi
 
 $routes->get('/manage/account', 'C_Admin::manageaccount', ['filter' => 'admin']);
 $routes->get('/manage/accounts/data', 'C_manage::index', ['filter' => 'admin']);
+$routes->get('/manage/accounts/user', 'C_manage::user', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/save', 'C_manage::save');
+$routes->post('/admin/manage/accounts/user/save', 'C_manage::saveuser');
 $routes->get('/manage/account/pencacah', 'C_Admin::manageaccountuser', ['filter' => 'admin']);
 $routes->delete('/admin/manage/accounts/delete/(:any)', 'C_manage::deletePencacah/$1');
 $routes->delete('/admin/manage/delete/(:any)', 'C_manage::delete/$1');

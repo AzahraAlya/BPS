@@ -57,17 +57,14 @@
                     <h3 data-aos="fade-up">Badan Pusat Statistik</h3>
 
                     <h1 data-aos="fade-up">
-                        Sistem Evaluasi Kinerja Mitra BPS 
+                        Sistem Evaluasi Kinerja Petugas BPS 
                        
                         <div class="buttons" data-aos="">
                         <h3>kabupaten pringsewu<br></h3>
-                            <a href="/login_mitra" class=" button stroke">
-                                <span class="icon-play" aria-hidden="true"></span>
-                                Login Mitra
-                            </a>
+                            
                             <a href="/login" class="button stroke">
                                 <span class="icon-play" aria-hidden="true"></span>
-                                Login Admin
+                                Login Sistem
                             </a>
                             <br>
                             <br>
@@ -141,8 +138,8 @@
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>© Copyright Dazzle 2018.</span> 
-		         	<span>Design by <a href="http://www.styleshout.com/">styleshout</a></span>		         	
+		         	<span>© Copyright 2022.</span> 
+		         	<span>Badan Pusat Statistik Kabupaten Pringsewu</span>		         	
 		         </div>
 
 		         <div id="go-top">

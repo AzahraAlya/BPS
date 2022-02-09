@@ -25,6 +25,17 @@ class C_manage extends BaseController
         return view('admin/add_admin', $data);
 	}
 
+    public function user()
+	{
+        $model = model("M_petugas");
+		$id_petugas = $model->id_KodePetugas();
+	
+		$data = [
+			'id_petugas' => $id_petugas,
+		];
+        return view('admin/add_user', $data);
+	}
+
     public function save()
 	{
         $session = session();
@@ -33,7 +44,7 @@ class C_manage extends BaseController
             'NAMA'      => 'required|min_length[3]|max_length[64]',
             'KODE_PETUGAS'      => 'required|min_length[3]|max_length[64]',
             'password'      => 'required|min_length[3]|max_length[200]',
-            'confpassword'  => 'matches[password]',
+            'password_confirm'  => 'matches[password]',
             'role'      => 'required|min_length[1]|max_length[2]',
         ];
 
@@ -42,10 +53,38 @@ class C_manage extends BaseController
                 'NAMA'  => $this->request->getVar('NAMA'),
                 'KODE_PETUGAS'  => $this->request->getVar('KODE_PETUGAS'),
                 'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'password_confirm'  => $this->request->getVar('password_confirm'),
                 'role'      => $this->request->getVar('role'),
             ];
             $this->M_petugas->insert($data);
             return redirect()->to('/manage/account');
+        } else {
+            $validation = $this->validator;
+            $session->setFlashdata('error', $validation->listErrors());
+        }
+    }
+
+    public function saveuser()
+	{
+        $session = session();
+        helper(['form']);
+        $rules = [
+            'NAMA'      => 'required|min_length[3]|max_length[64]',
+            'KODE_PETUGAS'      => 'required|min_length[3]|max_length[64]',
+            'password'      => 'required|min_length[3]|max_length[200]',
+            'password_confirm'  => 'matches[password]',
+        ];
+
+        if ($this->validate($rules)) {
+            $data = [
+                'NAMA'  => $this->request->getVar('NAMA'),
+                'KODE_PETUGAS'  => $this->request->getVar('KODE_PETUGAS'),
+                'password'  => password_hash($this->request->getVar('password'), PASSWORD_DEFAULT),
+                'password_confirm'  => $this->request->getVar('password_confirm'),
+                'role'      => 0,
+            ];
+            $this->M_petugas->insert($data);
+            return redirect()->to('/manage/account/pencacah');
         } else {
             $validation = $this->validator;
             $session->setFlashdata('error', $validation->listErrors());

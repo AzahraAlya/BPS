@@ -91,6 +91,7 @@ class C_login extends BaseController
 				];
 				if ($this->request->getPost('password') != '') {
 					$newData['password'] = $this->request->getPost('password');
+					$newData['password_confirm'] = $this->request->getPost('password_confirm');
 				}
 				$model->save($newData);
 				set_notifikasi_swal('success', 'Berhasil','Password Berhasil Diubah');
