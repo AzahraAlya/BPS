@@ -36,7 +36,7 @@
                         <div class="text-xs font-weight-bold text-primary text-uppercase mb-1">
                             Jumlah Mitra</div>
                         <?php $i=0; ?>
-                        <?php foreach ($pencacah as $i => $agt) :
+                        <?php foreach ($jumlahAdmin as $i => $agt) :
                             $i++;
                         endforeach;
                         ?>
@@ -58,9 +58,9 @@
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
                         <div class="text-xs font-weight-bold text-success text-uppercase mb-1">
-                           Mitra Yang Sudah Dinilai</div>
-                        <?php $j=0; ?>
-                        <?php foreach ($nilai as $j => $bk) :
+                           Jumlah Pegawai</div>
+                           <?php $j=0; ?>
+                        <?php foreach ($jumlahpenilai as $j => $pj) :
                             $j++;
                         endforeach;
                         ?>
@@ -80,10 +80,10 @@
             <div class="card-body">
                 <div class="row no-gutters align-items-center">
                     <div class="col mr-2">
-                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Pegawai
+                        <div class="text-xs font-weight-bold text-info text-uppercase mb-1">Jumlah Pegawai PPNPM
                         </div>
                         <?php $k=0; ?>
-                        <?php foreach ($pegawai as $k => $pj) :
+                        <?php foreach ($jumlahNonAdmin as $k => $pj) :
                             $k++;
                         endforeach;
                         ?>

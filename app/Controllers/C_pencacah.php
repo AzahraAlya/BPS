@@ -3,7 +3,7 @@
 namespace App\Controllers;
 use App\Models\M_user;
 use App\Models\M_pencacah;
-use App\Models\M_kegiatan;
+use App\Models\M_petugas;
 
 
 class C_Pencacah extends BaseController{
@@ -11,6 +11,7 @@ class C_Pencacah extends BaseController{
     {
         
         $this->user = new M_user();
+        $this->petugas = new M_petugas();
     }
     public function index()
     {
@@ -30,19 +31,15 @@ class C_Pencacah extends BaseController{
 				'nilaipgw' => $M_pegawai->findAll(),
 				'validation' => \Config\Services::validation(),
                 'jumlahUser'=> $jumlahUser,
-                'jumlahAdmin' => $this->user->like('role','0')->countAllResults(),
-                'jumlahNonAdmin'=>$this->user->like('role','1')->countAllResults(),
-                'jumlahpenilai'=>$this->user->like('role','2')->countAllResults(),
+                'jumlahAdmin' => $M_petugas->like('role','0')->findAll(),
+                'jumlahNonAdmin'=>$M_petugas->like('role','1' )->findAll(),
+                'jumlahpenilai'=>$M_petugas->like('role','2')->findAll(),
             ]);
             
         }else if($session->get('role') == 2){
             return view('pengawas/editprofile',[ // role 2 = pengawas
                 'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
 				'validation' => \Config\Services::validation(),
-                'jumlahUser'=> $jumlahUser,
-                'jumlahAdmin' => $this->user->like('role','0')->countAllResults(),
-                'jumlahNonAdmin'=>$this->user->like('role','1')->countAllResults(),
-                'jumlahpenilai'=>$this->user->like('role','2')->countAllResults(),
             ]);
 
         

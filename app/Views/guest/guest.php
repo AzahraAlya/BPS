@@ -11,7 +11,7 @@
     <!--- basic page needs
    ================================================== -->
     <meta charset="utf-8">
-    <title>Dazzle</title>
+    <title>BPS Kabupaten Pringsewu</title>
     <meta name="description" content="">
     <meta name="author" content="">
 
@@ -75,37 +75,28 @@
 
                 </div>
 
-                <div class="home-image-right">
-                    <img src="images/iphone-app-470.png" 
-                        srcset="images/iphone-app-470.png 1x, images/iphone-app-940.png 2x"  
-                        data-aos="fade-up">
-                </div>
+                
             </div>
 
         </div> <!-- end home-content -->
 
         <ul class="home-social-list">
             <li>
-                <a href="#"><i class="fa fa-facebook-square"></i></a>
+                <a href="https://www.facebook.com/pages/Bps%20Kabupaten%20Pringsewu/148319242343453/"><i class="fa fa-facebook-square"></i></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-twitter"></i></a>
+                <a href="https://twitter.com/PringsewuBps"><i class="fa fa-twitter"></i></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-instagram"></i></a>
+                <a href="https://www.instagram.com/bps_pringsewu/"><i class="fa fa-instagram"></i></a>
             </li>
             <li>
-                <a href="#"><i class="fa fa-youtube-play"></i></a>
+                <a href="https://www.youtube.com/channel/UCSqF4slq77SHBdGjX9htEXg"><i class="fa fa-youtube-play"></i></a>
             </li>
         </ul>
         <!-- end home-social-list -->
 
-        <div class="home-scrolldown">
-            <a href="#about" class="scroll-icon smoothscroll">
-                <span>Scroll Down</span>
-                <i class="icon-arrow-right" aria-hidden="true"></i>
-            </a>
-        </div>
+        
 
     </section> <!-- end home -->  
 
@@ -138,7 +129,7 @@
 
       		<div class="col-twelve">
 	      		<div class="copyright">
-		         	<span>© Copyright 2022.</span> 
+		         	<span>© Copyright 2022</span> 
 		         	<span>Badan Pusat Statistik Kabupaten Pringsewu</span>		         	
 		         </div>
 

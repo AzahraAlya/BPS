@@ -41,7 +41,7 @@
                         <div class="form-group row">
                             <label for="exampleInputPassword2" class="col-sm-2 col-form-label">Confirmation Password</label>
                             <div class="col-sm-10">
-                                <input type="password" minLength="4" class="form-control " name="confpassword" placeholder="Confirm Password" required>
+                                <input type="password" minLength="4" class="form-control " name="password_confirm" placeholder="Confirm Password" required>
                             </div>
                         </div>
                         <div class="form-group row">
