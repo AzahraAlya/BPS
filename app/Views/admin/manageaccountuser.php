@@ -14,16 +14,15 @@
         <!-- Begin Page Content -->
         <div class="content-wrapper">
         <div class="container">
-        <a href="/manage/accounts/data">
+        <!-- <a href="/manage/accounts/data">
             <button type="button" class="btn btn-primary">
                 <i class="mdi mdi-account-plus"></i>
                 Tambah Akun Pengawas
             </button>
-        </a>
-        <br> <br>
+        </a> -->
         <div class="card mt-3">
                     <div class="card-header py-3">
-                    <p class="h5 text-center font-weight-bold">Kelola Akun Pengawas</p>
+                    <p class="h5 text-center font-weight-bold">Kelola Akun Mitra</p>
                     <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">

@@ -208,7 +208,7 @@ class C_Admin extends BaseController
 		helper(['form']);
 		
 		$data = [
-            'admin' => $this->M_petugas->where('role !=', 2,3)->findAll(),
+            'admin' => $this->M_petugas->where('role =', 0)->findAll(),
             
         ];
 

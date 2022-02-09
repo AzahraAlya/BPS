@@ -56,14 +56,14 @@ class C_manage extends BaseController
 		];
         return view('admin/edit_password',$data);
     }
-    public function manageaccount(){
+    // public function manageaccount(){
 		
-		$data = [
-            'admin' => $this->M_petugas->where('role !=', 3)->findAll(),
-        ];
+	// 	$data = [
+    //         'admin' => $this->M_petugas->where('role !=', 3)->findAll(),
+    //     ];
 
-		return view('admin/manageaccount',$data);
-	}
+	// 	return view('admin/manageaccount',$data);
+	// }
 
     //simpan hasil edit password pencacah
     public function updatePassword($NO_URUT){
