@@ -188,12 +188,14 @@ class C_Admin extends BaseController
 	}
 
 	public function store_kegiatan(){
+		helper(['swal_helper']);
 		$data = [
 			'nama_kegiatan' => $this->request->getVar('nama_kegiatan'),
 		];
 		$M_kegiatan = model("M_kegiatan");
 		$M_kegiatan->insert($data);
-		return redirect()->to(base_url('/admin/tambah-kegiatan'));
+		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('/admin/kegiatan'));
 	}
 
 	public function manageaccount(){

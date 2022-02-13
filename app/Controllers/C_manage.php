@@ -38,6 +38,7 @@ class C_manage extends BaseController
 
     public function save()
 	{
+        helper(['swal_helper']);
         $session = session();
         helper(['form']);
         $rules = [
@@ -57,6 +58,7 @@ class C_manage extends BaseController
                 'role'      => $this->request->getVar('role'),
             ];
             $this->M_petugas->insert($data);
+            set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
             return redirect()->to('/manage/account');
         } else {
             $validation = $this->validator;
@@ -66,6 +68,7 @@ class C_manage extends BaseController
 
     public function saveuser()
 	{
+        helper(['swal_helper']);
         $session = session();
         helper(['form']);
         $rules = [
@@ -84,6 +87,7 @@ class C_manage extends BaseController
                 'role'      => 0,
             ];
             $this->M_petugas->insert($data);
+            set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
             return redirect()->to('/manage/account/pencacah');
         } else {
             $validation = $this->validator;
@@ -111,6 +115,7 @@ class C_manage extends BaseController
 
     //simpan hasil edit password pencacah
     public function updatePassword($NO_URUT){
+        helper(['swal_helper']);
         $M_petugas = model("M_petugas");
         $rules = [
             'password'      => 'required|min_length[3]|max_length[200]',
@@ -119,10 +124,11 @@ class C_manage extends BaseController
         if ($this->validate($rules)) {
             $data = [
                 'NO_URUT' => $NO_URUT,
-                'password'=>$this->request->getPost('password'),
+                'password'  =>$this->request->getPost('password'),
                 'password_confirm'      => $this->request->getVar('password_confirm'),
             ];
             $this->M_petugas->save($data);
+            set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		    return redirect()->to(base_url('/manage/account/pencacah'));
         } else {
             return view('admin/errorpage');
@@ -157,7 +163,7 @@ class C_manage extends BaseController
 
      //simpan hasil edit password penilai
      public function updatePasswordPenilai($NO_URUT){
-      
+        helper(['swal_helper']);
         $rules = [
             'password'      => 'required|min_length[3]|max_length[200]',
             'password_confirm'  => 'matches[password]',
@@ -169,6 +175,7 @@ class C_manage extends BaseController
                 'password_confirm'      => $this->request->getVar('password_confirm'),
             ];
             $this->M_petugas->save($data);
+            set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 		    return redirect()->to(base_url('/manage/account'));
         } else {
             return view('admin/errorpage');

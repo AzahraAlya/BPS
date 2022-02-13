@@ -58,13 +58,6 @@ class C_login extends BaseController
         return redirect()->to('/');
     }
 
-    public function logoutpencacah()
-    {
-        $session = session();
-        $session->destroy();
-        return redirect()->to('/');
-    }
-
     public function profile(){
         $session = session();
         helper(['swal_helper']);
