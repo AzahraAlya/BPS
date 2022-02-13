@@ -24,16 +24,12 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Mitra</label>
                                     <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid city.
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom04">Nama</label>
                                     <input type="text" class="form-control" name="nama" autofocus value="<?= $pencacah['NAMA']; ?>" readonly>
-                                    <div class="invalid-feedback">
-                                        Please select a valid state.
-                                    </div>
+                                   
                                 </div>
                             </div>
                             <!-- tampilan -->
@@ -41,16 +37,12 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom05">NIK</label>
                                     <input type="text" class="form-control" name="nik" autofocus value="<?= $pencacah['NIK_NIP']; ?>" readonly>
-                                    <div class="invalid-feedback">
-                                        Please provide a valid zip.
-                                    </div>
+                                    
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Nomor HP</label>
                                     <input type="text" class="form-control" name="no_hp" autofocus value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
+                                    
                                 </div>
                             </div>
 
@@ -58,9 +50,7 @@
                                 <div class="col">
                                     <label for="validationCustom02">Alamat</label>
                                     <input type="text" class="form-control" name="alamat" autofocus value="<?= $pencacah['ALAMAT']; ?>" readonly>
-                                    <div class="valid-feedback">
-                                        Looks good!
-                                    </div>
+                                   
                                 </div>
                             </div>
 
@@ -69,9 +59,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Penilai</label>
                                     <input type="text" class="form-control" id="nama_penilai" name="nama_penilai">
-                                    <div class="invalid-feedback">
-                                        Please provide a valid city.
-                                    </div>
+                                  
                                     <div class="small">*Diisi Oleh Penilai</div><br />
                                 </div>
 
@@ -84,9 +72,6 @@
                                             <option value="<?= $data['nama_kegiatan']; ?>"><?= $data['nama_kegiatan']; ?></option>
                                         <?php } ?>
                                     </select>
-                                    <div class="invalid-feedback">
-                                        Please select a valid state.
-                                    </div>
                                 </div>
                             </div>
 
@@ -108,28 +93,22 @@
                                         <option value="November">November</option>
                                         <option value="Desember">Desember</option>
                                     </select>
-                                    <div class="invalid-feedback">
-                                        Please select a valid state.
-                                    </div>
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom05">Volume Beban Kerja</label>
                                     <input type="text" class="form-control" id="beban_kerja" name="beban_kerja">
-                                    <div class="invalid-feedback">
-                                        Please provide a valid zip.
-                                    </div>
                                 </div>
                             </div>
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Mitra</label><br />
+                                <label for="formGroupExampleInput" class="form-label">Status Keberadaan dan Partisipasi Petugas</label><br />
                                 <input type="radio" name="status" id="options" value="Aktif">Aktif<br />
                                 <input type="radio" name="status" id="options" value="Tidak Aktif">Tidak Aktif<br />
                             </div>
                             <!-- Halaman Berikutnya -->
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Bagaimana penguasaan konsep dan definisi Mitra ketika melaksanakan kegiatan pencacahan di lapangan?</label></br>
+                                <label for="formGroupExampleInput2" class="form-label">Bagaimana penguasaan konsep dan definisi Petugas ketika melaksanakan kegiatan pencacahan di lapangan?</label></br>
                                 <input type="radio" name="que1" id="options" value="1"> 1<br />
                                 <input type="radio" name="que1" id="options" value="2"> 2<br />
                                 <input type="radio" name="que1" id="options" value="3"> 3<br />
@@ -138,7 +117,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Bagaimana teknik wawancara yang dilakukan Mitra, jika dilihat dari segi probing (mencari jawaban dengan pertanyaan lain yang berkaitan/mendekati)?</label>
+                                <label for="formGroupExampleInput2" class="form-label">Bagaimana teknik wawancara yang dilakukan Petugas, jika dilihat dari segi probing (mencari jawaban dengan pertanyaan lain yang berkaitan/mendekati)?</label>
                                 <input type="radio" name="que2" id="options" value="1"> 1<br />
                                 <input type="radio" name="que2" id="options" value="2"> 2<br />
                                 <input type="radio" name="que2" id="options" value="3"> 3<br />
@@ -147,7 +126,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Tingkat ketepatan waktu Mitra dalam menyelesaikan tugas/target yang diberikan?</label></br>
+                                <label for="formGroupExampleInput2" class="form-label">Tingkat ketepatan waktu Petugas dalam menyelesaikan tugas/target yang diberikan?</label></br>
                                 <input type="radio" name="que3" id="options" value="1"> 1<br />
                                 <input type="radio" name="que3" id="options" value="2"> 2<br />
                                 <input type="radio" name="que3" id="options" value="3"> 3<br />
@@ -156,7 +135,7 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="formGroupExampleInput2" class="form-label">Tingkat respon komunikasi yang dilakukan bersama Mitra ketika dihubungi/dibutuhkan?</label></br>
+                                <label for="formGroupExampleInput2" class="form-label">Tingkat respon komunikasi yang dilakukan bersama Petugas ketika dihubungi/dibutuhkan?</label></br>
                                 <input type="radio" name="que4" id="options" value="1"> 1<br />
                                 <input type="radio" name="que4" id="options" value="2"> 2<br />
                                 <input type="radio" name="que4" id="options" value="3"> 3<br />
@@ -165,20 +144,21 @@
                             </div>
 
                             <div class="mb-3">
-                                <label for="que5" class="form-label">Apa saja kelebihan Mitra ini? </label><br />
+                                <label for="que5" class="form-label">Apa saja kelebihan Petugas ini? </label><br />
 
                                 <input type="checkbox" name="que5[]" value="Disiplin" id="defaultCheck1">Disiplin<br />
                                 <input type="checkbox" name="que5[]" value="Smart" id="defaultCheck2">Smart<br />
                                 <input type="checkbox" name="que5[]" value="Teliti" id="defaultCheck3">Teliti<br />
                                 <input type="checkbox" name="que5[]" value="Sabar" id="defaultCheck4">Sabar<br />
                                 <input type="checkbox" name="que5[]" value="Tekun" id="defaultCheck5">Tekun<br />
+                                <input type="checkbox" name="que5[]" value="Memiliki koneksi/peran yang luas di masyarakat" id="defaultCheck6">Memiliki koneksi/peran yang luas di masyarakat<br />
                                 <label class="form-label">Lainnya </label><br />
                                 <input type="text" class="form-control col-md-6 mb-3" name="que5[]">
                                 </label>
                             </div>
 
                             <div class="mb-3">
-                                <label for="que6" class="form-label">Apa saja kekurangan Mitra ini? </label><br />
+                                <label for="que6" class="form-label">Apa saja kekurangan Petugas ini? </label><br />
 
                                 <input type="checkbox" name="que6[]" value="Tidak punya kendaraan" id="defaultCheck1">Tidak punya kendaraan<br />
                                 <input type="checkbox" name="que6[]" value="Malas" id="defaultCheck2">Malas<br />
@@ -193,6 +173,7 @@
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Catatan</label>
                                 <input type="text" class="form-control col-md-6 mb-3" name="catatan">
+                                <div class="small">*jika tidak ada isikan "-"</div><br />
                             </div>
 
 
