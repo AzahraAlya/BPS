@@ -1,6 +1,7 @@
 <?php
 
 namespace App\Controllers;
+use App\Models\M_petugas;
 use App\Models\M_pencacah;
 use App\Models\M_kegiatan;
 
@@ -99,7 +100,7 @@ class C_Pengawas extends BaseController
 		]);
 
 		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
-		return redirect()->to(base_url('/editprofile'));
+		return redirect()->to(base_url('/pengawas'));
 
 	}
 
@@ -120,6 +121,51 @@ class C_Pengawas extends BaseController
 	
 	public function pegawai(){
 		return view('pengawas/nonpegawai');
+	}
+
+	public function profile(){
+        $session = session();
+        helper(['swal_helper']);
+		helper(['form']);
+		$model = new M_petugas();
+		if ($this->request->getMethod() == 'post') {
+			//let's do the validation here
+			$rules = [
+				'password' => 'required|min_length[3]|max_length[20]',
+				'password_confirm' => 'required|min_length[3]|max_length[20]',
+			];
+
+			if ($this->request->getPost('password') != '') {
+				$rules['password'] = 'required|min_length[8]|max_length[255]';
+				$rules['password_confirm'] = 'matches[password]';
+
+			}
+
+			if (!$this->validate($rules)) {
+				$data['validation'] = $this->validator;
+			} else {
+				$newData = [
+					'NO_URUT' => session()->get('NO_URUT'),
+				];
+				if ($this->request->getPost('password') != '') {
+					$newData['password'] = $this->request->getPost('password');
+					$newData['password_confirm'] = $this->request->getPost('password_confirm');
+				}
+				$model->save($newData);
+				set_notifikasi_swal('success', 'Berhasil','Password Berhasil Diubah');
+				return redirect()->to('/pengawas');
+			}
+		}
+		$data['pengawas'] = $model->where('NO_URUT', session()->get('NO_URUT'))->first();
+        // $data['user'] = $this->$model->find(session()->get('id_user'));
+        // dd($data);
+		echo view('auth/editpassword', $data);
+    }
+
+	public function editpengawas(){
+		$model = new M_petugas();
+		$data['pengawas'] = $model->where('NO_URUT', session()->get('NO_URUT'))->first();
+		return view('auth/editpassword_pengawas',$data);
 	}
 
 }

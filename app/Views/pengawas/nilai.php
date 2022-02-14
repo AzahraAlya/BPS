@@ -24,12 +24,12 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Mitra</label>
                                     <input type="text" class="form-control" name="kode_mitra" autofocus value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
-                                    
+
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom04">Nama</label>
                                     <input type="text" class="form-control" name="nama" autofocus value="<?= $pencacah['NAMA']; ?>" readonly>
-                                   
+
                                 </div>
                             </div>
                             <!-- tampilan -->
@@ -37,12 +37,12 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom05">NIK</label>
                                     <input type="text" class="form-control" name="nik" autofocus value="<?= $pencacah['NIK_NIP']; ?>" readonly>
-                                    
+
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Nomor HP</label>
                                     <input type="text" class="form-control" name="no_hp" autofocus value="<?= $pencacah['NOMOR_HP']; ?>" readonly>
-                                    
+
                                 </div>
                             </div>
 
@@ -50,7 +50,7 @@
                                 <div class="col">
                                     <label for="validationCustom02">Alamat</label>
                                     <input type="text" class="form-control" name="alamat" autofocus value="<?= $pencacah['ALAMAT']; ?>" readonly>
-                                   
+
                                 </div>
                             </div>
 
@@ -59,7 +59,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Penilai</label>
                                     <input type="text" class="form-control" id="nama_penilai" name="nama_penilai">
-                                  
+
                                     <div class="small">*Diisi Oleh Penilai</div><br />
                                 </div>
 
@@ -180,7 +180,7 @@
                             <button type="submit" class="btn btn-sm btn-primary" name="btn-simpan">
                                 Simpan</button>
                             <a href="/pengawas" class="btn btn-sm btn-danger">Batal</a>
-
+                        </div>
                     </form>
                 </div>
             </div>

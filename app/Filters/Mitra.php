@@ -12,7 +12,7 @@ class Mitra implements FilterInterface
     {
         // Do something here
         if(!session('login')){
-            return redirect()->to('/guest');
+            return redirect()->to('/login');
         }
         if(!(session()->get('role') == 0)){
             return redirect()->to('/dashboard');

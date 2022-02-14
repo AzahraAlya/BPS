@@ -176,7 +176,7 @@
 
                             <button type="submit" class="btn btn-primary btn-sm">
                                 Simpan</button>
-                            <a href="/pencacah" class="btn btn-sm btn-danger">Kembali</a>
+                            
 
                         </form>
 

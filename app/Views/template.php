@@ -19,6 +19,7 @@
     <link href="/assets/startbootstrap/css/sb-admin-2.min.css" rel="stylesheet">
 
     <link href="/assets/startbootstrap/css/dboard.css" rel="stylesheet">
+    <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
 
     <link href="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
 </head>
@@ -27,18 +28,18 @@
 
     <!-- Page Wrapper -->
     <div id="wrapper">
-        
+
 
         <!-- Sidebar -->
-        <?= $this->include('sidebar'); ?>
+
         <!-- Content Wrapper -->
 
         <div id="content-wrapper" class="d-flex flex-column">
 
             <!-- Main Content -->
             <div id="content">
-                <?= $this->include('navbar'); ?>
-                <?= $this->renderSection('content'); ?> 
+
+                <?= $this->renderSection('content'); ?>
             </div>
             <!-- End of Main Content -->
 
@@ -63,7 +64,19 @@
             <script src="/assets/startbootstrap/vendor/datatables/dataTables.bootstrap4.min.js"></script>
 
             <!-- Page level custom scripts -->
-           <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+            <script src="/assets/startbootstrap/js/demo/datatables-demo.js"></script>
+            <script src="/assets/js/sweetalert2.min.js"></script>
+
+
+            <script>
+                <?php if (!empty(session()->getFlashdata('swal_icon'))) { ?>
+                    Swal.fire(
+                        'Berhasil',
+                        'Data berhasil diubah',
+                        'success'
+                    )
+                <?php } ?>
+            </script>
         </div>
     </div>
 

@@ -1,4 +1,4 @@
-<?= $this->extend('pengawas/template'); ?>
+<?= $this->extend('template'); ?>
 <?= $this->section('content'); ?>
 
 
@@ -105,6 +105,7 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Pengalaman Survei BPS</label>
                                 <input type="text" class="form-control" name="PENGALAMAN_SURVEI_BPS" value="<?= $pencacah['PENGALAMAN_SURVEI_BPS']; ?>" required>
+                                <div class="small">*jika tidak ada isikan "tidak ada"</div>
                             </div>
 
                             <div class="form-group">
@@ -142,7 +143,7 @@
 
                             <button type="submit" class="btn btn-primary btn-sm">
                                 Simpan</button>
-                            <a href="/pencacah" class="btn btn-sm btn-danger">Kembali</a>
+                            
 
                         </form>
 
