@@ -40,7 +40,7 @@ $routes->get('/login/mitra', 'C_login::coba', ['filter' => 'mitra']);
 $routes->get('/login_mitra', 'C_login::login_mitra');
 $routes->post('/savelogin', 'C_login::auth');
 $routes->match(['get', 'post'], 'profile', 'C_login::profile', ['filter' => 'auth']);
-$routes->match(['get', 'post'], 'setting', 'C_pencacah::profile', ['filter' => 'mitra'] );
+$routes->match(['get', 'post'], 'setting', 'C_Pengawas::setting', ['filter' => 'penilai'] );
 
 
 // $routes->get('/dashboard', 'C_home::index', ['filter' => 'auth']);
@@ -98,8 +98,12 @@ $routes->delete('/admin/manage/accounts/delete/(:any)', 'C_manage::deletePencaca
 $routes->delete('/admin/manage/delete/(:any)', 'C_manage::delete/$1');
 $routes->get('/admin/manage/accounts/edit/(:segment)', 'C_manage::editPassword/$1', ['filter' => 'admin']);
 $routes->get('/admin/manage/edit/(:segment)', 'C_manage::editPasswordPenilai/$1', ['filter' => 'admin']);
+$routes->get('/admin/manage/edit/petugas/(:segment)', 'C_manage::editNamaPenilai/$1', ['filter' => 'admin']);
+$routes->get('/admin/manage/edit/user/(:segment)', 'C_manage::editNamaUser/$1', ['filter' => 'admin']);
 $routes->post('/admin/manage/accounts/update/(:segment)', 'C_manage::updatePassword/$1');
 $routes->post('/admin/manage/update/(:segment)', 'C_manage::updatePasswordPenilai/$1', ['filter' => 'admin']);
+$routes->post('/admin/manage/update/username/(:segment)', 'C_manage::updateNamaPenilai/$1', ['filter' => 'admin']);
+$routes->post('/admin/manage/update/username/user/(:segment)', 'C_manage::updateNamaUser/$1', ['filter' => 'admin']);
 
 
 /*

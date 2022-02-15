@@ -49,6 +49,7 @@
                                         <td><?= $a['password_confirm']; ?></td>
                                         <td align="center">
                                         <a href="/admin/manage/accounts/edit/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-warning me-1"><i class="fas fa-pen" class="d-inline"></i></a>
+                                        <a href="/admin/manage/edit/user/<?= $a['NO_URUT']; ?>" class="btn btn-sm btn-success me-1"><i class="fas fa-pen" class="d-inline"></i></a>
                                                 <form action="/admin/manage/delete/<?= $a['NO_URUT']; ?>" method="post" class="d-inline">
                                                     <input type="hidden" name = "_method" value = "DELETE" />
                                                     <button type ="submit" class="btn btn-danger btn-sm" onclick="return confirm('Apakah Anda yakin?');"><i class="fas fa-trash"></i></button>

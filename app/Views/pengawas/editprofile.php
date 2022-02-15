@@ -18,6 +18,12 @@
             <!-- /.content-header -->
             <div class="container">
 
+            <?php if (session()->get('pesan')) : ?>
+                <div class="alert alert-success" role="alert">
+                    <?= session()->get('pesan') ?>
+                </div>
+            <?php endif; ?>
+            
                 <div class="card mt-3">
                     <div class="card-header">
                         <p class="h5 text-center font-weight-bold">Ubah Profil</p>

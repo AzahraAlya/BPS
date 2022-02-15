@@ -123,11 +123,11 @@ class C_Pengawas extends BaseController
 		return view('pengawas/nonpegawai');
 	}
 
-	public function profile(){
-        $session = session();
-        helper(['swal_helper']);
+	public function setting(){
+		helper(['swal_helper']);
 		helper(['form']);
-		$model = new M_petugas();
+		//$model = new M_pencacah();
+        $model = model("M_petugas");
 		if ($this->request->getMethod() == 'post') {
 			//let's do the validation here
 			$rules = [
@@ -138,7 +138,6 @@ class C_Pengawas extends BaseController
 			if ($this->request->getPost('password') != '') {
 				$rules['password'] = 'required|min_length[8]|max_length[255]';
 				$rules['password_confirm'] = 'matches[password]';
-
 			}
 
 			if (!$this->validate($rules)) {
@@ -149,17 +148,18 @@ class C_Pengawas extends BaseController
 				];
 				if ($this->request->getPost('password') != '') {
 					$newData['password'] = $this->request->getPost('password');
-					$newData['password_confirm'] = $this->request->getPost('password_confirm');
 				}
+				//Edit sessions
 				$model->save($newData);
-				set_notifikasi_swal('success', 'Berhasil','Password Berhasil Diubah');
+				set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
 				return redirect()->to('/pengawas');
 			}
 		}
+
 		$data['pengawas'] = $model->where('NO_URUT', session()->get('NO_URUT'))->first();
         // $data['user'] = $this->$model->find(session()->get('id_user'));
         // dd($data);
-		echo view('auth/editpassword', $data);
+		echo view('auth/editpassword_pengawas', $data);
     }
 
 	public function editpengawas(){

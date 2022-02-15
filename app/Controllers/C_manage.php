@@ -162,7 +162,7 @@ class C_manage extends BaseController
     } 
 
      //simpan hasil edit password penilai
-     public function updatePasswordPenilai($NO_URUT){
+    public function updatePasswordPenilai($NO_URUT){
         helper(['swal_helper']);
         $rules = [
             'password'      => 'required|min_length[3]|max_length[200]',
@@ -182,4 +182,49 @@ class C_manage extends BaseController
         }
         
     }
+
+    public function editNamaPenilai($NO_URUT){
+        
+        $M_petugas = model("M_petugas");
+		$data = [
+			'penilai' => $M_petugas->getPetugas($NO_URUT),
+		];
+        return view('admin/editusername',$data);
+        
+    }
+
+    public function updateNamaPenilai($NO_URUT){
+        helper(['swal_helper']);
+        $M_user = model("M_petugas");
+		$M_user->save([
+			'NO_URUT' => $NO_URUT,
+            'NAMA' => $this->request->getVar('NAMA'),
+            
+		]);
+        set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('/manage/account'));
+    }
+
+    public function editNamaUser($NO_URUT){
+        
+        $M_petugas = model("M_petugas");
+		$data = [
+			'penilai' => $M_petugas->getPetugas($NO_URUT),
+		];
+        return view('admin/editusernameuser',$data);
+        
+    }
+
+    public function updateNamaUser($NO_URUT){
+        helper(['swal_helper']);
+        $M_user = model("M_petugas");
+		$M_user->save([
+			'NO_URUT' => $NO_URUT,
+            'NAMA' => $this->request->getVar('NAMA'),
+            
+		]);
+        set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
+		return redirect()->to(base_url('manage/account/pencacah'));
+    }
+
 }
