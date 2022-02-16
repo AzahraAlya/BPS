@@ -35,12 +35,107 @@
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom01">Kode Mitra</label>
-                                    <input type="text" class="form-control" name="KODE_PETUGAS" value="<?= $pencacah['KODE_PETUGAS']; ?>" required>
+                                    <input type="text" class="form-control" name="KODE_PETUGAS" value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
 
                                 </div>
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom02">No Kecamatan</label>
-                                    <input type="text" class="form-control" name="noKECAMATAN" value="<?= $pencacah['noKECAMATAN']; ?>" required>
+                                    <select name="noKECAMATAN" class="form-control" required>
+                                        <?php
+                                        if ($pencacah['noKECAMATAN'] == "10") { ?>
+                                            <option value="010" selected>010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php } else if ($pencacah['noKECAMATAN'] == "20"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020" selected>020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php } else if ($pencacah['noKECAMATAN'] == "30"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030" selected>030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php }else if($pencacah['noKECAMATAN'] == "40"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040" selected>040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php }else if ($pencacah['noKECAMATAN'] == "50"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050"selected>050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>  
+                                        <?php }else if ($pencacah['noKECAMATAN'] == "60"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060"selected>060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>  
+                                        <?php }else if ($pencacah['noKECAMATAN'] == "70"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070"selected>070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php }else if ($pencacah['noKECAMATAN'] == "80"){ ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080" selected>080-Adiluwih</option>
+                                            <option value="090">090-Pagelaran Utara</option>
+                                        <?php }else { ?>
+                                            <option value="010">010-Pardasuka</option>
+                                            <option value="020">020-Ambarawa</option>
+                                            <option value="030">030-Pagelaran</option>
+                                            <option value="040">040-Pringsewu</option>
+                                            <option value="050">050-Gadingrejo</option>
+                                            <option value="060">060-Sukoharjo</option>
+                                            <option value="070">070-Banyumas</option>
+                                            <option value="080">080-Adiluwih</option>
+                                            <option value="090"selected>090-Pagelaran Utara</option>
+                                        <?php }
+                                        ?>
+                                    </select>
+                                   
 
                                 </div>
                             </div>
@@ -58,6 +153,7 @@
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Nama</label>
                                     <input type="text" class="form-control" name="NAMA" value="<?= $pencacah['NAMA']; ?>" required>
+                                    <div class="small">*diisi dengan nama lengkap</div>
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="validationCustom04">Jenis Kelamin</label>
@@ -75,7 +171,7 @@
                                 </div>
                                 <div class="col-md-3 mb-3">
                                     <label for="validationCustom05">Pendidikan</label>
-                                    <select name="JENIS_KELAMIN" class="form-control" required>
+                                    <select name="PENDIDIKAN" class="form-control" required>
                                         <?php
                                         if ($pencacah['PENDIDIKAN'] == "S1/S2") { ?>
                                             <option value="S1/S2" selected>S1/S2</option>
@@ -148,11 +244,13 @@
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Pengalaman Survei BPS</label>
                                 <input type="text" class="form-control" name="PENGALAMAN_SURVEI_BPS" value="<?= $pencacah['PENGALAMAN_SURVEI_BPS']; ?>" required>
+                                <div class="small">*jika tidak ada isikan "tidak ada"</div>
                             </div>
 
                             <div class="form-group">
                                 <label for="exampleInputPassword1">Alamat</label>
                                 <input type="text" class="form-control" name="ALAMAT" value="<?= $pencacah['ALAMAT']; ?>" required>
+                                <div class="small">*diisikan alamat lengkap RT/RW</div>
                             </div>
 
                             <div class="form-row">

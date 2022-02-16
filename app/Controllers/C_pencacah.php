@@ -21,6 +21,7 @@ class C_Pencacah extends BaseController{
 		$M_user = model("M_user");
 		$M_nilai = model("M_nilai");
 		$M_pegawai = model("M_pegawai");
+		$M_kecamatan = model("M_kecamatan");
        
         $jumlahUser = $this->user->CountAllResults();
         if ($session->get('role') == 3) { //role 3 = admin
@@ -46,11 +47,13 @@ class C_Pencacah extends BaseController{
         }else if ($session->get('role') == 0) {
 			return view('pencacah/editprofile',[
 				'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
+				'kecamatan' => $M_kecamatan->findAll(),
 			]
 		); // role 0 = mitra
 		} else {
             return view('pencacah/nonpegawai',[ //role 1 = non pns
 				'pegawai'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
+				
 			]
 		);
                
