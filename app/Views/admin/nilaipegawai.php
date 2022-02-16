@@ -151,7 +151,8 @@
                                     <input type="checkbox" name = "que5[]" value="Tekun" id="defaultCheck5">Tekun<br/>
                                     <input type="checkbox" name = "que5[]" value="Memiliki koneksi/peran yang luas di masyarakat" id="defaultCheck6">Memiliki koneksi/peran yang luas di masyarakat<br />
                                     <label class="form-label">Lainnya </label><br/>
-                                    <input type="text" class="form-control col-md-6 mb-3" name = "que5[]">   
+                                    <input type="text" class="form-control col-md-6 mb-3" name = "que5[]"> 
+                                    <div class="small">*jika tidak ada isikan "tidak ada"</div><br />  
                                 </label>
                             </div>
 
@@ -165,13 +166,14 @@
                                     <input type="checkbox" name = "que6[]" value="Sulit bergaul" id="defaultCheck5">Sulit bergaul<br/>
                                     <label class="form-label">Lainnya </label><br/>
                                     <input type="text" class="form-control col-md-6 mb-3" name = "que6[]">  
+                                    <div class="small">*jika tidak ada isikan "tidak ada"</div><br />
                                 </label>
                             </div>
 
                             <div class="mb-3">
                                 <label for="formGroupExampleInput2" class="form-label">Catatan</label>
                                 <input type="text" class="form-control col-md-6 mb-3"  name = "catatan">
-                                <div class="small">*jika tidak ada isikan "-"</div><br />
+                                <div class="small">*jika tidak ada isikan "tidak ada"</div><br />
                             </div>
                         
             

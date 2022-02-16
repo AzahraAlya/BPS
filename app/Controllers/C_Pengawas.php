@@ -13,7 +13,7 @@ class C_Pengawas extends BaseController
 		$M_petugas = model("M_petugas");
 		$data = [
 			//'pencacah' => $M_petugas->findAll(),
-			'pencacah' => $M_petugas->where('role = 0')->findAll(),
+			'pencacah' => $M_petugas->where('role != 3')->findAll(),
 			'validation' => \Config\Services::validation(),
 
 		];

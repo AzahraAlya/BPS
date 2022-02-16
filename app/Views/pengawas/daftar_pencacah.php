@@ -31,8 +31,8 @@
                                     <tr>
                                         <th scope="col">No Urut</th>
                                         <th scope="col">Kode Mitra</th>
-                                        <th scope="col">No Kecamatan</th>
-                                        <th scope="col">No Peserta</th>
+                                        <!-- <th scope="col">No Kecamatan</th>
+                                        <th scope="col">No Peserta</th> -->
                                         <th scope="col">NIK</th>
                                         <th scope="col">Nama</th>                                        
                                         <th scope="col">Kegiatan</th>                                        
@@ -45,8 +45,7 @@
                                         <tr>
                                             <th scope="row"><?= $i + 1;?></th>
                                             <td><?= $pc['KODE_PETUGAS']; ?></td>
-                                            <td><?= $pc['noKECAMATAN']; ?></td>
-                                            <td><?= $pc['NOMOR_PESERTA']; ?></td>
+                                          
                                             <td><?= $pc['NIK_NIP']; ?></td>
                                             <td><?= $pc['NAMA']; ?></td>
                                             <td align="center">
