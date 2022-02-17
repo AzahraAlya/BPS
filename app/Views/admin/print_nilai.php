@@ -22,7 +22,7 @@
                 <div class="card mt-3">
                     <div class="card-header py-3">
                     <p class="h5 text-center font-weight-bold">Data Penilaian Mitra</p>
-                        <a href="/admin/excel" class="btn btn-outline-success shadow float-right">Excel<i class="fa fa-file-excel"></i></a>
+                        <a href="/admin/excel" class="btn btn-outline-success shadow float-right">Print Penilaian<i class="fa fa-file-excel"></i></a>
                         <a href = "/admin/mitra-lengkap" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
                     </div>
                     <div class="card-body">

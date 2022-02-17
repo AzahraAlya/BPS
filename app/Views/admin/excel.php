@@ -1,6 +1,6 @@
 <?php
     header("Content-type: application/vnd-ms-excel");
-    header("Content-Disposition: attachment; filename=Data Penilaian Mitra.xls");
+    header("Content-Disposition: attachment; filename=Evaluasi Kinerja Petugas.xls");
 ?>
 
 <!DOCTYPE html>
@@ -16,7 +16,7 @@
                                 <thead>
                                     <tr>
                                         <th scope="col">No Urut</th>
-                                        <th scope="col">Kode Mitra</th>
+                                        <th scope="col">Kode Petugas</th>
                                         <th scope="col">Nama</th>
                                         <th scope="col">NIK</th>
                                         <th scope="col">No HP</th>                                        

@@ -24,7 +24,8 @@
                         <!-- <h6 class="m-0 font-weight-bold text-primary">Daftar Pencacah</h6> -->
                         <p class="h5 text-center font-weight-bold">Data Lengkap Petugas</p>
                         <a href = "/dashboard" class="btn btn-sm btn-primary me-1"><i class="fas fa-arrow-left"></i></a>
-                        <a href="/admin/print" class="btn btn-sm btn-primary float-right">Lihat Penilaian</a>
+                        <a href="/admin/print" class="btn btn-sm btn-primary float-right">Lihat Penilaian</a><br/><br/>
+                        <a href="/admin/printpetugas" class="btn btn-outline-success shadow float-right">Print Data Petugas<i class="fa fa-file-excel"></i></a>
                     </div>
                     <div class="card-body">
                         <div class="table-responsive">

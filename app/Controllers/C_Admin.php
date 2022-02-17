@@ -174,6 +174,16 @@ class C_Admin extends BaseController
 		return view('admin/excel',$data);
     }
 
+	public function printpetugas(){
+        $M_petugas = model("M_petugas");
+        $data = [
+            'admin' => $M_petugas->findAll(),
+            
+
+		];
+		return view('admin/print_petugas',$data);
+    }
+
 	public function kegiatan(){
 		$M_kegiatan = model("M_kegiatan");
 		$data = [

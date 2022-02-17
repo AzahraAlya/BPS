@@ -58,6 +58,7 @@ $routes->post('/saveprofilepegawai/(:segment)', 'C_pencacah::saveprofilepegawai/
 
 $routes->get('/admin/print', 'C_Admin::index', ['filter' => 'admin']);
 $routes->get('/admin/excel', 'C_Admin::excel', ['filter' => 'admin']);
+$routes->get('/admin/printpetugas', 'C_Admin::printpetugas', ['filter' => 'admin']);
 $routes->get('/admin/kegiatan', 'C_Admin::kegiatan', ['filter' => 'admin']);
 $routes->get('/admin/tambah-kegiatan', 'C_Admin::tambahkegiatan', ['filter' => 'admin']);
 $routes->post('/admin/store-kegiatan', 'C_Admin::store_kegiatan', ['filter' => 'admin']);

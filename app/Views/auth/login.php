@@ -54,7 +54,7 @@
                                     <?php endif; ?>
                                     <form class="user" action = "/login" method="post">
                                         <div class="form-group">
-                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Username" name="KODE_PETUGAS">
+                                            <input type="text" class="form-control form-control-user" id="exampleInputEmail" aria-describedby="emailHelp" placeholder="Kode Petugas" name="KODE_PETUGAS">
                                         </div>
                                         <div class="form-group">
                                             <input type="password" class="form-control form-control-user" id="exampleInputPassword" placeholder="Password" name="password">
@@ -64,9 +64,9 @@
                                         </button>
                                     </form>
                                     <hr>
-                                    <!-- <div class="text-center">
-                                        <a class="small" href="/login_mitra">Login sebagai Mitra!</a>
-                                    </div> -->
+                                    <div class="text-center">
+                                        <a class="small" href="https://docs.google.com/spreadsheets/d/1DsNYc4CZOQ18hKPzDqXllM3z808mjLTj/edit?usp=sharing&ouid=101281481195089421445&rtpof=true&sd=true">Lihat Kode Petugas</a>
+                                    </div>
                                 </div>
                             </div>
                         </div>
