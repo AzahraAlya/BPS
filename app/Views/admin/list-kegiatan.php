@@ -31,6 +31,7 @@
                                     <tr>
                                         <th scope="col">Nama Pegawai</th>
                                         <th scope="col">Kegiatan</th>
+                                        <th scope="col">Bulan Kegiatan</th>
                                         <th scope="col">Tanggal Dinilai</th>
                                                                           
                                     </tr>
@@ -43,6 +44,7 @@
                                             
                                             <td><?= $pc['nama']; ?></td>
                                             <td><?= $pc['nama_kegiatan']; ?></td>
+                                            <td><?= $pc['bulan_kegiatan']; ?></td>
                                             <td><?= date("l, d F Y",strtotime($pc['created_at'])); ?></td>
                                         </tr>
                                     <?php endforeach; ?>
