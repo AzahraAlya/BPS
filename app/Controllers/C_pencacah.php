@@ -1,8 +1,6 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_user;
-use App\Models\M_pencacah;
 use App\Models\M_petugas;
 
 
@@ -10,44 +8,42 @@ class C_Pencacah extends BaseController{
     public function __construct()
     {
         
-        $this->user = new M_user();
         $this->petugas = new M_petugas();
     }
     public function index()
     {
         $session = session();
-		$M_pencacah = model("M_pencacah");
+		// $M_pencacah = model("M_pencacah");
 		$M_petugas = model("M_petugas");
-		$M_user = model("M_user");
+		// $M_user = model("M_user");
 		$M_nilai = model("M_nilai");
-		$M_pegawai = model("M_pegawai");
-		$M_kecamatan = model("M_kecamatan");
+		// $M_pegawai = model("M_pegawai");
+		// $M_kecamatan = model("M_kecamatan");
        
-        $jumlahUser = $this->user->CountAllResults();
+        // $jumlahUser = $this->user->CountAllResults();
         if ($session->get('role') == 3) { //role 3 = admin
             return view('admin/dashboard',[
-				'pencacah' => $M_pencacah->findAll(),
+				// 'pencacah' => $M_pencacah->findAll(),
 				'nilai' => $M_nilai->findAll(),
-				'pegawai' => $M_user->findAll(),
-				'nilaipgw' => $M_pegawai->findAll(),
+				// 'pegawai' => $M_user->findAll(),
+				// 'nilaipgw' => $M_pegawai->findAll(),
 				'validation' => \Config\Services::validation(),
-                'jumlahUser'=> $jumlahUser,
+                // 'jumlahUser'=> $jumlahUser,
                 'jumlahAdmin' => $M_petugas->like('role','0')->findAll(),
                 'jumlahNonAdmin'=>$M_petugas->like('role','1' )->findAll(),
                 'jumlahpenilai'=>$M_petugas->like('role','2')->findAll(),
             ]);
             
         }else if($session->get('role') == 2){
-            return view('pengawas/editprofile',[ // role 2 = pengawas
+            return view('pengawas/dashboard',[ // role 2 = pengawas
                 'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
 				'validation' => \Config\Services::validation(),
             ]);
 
         
         }else if ($session->get('role') == 0) {
-			return view('pencacah/editprofile',[
+			return view('pencacah/home',[
 				'pencacah'=> $M_petugas->where('NO_URUT', session()->get('NO_URUT'))->first(),
-				'kecamatan' => $M_kecamatan->findAll(),
 			]
 		); // role 0 = mitra
 		} else {

@@ -100,7 +100,7 @@ class C_Pengawas extends BaseController
 		]);
 
 		set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
-		return redirect()->to(base_url('/pengawas'));
+		return redirect()->to(base_url('/dashboard'));
 
 	}
 

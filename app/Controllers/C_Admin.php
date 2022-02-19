@@ -1,14 +1,12 @@
 <?php
 
 namespace App\Controllers;
-use App\Models\M_user;
 use App\Models\M_petugas;
 class C_Admin extends BaseController
 {
 	protected $M_user;
     public function __construct()
     {
-        $this->M_user = new M_user();
         $this->M_petugas = new M_petugas();
     }
 	public function index()

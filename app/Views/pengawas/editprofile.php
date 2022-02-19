@@ -1,4 +1,4 @@
-<?= $this->extend('template'); ?>
+<?= $this->extend('pengawas/template'); ?>
 <?= $this->section('content'); ?>
 
 

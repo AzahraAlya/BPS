@@ -10,7 +10,7 @@ class C_manage extends BaseController
     protected $M_user;
     public function __construct()
     {
-        $this->M_user = new M_user();
+       
         $this->M_petugas = new M_petugas();
     }
 

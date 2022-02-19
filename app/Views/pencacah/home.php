@@ -25,9 +25,9 @@
                 <div class="card-body">
                     <form action="" method="POST">
                         <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Kode Mitra</label>
+                            <label for="staticEmail" class="col-sm-2 col-form-label">Kode Petugas</label>
                             <div class="col-sm-4">
-                                <input type="text" class="form-control-plaintext" value="<?= $pencacah['Kode_Mitra']; ?>" readonly>
+                                <input type="text" class="form-control-plaintext" value="<?= $pencacah['KODE_PETUGAS']; ?>" readonly>
                             </div>
                             <label for="staticEmail" class="col-sm-2 col-form-label">Nama</label>
                             <div class="col-sm-4">
@@ -41,7 +41,7 @@
                             </div>
                             <label for="staticEmail" class="col-sm-2 col-form-label">NIK</label>
                             <div class="col-sm-4">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $pencacah['NIK']; ?>">
+                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $pencacah['NIK_NIP']; ?>">
                             </div>
                         </div>
 
@@ -50,18 +50,6 @@
                             <div class="col-sm-10">
                                 <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $pencacah['ALAMAT']; ?>">
                             </div>
-                        </div>
-
-                        <div class="mb-3 row">
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Desa</label>
-                            <div class="col-sm-4">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $pencacah['DESA']; ?>">
-                            </div>
-                            <label for="staticEmail" class="col-sm-2 col-form-label">Kecamatan</label>
-                            <div class="col-sm-4">
-                                <input type="text" readonly class="form-control-plaintext" id="staticEmail" value="<?= $pencacah['KECAMATAN']; ?>">
-                            </div>
-
                         </div>
                         <div class="mb-3 row">
                             <label for="staticEmail" class="col-sm-2 col-form-label">No Hp</label>
@@ -93,6 +81,6 @@
             </script>
 
 
-
-
+        </div>
+    </div>
             <?= $this->endSection(); ?>
