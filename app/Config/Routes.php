@@ -85,7 +85,7 @@ $routes->get('/pengawas/nilai/(:segment)', 'C_Pengawas::nilai/$1',['filter' => '
 $routes->get('/pengawas/penilaian', 'C_Pengawas::penilaian',  ['filter' => 'penilai']);
 $routes->post('/pengawas/selanjutnyaa', 'C_Pengawas::selanjutnya',  ['filter' => 'penilai']);
 $routes->get('/pengawas/savePenilaian', 'C_Pengawas::savePenilaian',  ['filter' => 'penilai']);
-$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai', ['filter' => 'penilai'] );
+$routes->post('/pengawas/store-nilai', 'C_Pengawas::store_nilai');
 $routes->post('/pengawas/saveprofile/(:segment)', 'C_Pengawas::saveprofile/$1', );
 $routes->get('/pengawas/detail/(:segment)', 'C_pengawas::detailkegiatan/$1',['filter' => 'penilai'] );
 

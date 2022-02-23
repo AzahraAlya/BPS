@@ -38,9 +38,9 @@
             <!-- Sidebar - Brand -->
             <a class="sidebar-brand d-flex align-items-center justify-content-center" href="#">
                 <div class="sidebar-brand-icon rotate-n-15">
-                    <i class="fas fa-laugh-wink"></i>
+                    <i class=""></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">Evaluasi Kinerja<sup>bps</sup></div>
+                <div class="sidebar-brand-text mx-3">PENCACAH<sup></sup></div>
             </a>
 
             <!-- Divider -->
@@ -48,7 +48,7 @@
 
             <!-- Nav Item - Dashboard -->
             <li class="nav-item active">
-                <a class="nav-link" href="/pencacah">
+                <a class="nav-link" href="/dashboard">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
                     <span>Pencacah</span></a>
             </li>

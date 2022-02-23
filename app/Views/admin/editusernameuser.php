@@ -13,7 +13,7 @@
                 <div class="container">
                 <div align="center">
 
-            <form action="/admin/manage/update/username/<?= $penilai['NO_URUT']; ?>" method="post">
+            <form action="/admin/manage/update/username/user<?= $penilai['NO_URUT']; ?>" method="post">
                 <div class="card" style="width: 25rem;">
                     <div class="card-header">
                         <b>Edit Username</b>

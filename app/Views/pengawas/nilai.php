@@ -1,5 +1,14 @@
 <?= $this->extend('pengawas/template'); ?>
 <?= $this->section('content'); ?>
+
+<?php
+
+use App\Models\M_petugas;
+
+$this->user = new M_petugas();
+$session = session();
+?>  
+
 <!-- Content Wrapper -->
 <div id="content-wrapper" class="d-flex flex-column">
 
@@ -58,9 +67,10 @@
                             <div class="form-row">
                                 <div class="col-md-6 mb-3">
                                     <label for="validationCustom03">Kode Penilai</label>
-                                    <input type="text" class="form-control" id="nama_penilai" name="nama_penilai">
-
-                                    <div class="small">*Diisi Oleh Penilai</div><br />
+                                    <!-- <input type="text" class="form-control" id="nama_penilai" name="nama_penilai"> -->
+                                    <input type="text" class="form-control" name="nama_penilai" autofocus value=  "<?= $this->user->find($session->get('NO_URUT'))['KODE_PETUGAS'] ?>" readonly>
+                                  
+                                    <!-- <div class="small">*Diisi Oleh Penilai</div><br /> -->
                                 </div>
 
                                 <div class="col-md-6 mb-3">

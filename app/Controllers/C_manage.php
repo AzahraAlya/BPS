@@ -224,7 +224,7 @@ class C_manage extends BaseController
             
 		]);
         set_notifikasi_swal('success', 'Berhasil','Data Berhasil Diupdate');
-		return redirect()->to(base_url('manage/account/pencacah'));
+		return redirect()->to(base_url('/manage/account/pencacah'));
     }
 
 }

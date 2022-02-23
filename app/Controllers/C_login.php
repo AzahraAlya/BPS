@@ -102,36 +102,6 @@ class C_login extends BaseController
         return view('auth/login_mitra');
     }
 
-    public function mitra_auth(){
-
-        $session = session();
-        $model = new M_pencacah();
-        $username = $this->request->getVar('Kode_Mitra');
-        $password = $this->request->getVar('password');
-        $data = $model->where('Kode_Mitra', $username)->first();
-
-        if($data) {
-            $pass = $data['password'];
-            $verify_pass = password_verify($password, $pass);
-            if ($verify_pass) {
-                $ses_data = [
-                    'No_Urut'      => $data['No_Urut'],
-                    'login' => TRUE
-                ];
-                $session->set($ses_data);
-                session()->setFlashdata('pesan', 'berhasil login');
-                return redirect()->to('/pencacah');
-			    
-            } else {
-                $session->setFlashdata('pesan', 'password anda salah');
-                return redirect()->to('/login_mitra');
-            }
-        } else {
-            $session->setFlashdata('pesan', 'username tidak ditemukan');
-            return redirect()->to('/login_mitra');
-        }
-        
-    }
 
     public function coba(){
         $M_pencacah = model("M_pencacah");
